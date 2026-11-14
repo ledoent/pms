@@ -50,8 +50,8 @@ class PMSConfigurator(models.TransientModel):
         if self.guest_ids:
             self.no_of_guests = len(self.guest_ids)
 
-    product_id = fields.Many2one("product.product", string="Product", readonly=True)
-    property_id = fields.Many2one("pms.property", string="Property")
+    product_id = fields.Many2one("product.product", readonly=True)
+    property_id = fields.Many2one("pms.property")
     reservation_id = fields.Many2one(
         "pms.property.reservation", string="Reservation Type"
     )
@@ -78,7 +78,7 @@ class PMSConfigurator(models.TransientModel):
         "pms.reservation.guest.wizard", "configurator_id", string="Guests"
     )
     price = fields.Float(related="reservation_id.price", readonly=True)
-    currency_id = fields.Many2one("res.currency", string="Currency")
+    currency_id = fields.Many2one("res.currency")
     existing_reservation_id = fields.Integer()
     reservation_ids = fields.Many2many("pms.reservation")
     timeline_html = fields.Html("Timeline HTML", readonly=True)
@@ -279,8 +279,8 @@ class PMSReservationGuestWizard(models.TransientModel):
     name = fields.Char(required=True)
     phone = fields.Char()
     email = fields.Char()
-    configurator_id = fields.Many2one("pms.configurator", string="Configurator")
-    partner_id = fields.Many2one("res.partner", string="Partner")
+    configurator_id = fields.Many2one("pms.configurator")
+    partner_id = fields.Many2one("res.partner")
 
     @api.onchange("partner_id")
     def _onchange_partner_id(self):

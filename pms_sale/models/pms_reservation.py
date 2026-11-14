@@ -65,20 +65,15 @@ class PmsReservation(models.Model):
     date = fields.Datetime(default=lambda self: fields.Datetime.now())
     stage_id = fields.Many2one(
         "pms.stage",
-        string="Stage",
         store=True,
         tracking=True,
         index=True,
         default=lambda self: self._default_stage_id(),
         group_expand="_read_group_stage_ids",
     )
-    team_id = fields.Many2one(
-        "pms.team", string="Team", related="property_id.team_id", store=True
-    )
-    property_id = fields.Many2one("pms.property", string="Property")
-    reservation_type_id = fields.Many2one(
-        "pms.property.reservation", string="Reservation Type"
-    )
+    team_id = fields.Many2one("pms.team", related="property_id.team_id", store=True)
+    property_id = fields.Many2one("pms.property")
+    reservation_type_id = fields.Many2one("pms.property.reservation")
     sale_order_id = fields.Many2one("sale.order", string="Sales Order")
     sale_order_line_id = fields.Many2one("sale.order.line", string="Sales Order Line")
     invoice_status = fields.Selection(
@@ -90,7 +85,6 @@ class PmsReservation(models.Model):
     )
     company_id = fields.Many2one(
         "res.company",
-        string="Company",
         default=lambda self: self.env.company.id,
     )
     adults = fields.Integer()
