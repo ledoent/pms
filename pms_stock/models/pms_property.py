@@ -27,7 +27,11 @@ class PmsProperty(models.Model):
         return res
 
     def _create_stock_location(self):
-        parent = self.env.ref("stock.stock_location_stock", raise_if_not_found=False)
+        company = self.company_id or self.env.company
+        warehouse = self.env["stock.warehouse"].search(
+            [("company_id", "=", company.id)], limit=1
+        )
+        parent = warehouse.lot_stock_id
         if not parent:
             return
         location = self.env["stock.location"].create(
@@ -35,6 +39,7 @@ class PmsProperty(models.Model):
                 "name": self.name,
                 "location_id": parent.id,
                 "usage": "internal",
+                "company_id": company.id,
             }
         )
         self.stock_location_id = location.id

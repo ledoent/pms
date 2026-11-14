@@ -71,7 +71,11 @@ class TestPmsStock(PmsBaseCase):
         self.assertEqual(prop.stock_location_id.name, "Renamed Without Location")
 
     def test_create_stock_location_without_parent_on_create(self):
-        with patch.object(self.env, "ref", return_value=False):
+        with patch.object(
+            type(self.env["stock.warehouse"]),
+            "search",
+            return_value=self.env["stock.warehouse"],
+        ):
             prop = self.env["pms.property"].create(
                 self._property_vals("No Parent Property")
             )
@@ -81,7 +85,11 @@ class TestPmsStock(PmsBaseCase):
         prop = self.env["pms.property"].create(
             self._property_vals("Write No Parent", stock_location_id=self.location.id)
         )
-        with patch.object(self.env, "ref", return_value=False):
+        with patch.object(
+            type(self.env["stock.warehouse"]),
+            "search",
+            return_value=self.env["stock.warehouse"],
+        ):
             prop.write({"stock_location_id": False, "name": "Renamed No Parent"})
         self.assertFalse(prop.stock_location_id)
 
@@ -90,9 +98,13 @@ class TestPmsStock(PmsBaseCase):
             self._property_vals("Direct No Parent", stock_location_id=self.location.id)
         )
         prop.write({"stock_location_id": False})
-        with patch.object(self.env, "ref", return_value=False) as mock_ref:
+        with patch.object(
+            type(self.env["stock.warehouse"]),
+            "search",
+            return_value=self.env["stock.warehouse"],
+        ) as mock_ref:
             prop._create_stock_location()
             mock_ref.assert_called_once_with(
-                "stock.stock_location_stock", raise_if_not_found=False
+                [("company_id", "=", self.env.company.id)], limit=1
             )
         self.assertFalse(prop.stock_location_id)
