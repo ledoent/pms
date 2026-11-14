@@ -1,0 +1,2 @@
+# DO NOT MERGE -- immutable sibling/dependency pins for fork evaluation.
+odoo-addon-pms_base @ git+https://github.com/ledoent/pms.git@7c6889c2a0472925d4ec895773dae9e1816dbd6d#subdirectory=pms_base
