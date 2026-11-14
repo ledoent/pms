@@ -9,3 +9,6 @@ access_pms_configurator,access_pms_configurator,pms.configurator,base.group_user
 access_pms_reservation_guest_wizard,access_pms_reservation_guest_wizard,pms.reservation.guest.wizard,base.group_user,cru,
 access_pms_reservation_manager,access_pms_reservation_manager,pms.reservation,pms_base.group_pms_manager,crud,
 access_pms_reservation_user,access_pms_reservation_user,pms.reservation,pms_base.group_pms_user,cru,
+pms_reservation_company,Reservation companies,pms.reservation,,crud,"[('company_id', 'in', company_ids + [False])]"
+pms_reservation_guest_parent,Reservation guest access,pms.reservation.guest,,crud,"[('reservation_id', 'access', 'read')]"
+pms_reservation_type_company,Reservation type companies,pms.property.reservation,,crud,"['|', ('property_id', '=', False), ('property_id', 'access', 'read')]"

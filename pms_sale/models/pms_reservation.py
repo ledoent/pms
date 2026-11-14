@@ -7,6 +7,8 @@ from odoo import api, fields, models
 from odoo.exceptions import ValidationError
 from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT
 
+from ..tools import add_nights, stay_nights
+
 AVAILABLE_PRIORITIES = [("0", "Normal"), ("1", "Low"), ("2", "High"), ("3", "Urgent")]
 
 
@@ -14,23 +16,19 @@ class PmsReservation(models.Model):
     _name = "pms.reservation"
     _description = "Reservation"
     _order = "start, id"
+    _check_company_auto = True
     _inherit = ["mail.thread", "mail.activity.mixin"]
 
     def _default_stage_id(self):
         return self.env.ref("pms_sale.pms_stage_new", raise_if_not_found=False)
 
     def _get_duration(self, start, stop):
-        """Get the duration value between the 2 given dates."""
-        if not start or not stop:
-            return 0
-        duration = (stop - start).total_seconds() / (24 * 3600)
-        return round(duration, 0)
+        return stay_nights(start, stop, self.property_id.tz or "UTC")
 
     @api.depends("guest_ids")
     def _compute_no_of_guests(self):
-        self.no_of_guests = 0
-        if self.guest_ids:
-            self.no_of_guests = len(self.guest_ids)
+        for record in self:
+            record.no_of_guests = len(record.guest_ids)
 
     name = fields.Char(
         string="Reservation #",
@@ -71,10 +69,14 @@ class PmsReservation(models.Model):
         group_expand="_read_group_stage_ids",
     )
     team_id = fields.Many2one("pms.team", related="property_id.team_id", store=True)
-    property_id = fields.Many2one("pms.property")
+    property_id = fields.Many2one("pms.property", check_company=True)
     reservation_type_id = fields.Many2one("pms.property.reservation")
-    sale_order_id = fields.Many2one("sale.order", string="Sales Order")
-    sale_order_line_id = fields.Many2one("sale.order.line", string="Sales Order Line")
+    sale_order_id = fields.Many2one(
+        "sale.order", string="Sales Order", check_company=True
+    )
+    sale_order_line_id = fields.Many2one(
+        "sale.order.line", string="Sales Order Line", check_company=True
+    )
     invoice_status = fields.Selection(
         related="sale_order_id.invoice_status", store=True, index=True
     )
@@ -107,10 +109,10 @@ class PmsReservation(models.Model):
         copy=False,
     )
 
-    @api.depends("stop", "start")
+    @api.depends("stop", "start", "property_id.tz")
     def _compute_duration(self):
         for reservation in self.with_context(dont_notify=True):
-            reservation.duration = self._get_duration(
+            reservation.duration = reservation._get_duration(
                 reservation.start, reservation.stop
             )
 
@@ -128,7 +130,9 @@ class PmsReservation(models.Model):
         duration_field = self._fields["duration"]
         self.env.remove_to_compute(duration_field, self)
         for reservation in self:
-            reservation.stop = reservation.start + timedelta(days=reservation.duration)
+            reservation.stop = add_nights(
+                reservation.start, reservation.duration, reservation.property_id.tz
+            )
 
     def _compute_invoice_count(self):
         for reservation in self:
@@ -153,6 +157,9 @@ class PmsReservation(models.Model):
     @api.model_create_multi
     def create(self, vals_list):
         for vals in vals_list:
+            if vals.get("property_id"):
+                prop = self.env["pms.property"].browse(vals["property_id"])
+                vals.setdefault("company_id", prop.company_id.id or self.env.company.id)
             if vals.get("name", self.env._("New")) == self.env._("New"):
                 vals["name"] = self.env["ir.sequence"].next_by_code(
                     "pms.reservation"
@@ -163,7 +170,7 @@ class PmsReservation(models.Model):
     def onchange_property_id(self):
         user_tz = self.env.user.tz or "UTC"
         utc = ZoneInfo("UTC")
-        timezone = ZoneInfo(user_tz)
+        timezone = ZoneInfo(self.property_id.tz or user_tz)
         if (
             self.property_id
             and self.start
@@ -211,30 +218,57 @@ class PmsReservation(models.Model):
                     }
                 )
 
+    @api.model
+    def _get_overlap_domain(self, property_id, start, stop, exclude_id=False):
+        excluded = [
+            self.env.ref("pms_sale.pms_stage_new").id,
+            self.env.ref("pms_sale.pms_stage_cancelled").id,
+        ]
+        domain = [
+            ("property_id", "=", property_id),
+            ("stage_id", "not in", excluded),
+            ("start", "<", stop),
+            ("stop", ">", start),
+        ]
+        if exclude_id:
+            domain.append(("id", "!=", exclude_id))
+        return domain
+
+    @api.constrains("property_id", "start", "stop", "reservation_type_id")
+    def _check_stay_dates(self):
+        for record in self:
+            if record.start and record.stop and record.stop <= record.start:
+                raise ValidationError(self.env._("Checkout must be after checkin."))
+            if (
+                record.reservation_type_id.property_id
+                and record.reservation_type_id.property_id != record.property_id
+            ):
+                raise ValidationError(
+                    self.env._("The reservation type belongs to another property.")
+                )
+
     @api.constrains("property_id", "stage_id", "start", "stop")
     def _check_no_of_reservations(self):
-        stage_ids = [
-            self.env.ref("pms_sale.pms_stage_new", raise_if_not_found=False).id,
-            self.env.ref("pms_sale.pms_stage_cancelled", raise_if_not_found=False).id,
-        ]
-        for rec in self:
-            if rec.stage_id.id not in stage_ids:
-                reservation = self.search(
-                    [
-                        ("property_id", "=", rec.property_id.id),
-                        ("stage_id", "not in", stage_ids),
-                        ("id", "!=", rec.id),
-                        ("start", "<=", rec.stop),
-                        ("stop", ">=", rec.start),
-                    ]
+        excluded = self.env.ref("pms_sale.pms_stage_new") | self.env.ref(
+            "pms_sale.pms_stage_cancelled"
+        )
+        for record in self:
+            if (
+                record.property_id
+                and record.stage_id not in excluded
+                and self.sudo().search_count(
+                    self._get_overlap_domain(
+                        record.property_id.id, record.start, record.stop, record.id
+                    ),
+                    limit=1,
                 )
-                if reservation:
-                    raise ValidationError(
-                        self.env._(
-                            "You cannot have 2 reservations on the same night at the "
-                            "same property."
-                        )
+            ):
+                raise ValidationError(
+                    self.env._(
+                        "You cannot have 2 reservations on the same night "
+                        "at the same property."
                     )
+                )
 
     @api.constrains("property_id", "duration")
     def _check_no_of_nights(self):

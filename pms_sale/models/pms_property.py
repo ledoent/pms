@@ -1,8 +1,10 @@
 # Copyright (c) 2021 Gray Matter Logic
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
-from datetime import datetime
+from datetime import UTC, datetime, timedelta
+from zoneinfo import ZoneInfo
 
 from odoo import api, fields, models
+from odoo.exceptions import ValidationError
 
 
 class PmsProperty(models.Model):
@@ -34,19 +36,37 @@ class PmsProperty(models.Model):
         if vals.get("bedrooms_value") and vals.get("bedrooms_value") != 0:
             domain += [("qty_bedroom", ">=", vals.get("bedrooms_value"))]
         if vals.get("datepicker_value"):
-            date_range = vals.get("datepicker_value").split("-")
-            start = date_range[0].strip() + " 00:00:00"
-            end = date_range[1].strip() + " 23:59:59"
-            start = datetime.strptime(start, "%m/%d/%Y %H:%M:%S")
-            end = datetime.strptime(end, "%m/%d/%Y %H:%M:%S")
-            reservation_ids = self.env["pms.reservation"].search(
-                [
-                    ("start", "<", end),
-                    ("stop", ">", start),
-                ]
-            )
-            property_ids = reservation_ids.mapped("property_id")
-            # Remove all the properties with reservations in the date range to only
-            # show the ones available
-            domain += [("id", "not in", property_ids.ids)]
+            try:
+                date_range = vals["datepicker_value"].split("-")
+                arrival = datetime.strptime(date_range[0].strip(), "%m/%d/%Y").date()
+                departure = datetime.strptime(date_range[1].strip(), "%m/%d/%Y").date()
+                if departure <= arrival:
+                    raise ValueError("Invalid stay")
+            except (ValueError, IndexError, AttributeError) as error:
+                raise ValidationError(
+                    self.env._("Use a valid checkin and checkout date range.")
+                ) from error
+            Reservation = self.env["pms.reservation"].sudo()
+            blocked = []
+            for prop in self.search(domain):
+                start, stop = prop._get_stay_period(arrival, departure)
+                if Reservation.search_count(
+                    Reservation._get_overlap_domain(prop.id, start, stop), limit=1
+                ):
+                    blocked.append(prop.id)
+            domain.append(("id", "not in", blocked))
         return self.search_read(domain, ["ref", "name"])
+
+    def _get_stay_period(self, arrival, departure):
+        self.ensure_one()
+        timezone = ZoneInfo(self.tz or "UTC")
+        start = datetime.combine(arrival, datetime.min.time()) + timedelta(
+            hours=self.checkin
+        )
+        stop = datetime.combine(departure, datetime.min.time()) + timedelta(
+            hours=self.checkout
+        )
+        return tuple(
+            value.replace(tzinfo=timezone, fold=1).astimezone(UTC).replace(tzinfo=None)
+            for value in (start, stop)
+        )

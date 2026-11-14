@@ -28,7 +28,14 @@ class TestAccountMove(AccountTestInvoicingCommon):
         cls.reservation = (
             cls.env["pms.reservation"]
             .sudo()
-            .create({"name": "Test Reservation", "property_id": cls.property.id})
+            .create(
+                {
+                    "name": "Test Reservation",
+                    "property_id": cls.property.id,
+                    "start": "2030-01-01 12:00:00",
+                    "stop": "2030-01-03 12:00:00",
+                }
+            )
         )
 
     def test_compute_reservation_count(self):

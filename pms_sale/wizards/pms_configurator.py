@@ -3,9 +3,11 @@
 from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 
-from odoo import api, fields, models
+from odoo import Command, api, fields, models
 from odoo.exceptions import ValidationError
 from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT
+
+from ..tools import add_nights, stay_nights
 
 
 class PMSConfigurator(models.TransientModel):
@@ -13,16 +15,12 @@ class PMSConfigurator(models.TransientModel):
     _description = "PMS Configurator"
 
     def _get_duration(self, start, stop):
-        """Get the duration value between the 2 given dates."""
-        if not start or not stop:
-            return 0
-        duration = (stop - start).total_seconds() / (24 * 3600)
-        return round(duration, 0)
+        return stay_nights(start, stop, self.property_id.tz or "UTC")
 
-    @api.depends("stop", "start")
+    @api.depends("stop", "start", "property_id.tz")
     def _compute_duration(self):
         for reservation in self.with_context(dont_notify=True):
-            reservation.duration = self._get_duration(
+            reservation.duration = reservation._get_duration(
                 reservation.start, reservation.stop
             )
 
@@ -40,14 +38,17 @@ class PMSConfigurator(models.TransientModel):
         duration_field = self._fields["duration"]
         self.env.remove_to_compute(duration_field, self)
         for reservation in self:
-            date_stop = reservation.start + timedelta(days=reservation.duration)
-            reservation.stop = datetime.combine(date_stop, reservation.stop.time())
+            reservation.stop = add_nights(
+                reservation.start,
+                reservation.duration,
+                reservation.property_id.tz,
+                reservation.stop,
+            )
 
     @api.depends("guest_ids")
     def _compute_no_of_guests(self):
-        self.no_of_guests = 0
-        if self.guest_ids:
-            self.no_of_guests = len(self.guest_ids)
+        for record in self:
+            record.no_of_guests = len(record.guest_ids)
 
     product_id = fields.Many2one("product.product", readonly=True)
     property_id = fields.Many2one("pms.property")
@@ -87,23 +88,27 @@ class PMSConfigurator(models.TransientModel):
         if not self.property_id:
             self.reservation_ids = [(5,)]
             return
-        domain = [
-            ("property_id", "=", self.property_id.id),
-            ("stage_id.is_closed", "=", False),
-        ]
+        Reservation = self.env["pms.reservation"]
         if self.start and self.stop:
-            domain += [("start", "<", self.stop), ("stop", ">", self.start)]
+            domain = Reservation._get_overlap_domain(
+                self.property_id.id, self.start, self.stop, self.existing_reservation_id
+            )
         else:
-            domain += [("stop", ">", fields.Datetime.now())]
-        if self.existing_reservation_id:
-            domain += [("id", "!=", self.existing_reservation_id)]
-        self.reservation_ids = [(6, 0, self.env["pms.reservation"].search(domain).ids)]
+            excluded = self.env.ref("pms_sale.pms_stage_new") | self.env.ref(
+                "pms_sale.pms_stage_cancelled"
+            )
+            domain = [
+                ("property_id", "=", self.property_id.id),
+                ("stage_id", "not in", excluded.ids),
+                ("stop", ">", fields.Datetime.now()),
+            ]
+        self.reservation_ids = [Command.set(Reservation.search(domain).ids)]
 
     @api.onchange("property_id")
     def onchange_property_id(self):
         user_tz = self.env.user.tz or "UTC"
         utc = ZoneInfo("UTC")
-        timezone = ZoneInfo(user_tz)
+        timezone = ZoneInfo(self.property_id.tz or user_tz)
         if (
             self.property_id
             and self.start
@@ -150,16 +155,14 @@ class PMSConfigurator(models.TransientModel):
                 configurator.property_id and configurator.start and configurator.stop
             ):
                 continue
-            domain = [
-                ("property_id", "=", configurator.property_id.id),
-                ("start", "<", configurator.stop),
-                ("stop", ">", configurator.start),
-                ("stage_id.is_closed", "=", False),
-                ("stage_id.is_default", "=", False),
-            ]
-            if configurator.existing_reservation_id:
-                domain += [("id", "!=", configurator.existing_reservation_id)]
-            conflicts = self.env["pms.reservation"].search(domain)
+            Reservation = self.env["pms.reservation"]
+            domain = Reservation._get_overlap_domain(
+                configurator.property_id.id,
+                configurator.start,
+                configurator.stop,
+                configurator.existing_reservation_id,
+            )
+            conflicts = Reservation.search(domain)
             if conflicts:
                 refs = ", ".join(conflicts.mapped("name"))
                 raise ValidationError(
