@@ -9,7 +9,7 @@
                 <field name="product_qty">4.0</field>
                 <field
                     name="date_planned"
-                    eval="(datetime.datetime.now() + datetime.timedelta(days=7)).strftime('%Y-%m-%d %H:%M:%S')"
+                    eval="(datetime.now() + timedelta(days=7)).strftime('%Y-%m-%d %H:%M:%S')"
                 />
                 <field name="price_unit">120.0</field>
                 <field name="pms_property_id" ref="pms_base.demo_property_downtown" />
@@ -26,7 +26,7 @@
                 <field name="product_qty">6.0</field>
                 <field
                     name="date_planned"
-                    eval="(datetime.datetime.now() + datetime.timedelta(days=14)).strftime('%Y-%m-%d %H:%M:%S')"
+                    eval="(datetime.now() + timedelta(days=14)).strftime('%Y-%m-%d %H:%M:%S')"
                 />
                 <field name="price_unit">35.0</field>
                 <field name="pms_property_id" ref="pms_base.demo_property_suburban" />
@@ -37,7 +37,7 @@
                 <field name="product_qty">1.0</field>
                 <field
                     name="date_planned"
-                    eval="(datetime.datetime.now() + datetime.timedelta(days=14)).strftime('%Y-%m-%d %H:%M:%S')"
+                    eval="(datetime.now() + timedelta(days=14)).strftime('%Y-%m-%d %H:%M:%S')"
                 />
                 <field name="price_unit">80.0</field>
                 <field name="pms_property_id" ref="pms_base.demo_property_suburban" />
