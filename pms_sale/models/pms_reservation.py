@@ -1,8 +1,7 @@
 # Copyright (c) 2021 Gray Matter Logic
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 from datetime import datetime, timedelta
-
-import pytz
+from zoneinfo import ZoneInfo
 
 from odoo import api, fields, models
 from odoo.exceptions import ValidationError
@@ -163,8 +162,8 @@ class PmsReservation(models.Model):
     @api.onchange("property_id")
     def onchange_property_id(self):
         user_tz = self.env.user.tz or "UTC"
-        utc = pytz.timezone("UTC")
-        timezone = pytz.timezone(user_tz)
+        utc = ZoneInfo("UTC")
+        timezone = ZoneInfo(user_tz)
         if (
             self.property_id
             and self.start
@@ -177,9 +176,9 @@ class PmsReservation(models.Model):
                 + " "
                 + str(timedelta(hours=self.property_id.checkin))
             )
-            with_timezone = timezone.localize(
-                datetime.strptime(start_datetime, DEFAULT_SERVER_DATETIME_FORMAT)
-            )
+            with_timezone = datetime.strptime(
+                start_datetime, DEFAULT_SERVER_DATETIME_FORMAT
+            ).replace(tzinfo=timezone, fold=1)
             start_datetime = with_timezone.astimezone(utc)
             self.start = start_datetime.strftime(DEFAULT_SERVER_DATETIME_FORMAT)
 
@@ -188,9 +187,9 @@ class PmsReservation(models.Model):
                 + " "
                 + str(timedelta(hours=self.property_id.checkout))
             )
-            with_timezone = timezone.localize(
-                datetime.strptime(end_datetime, DEFAULT_SERVER_DATETIME_FORMAT)
-            )
+            with_timezone = datetime.strptime(
+                end_datetime, DEFAULT_SERVER_DATETIME_FORMAT
+            ).replace(tzinfo=timezone, fold=1)
             end_datetime = with_timezone.astimezone(utc)
             self.stop = end_datetime.strftime(DEFAULT_SERVER_DATETIME_FORMAT)
         else:

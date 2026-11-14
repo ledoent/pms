@@ -3,3 +3,4 @@ from . import test_pms_configurator
 from . import test_pms_property
 from . import test_pms_reservation
 from . import test_sale_reservation
+from . import test_frontend

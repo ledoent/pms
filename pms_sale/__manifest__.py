@@ -4,7 +4,7 @@
 {
     "name": "PMS - Sale",
     "summary": "Manage reservations",
-    "version": "19.0.1.0.1",
+    "version": "20.0.1.0.0",
     "development_status": "Beta",
     "category": "Generic Modules/Property Management System",
     "website": "https://github.com/OCA/pms",
@@ -19,7 +19,6 @@
         "demo/pms_reservation.xml",
     ],
     "data": [
-        "security/ir.model.access.csv",
         "data/ir_sequence.xml",
         "data/product_data.xml",
         "data/pms_stage.xml",
@@ -34,12 +33,15 @@
         "views/pms_team_views.xml",
         "views/menu.xml",
         "views/account_move.xml",
+        "security/ir.access.csv",
     ],
     "assets": {
+        "web.assets_unit_tests": ["pms_sale/static/tests/**/*.test.js"],
         "web.assets_backend": [
             "pms_sale/static/src/js/pms_configurator_controller.esm.js",
             "pms_sale/static/src/js/pms_sale_product_field.esm.js",
             "pms_sale/static/src/js/timeline.esm.js",
+            "pms_sale/static/src/xml/timeline.xml",
         ],
     },
 }
