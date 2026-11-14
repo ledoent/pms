@@ -10,8 +10,6 @@
     </function>
 
     <record id="base.res_partner_portal_public_rule" model="ir.access">
-        <field
-            name="domain"
-        >['|', ('id', 'child_of', user.commercial_partner_id.id), ('is_property', '=', True)]</field>
+        <field name="domain">[('id', 'child_of', user.commercial_partner_id.id)]</field>
     </record>
 </odoo>
