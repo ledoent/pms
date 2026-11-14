@@ -13,5 +13,5 @@ class PmsRoomType(models.Model):
     name = fields.Char(required=True, translate=True)
     sequence = fields.Integer(default=0)
     icon = fields.Char(
-        string="Website Icon", help="Set Icon name from https://fontawesome.com/"
+        string="Website Icon", help="Set an Odoo Material Symbols icon name"
     )

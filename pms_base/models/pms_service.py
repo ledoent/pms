@@ -33,5 +33,5 @@ class PmsService(models.Model):
         required=True, comodel_name="res.partner", ondelete="restrict"
     )
     icon = fields.Char(
-        string="Website Icon", help="Set Icon name from https://fontawesome.com/"
+        string="Website Icon", help="Set an Odoo Material Symbols icon name"
     )

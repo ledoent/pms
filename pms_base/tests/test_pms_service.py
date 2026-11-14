@@ -30,10 +30,10 @@ class TestPmsService(PmsBaseCase):
 
     def test_create_service(self):
         """A service can be created with required fields."""
-        service = self._make_service(icon="fa-wifi")
+        service = self._make_service(icon="wifi")
         self.assertEqual(service.property_id, self.property)
         self.assertEqual(service.vendor_id, self.vendor)
-        self.assertEqual(service.icon, "fa-wifi")
+        self.assertEqual(service.icon, "wifi")
         self.assertTrue(service.active)
 
     def test_vendor_required(self):
@@ -82,13 +82,13 @@ class TestPmsService(PmsBaseCase):
         product2 = self.env["product.product"].create(
             {"name": "Internet", "type": "service"}
         )
-        s1 = self._make_service(icon="fa-home")
+        s1 = self._make_service(icon="home")
         s2 = self.env["pms.service"].create(
             {
                 "name": product2.id,
                 "property_id": self.property.id,
                 "vendor_id": self.vendor.id,
-                "icon": "fa-wifi",
+                "icon": "wifi",
             }
         )
         self.assertIn(s1, self.property.service_ids)

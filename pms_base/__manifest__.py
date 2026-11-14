@@ -5,7 +5,7 @@
 {
     "name": "Property Management System",
     "summary": "Manage properties",
-    "version": "19.0.1.0.0",
+    "version": "20.0.1.0.0",
     "development_status": "Beta",
     "category": "Generic Modules/Property Management System",
     "website": "https://github.com/OCA/pms",
@@ -25,8 +25,6 @@
     ],
     "data": [
         "security/res_groups.xml",
-        "security/ir.model.access.csv",
-        "security/ir_rule.xml",
         "data/pms_stage.xml",
         "data/pms_team.xml",
         "data/pms_amenity_type.xml",
@@ -43,5 +41,6 @@
         "views/pms_team.xml",
         "views/menu.xml",
         "views/res_partner_view.xml",
+        "security/ir.access.csv",
     ],
 }
