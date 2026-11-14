@@ -112,7 +112,7 @@ class TestPropertyBooking(HttpCase):
         reservation = self.env["pms.reservation"].search(
             [
                 ("property_id", "=", self.property.id),
-                ("start", "=", self.dates_cart[0]),
+                ("start", "=", datetime.strptime(self.dates_cart[0], "%Y-%m-%d")),
             ],
             limit=1,
         )

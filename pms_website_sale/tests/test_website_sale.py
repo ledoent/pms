@@ -11,7 +11,7 @@ class TestWebsiteSaleControllers(HttpCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
-        cls.website = cls.env["website"].get_current_website()
+        cls.website = cls.env.ref("base.default_website")
         cls.product = cls.env.ref("pms_sale.product_product_reservation")
         cls.partner_owner = cls.env["res.partner"].create({"name": "Website Owner"})
         cls.property = cls.env["pms.property"].create(

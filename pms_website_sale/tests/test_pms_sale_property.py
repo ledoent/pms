@@ -11,7 +11,7 @@ class TestWebsiteSaleCartRecovery(HttpCaseWithUserPortal):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
-        cls.website = cls.env["website"].get_current_website()
+        cls.website = cls.env.ref("base.default_website")
         cls.partner_owner = cls.env["res.partner"].create({"name": "Tour Owner"})
 
     def _create_published_property(self, name):
@@ -27,7 +27,7 @@ class TestWebsiteSaleCartRecovery(HttpCaseWithUserPortal):
         )
 
     def test_01_property_page(self):
-        self.start_tour("/", "property_load_homepage", login="portal")
+        self.start_tour("/property", "property_load_homepage", login="portal")
         for idx in range(1, 5):
             self._create_published_property(f"Property {idx}")
-        self.start_tour("/", "property_search_homepage")
+        self.start_tour("/property", "property_search_homepage")

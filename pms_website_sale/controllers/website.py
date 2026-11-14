@@ -152,9 +152,9 @@ class WebsiteSale(WebsiteSale):
             except ValueError:
                 ppg = False
         if not ppg:
-            ppg = request.env["website"].get_current_website().shop_ppg or 20
+            ppg = request.env.website.shop_ppg or 20
 
-        ppr = request.env["website"].get_current_website().shop_ppr or 4
+        ppr = request.env.website.shop_ppr or 4
 
         domain = self._get_property_search_domain(
             search=search, category=category, guest=guest_select, args=post
@@ -187,7 +187,7 @@ class WebsiteSale(WebsiteSale):
             url = f"/shop/category/{request.env['ir.http']._slug(category)}"
 
         product_count = len(search_property)
-        pager = request.website.pager(
+        pager = request.env.website.pager(
             url=url, total=product_count, page=page, step=ppg, scope=7, url_args=post
         )
         offset = pager["offset"]
@@ -336,7 +336,7 @@ class PmsWebsiteSale(PmsPropertyWebsite):
             )
         )
         duration = (end - start).days
-        order = request.cart or request.website._create_cart()
+        order = request.cart or request.env.website._create_cart()
         request.env["sale.order.line"].sudo().create(
             {
                 "order_id": order.id,

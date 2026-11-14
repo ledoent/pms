@@ -3,7 +3,7 @@
 {
     "name": "PMS - Website Sale",
     "summary": "Allow online booking of your properties",
-    "version": "19.0.1.0.0",
+    "version": "20.0.1.0.0",
     "development_status": "Beta",
     "category": "Generic Modules/Property Management System",
     "website": "https://github.com/OCA/pms",
@@ -16,9 +16,9 @@
     ],
     "data": [
         "data/website_menu.xml",
-        "security/ir.model.access.csv",
         "security/pms_website_sale.xml",
         "views/templates.xml",
+        "security/ir.access.csv",
     ],
     "assets": {
         "web.assets_frontend": [
