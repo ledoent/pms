@@ -42,12 +42,19 @@
                         groups="pms_base.group_pms_manager"
                         invisible="stage_id != %(pms_sale.pms_stage_checked_in)d"
                     />
+                    <button
+                        id="action_cancel"
+                        name="action_cancel"
+                        string="Cancel"
+                        type="object"
+                        groups="pms_base.group_pms_manager"
+                        invisible="stage_id in (%(pms_sale.pms_stage_cancelled)d, %(pms_sale.pms_stage_checked_out)d)"
+                    />
                     <field
                         name="stage_id"
                         widget="statusbar"
                         options="{'fold_field': 'fold'}"
-                        domain="[('stage_type', '=', 'reservation'),
-                                    ('team_ids', 'in', (team_id, False))]"
+                        domain="[('stage_type', '=', 'reservation'),                                     ('team_ids', 'in', (team_id, False))]"
                     />
                 </header>
                 <sheet string="Reservation">
@@ -234,7 +241,7 @@
             <kanban default_group_by="stage_id" class="o_kanban_small_column">
                 <field
                     name="stage_id"
-                    options='{"group_by_tooltip": {"description": "Description"}}'
+                    options="{&quot;group_by_tooltip&quot;: {&quot;description&quot;: &quot;Description&quot;}}"
                 />
                 <field name="name" />
                 <field name="priority" />
