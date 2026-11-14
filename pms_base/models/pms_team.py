@@ -29,7 +29,6 @@ class PMSTeam(models.Model):
     sequence = fields.Integer(default=1, help="Used to sort teams. Lower is better.")
     company_id = fields.Many2one(
         "res.company",
-        string="Company",
         required=False,
         index=True,
         default=lambda self: self.env.company.id,

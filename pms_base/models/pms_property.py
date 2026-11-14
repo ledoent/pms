@@ -24,7 +24,6 @@ class PmsProperty(models.Model):
         ondelete="cascade",
     )
     owner_id = fields.Many2one(
-        string="Owner",
         help="The owner of the property.",
         comodel_name="res.partner",
         required=True,
@@ -33,10 +32,8 @@ class PmsProperty(models.Model):
     property_child_ids = fields.One2many(
         "pms.property", "parent_id", string="Children Property"
     )
-    company_id = fields.Many2one(string="Company", comodel_name="res.company")
-    team_id = fields.Many2one(
-        "pms.team", string="Team", default=lambda self: self._default_team_id()
-    )
+    company_id = fields.Many2one(comodel_name="res.company")
+    team_id = fields.Many2one("pms.team", default=lambda self: self._default_team_id())
     room_ids = fields.One2many(
         string="Rooms",
         help="List of rooms in the property.",
