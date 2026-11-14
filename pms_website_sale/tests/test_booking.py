@@ -19,6 +19,7 @@ class TestPropertyBooking(HttpCase):
                 "owner_id": cls.partner_owner.id,
                 "no_of_guests": 4,
                 "min_nights": 1,
+                "tz": "UTC",
                 "max_nights": 30,
                 "website_published": True,
             }
@@ -116,7 +117,14 @@ class TestPropertyBooking(HttpCase):
             ],
             limit=1,
         )
-        self.assertTrue(reservation, "Expected pms.reservation to be created")
+        self.assertTrue(
+            reservation,
+            repr(
+                self.env["pms.reservation"]
+                .search([("property_id", "=", self.property.id)])
+                .read(["start", "stop"])
+            ),
+        )
         self.assertTrue(reservation.sale_order_id)
         self.assertEqual(reservation.property_id, self.property)
 
@@ -135,3 +143,99 @@ class TestPropertyBooking(HttpCase):
         result = resp.json()["result"]
         self.assertIn("redirect", result)
         self.assertIn("/web/login", result["redirect"])
+
+    def _payload(self, **values):
+        return {
+            "date_start": self.dates_cart[0],
+            "date_end": self.dates_cart[1],
+            "reservation_type_id": self.reservation_type.id,
+            "guests": [{"name": "Review guest"}],
+            **values,
+        }
+
+    def _book(self, **values):
+        self.authenticate("admin", "admin")
+        data = self._jsonrpc(
+            f"/property/{self.property.id}/add_to_cart", self._payload(**values)
+        ).json()
+        self.assertIn("result", data, data)
+        return data["result"]
+
+    def test_forged_guest_fields_are_rejected_without_side_effects(self):
+        before = self.env["pms.reservation"].search_count([])
+        result = self._book(
+            guests=[{"name": "Forged guest", "partner_id": self.partner_owner.id}]
+        )
+        self.assertIn("error", result)
+        self.assertEqual(self.env["pms.reservation"].search_count([]), before)
+
+    def test_unrelated_reservation_type_is_rejected(self):
+        other = self.property.copy({"name": "Unrelated property"})
+        rate = self.reservation_type.copy({"property_id": other.id})
+        self.assertIn("error", self._book(reservation_type_id=rate.id))
+
+    def test_reversed_dates_are_rejected(self):
+        self.assertIn(
+            "error",
+            self._book(date_start=self.dates_cart[1], date_end=self.dates_cart[0]),
+        )
+
+    def test_malformed_guest_input_returns_validation_error(self):
+        self.assertIn("error", self._book(guests=["forged"]))
+
+    def test_excess_capacity_is_rejected(self):
+        self.assertIn(
+            "error", self._book(guests=[{"name": f"Guest {i}"} for i in range(5)])
+        )
+
+    def test_unpublished_property_is_not_available(self):
+        self.property.is_published = False
+        self.authenticate(None, None)
+        result = self._jsonrpc(
+            f"/property/{self.property.id}/check_availability", self._payload()
+        ).json()["result"]
+        self.assertFalse(result["available"])
+        self.assertIn("error", result)
+
+    def test_confirmed_overlap_cannot_be_added_to_cart(self):
+        self.env["pms.reservation"].create(
+            {
+                "property_id": self.property.id,
+                "start": self.dates_cart[0],
+                "stop": self.dates_cart[1],
+                "stage_id": self.env.ref("pms_sale.pms_stage_confirmed").id,
+            }
+        )
+        self.assertIn("error", self._book())
+
+    def test_back_to_back_availability(self):
+        self.env["pms.reservation"].create(
+            {
+                "property_id": self.property.id,
+                "start": (
+                    datetime.strptime(self.dates_cart[0], "%Y-%m-%d")
+                    - timedelta(days=2)
+                ),
+                "stop": self.dates_cart[0],
+                "stage_id": self.env.ref("pms_sale.pms_stage_confirmed").id,
+            }
+        )
+        self.authenticate(None, None)
+        result = self._jsonrpc(
+            f"/property/{self.property.id}/check_availability", self._payload()
+        ).json()["result"]
+        self.assertTrue(result["available"])
+
+    def test_booking_uses_property_timezone_and_rate(self):
+        self.property.write({"tz": "America/New_York", "checkin": 15, "checkout": 11})
+        self.assertEqual(
+            self._book(date_start="2030-03-09", date_end="2030-03-11").get("redirect"),
+            "/shop/cart",
+        )
+        reservation = self.env["pms.reservation"].search(
+            [("property_id", "=", self.property.id)], order="id desc", limit=1
+        )
+        self.assertEqual(reservation.start, datetime(2030, 3, 9, 20))
+        self.assertEqual(reservation.stop, datetime(2030, 3, 11, 15))
+        self.assertEqual(reservation.duration, 2)
+        self.assertEqual(reservation.reservation_type_id, self.reservation_type)
