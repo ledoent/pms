@@ -1,0 +1,6 @@
+# DO NOT MERGE -- immutable sibling/dependency pins for fork evaluation.
+odoo-addon-pms_base @ git+https://github.com/ledoent/pms.git@7c6889c2a0472925d4ec895773dae9e1816dbd6d#subdirectory=pms_base
+odoo-addon-pms_account @ git+https://github.com/ledoent/pms.git@e0a00f48c288cb6d3bb5e2a3c14dd797399428bf#subdirectory=pms_account
+odoo-addon-account_asset_management @ git+https://github.com/ledoent/account-financial-tools.git@0c8ec1732b1dd2d03a5b1c48ca9e7e4d030d312b#subdirectory=account_asset_management
+odoo-addon-report_xlsx_helper @ git+https://github.com/ledoent/reporting-engine.git@f6a0a6fbe514f3fa8ce0e3703da1dccff91c4c45#subdirectory=report_xlsx_helper
+odoo-addon-report_xlsx @ git+https://github.com/ledoent/reporting-engine.git@c8dbdafc9b0f46be551e6ac135287b4ce63937ad#subdirectory=report_xlsx
