@@ -128,17 +128,9 @@ class TestPmsWebsiteController(PmsBaseCase):
     @contextmanager
     def _mock_request(self, website_module, render=False):
         mock_request = MagicMock()
-        mock_request.env = self.env
-        mock_website = MagicMock()
-        mock_website.website_domain.return_value = [
-            ("website_id", "in", (False, self.website.id))
-        ]
-        mock_website.pager.return_value = {
-            "page_count": 1,
-            "offset": 0,
-            "page": {"num": 0},
-        }
-        mock_request.website = mock_website
+        mock_request.env = self.env(
+            context=dict(self.env.context, website_id=self.website.id)
+        )
         if render:
             mock_response = MagicMock()
             mock_response.status_code = 200
@@ -439,7 +431,7 @@ class TestPmsWebsiteHttp(HttpCase):
         super().setUpClass()
         cls.owner = cls.env["res.partner"].create({"name": "Test Owner"})
         cls.team = cls.env.ref("pms_base.pms_team_default")
-        cls.website = cls.env.ref("website.default_website")
+        cls.website = cls.env.ref("base.default_website")
         cls.vendor = cls.env["res.partner"].create({"name": "Test Vendor"})
         cls.service_product = cls.env["product.product"].create(
             {"name": "Internet", "type": "service"}
@@ -540,7 +532,7 @@ class TestPmsWebsiteHttp(HttpCase):
                 "name": self.service_product.id,
                 "property_id": property_rec.id,
                 "vendor_id": self.vendor.id,
-                "icon": "fa-wifi",
+                "icon": "wifi",
             }
         )
         self.env["pms.room"].create(
@@ -571,7 +563,7 @@ class TestPmsWebsiteHttp(HttpCase):
                 "name": self.service_product.id,
                 "property_id": property_rec.id,
                 "vendor_id": self.vendor.id,
-                "icon": "fa-wifi",
+                "icon": "wifi",
             }
         )
         response = self.url_open(property_rec.website_url)

@@ -10,6 +10,11 @@ class PmsProperty(models.Model):
     _name = "pms.property"
     _inherit = ["pms.property", "website.published.mixin", "website.multi.mixin"]
 
+    def can_access_from_current_website(self):
+        self.ensure_one()
+        website = self.env.website or self.env.ref("base.default_website")
+        return not self.website_id or self.website_id == website
+
     def _compute_website_url(self):
         for pms_property in self:
             if pms_property.id:
