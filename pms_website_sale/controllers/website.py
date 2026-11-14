@@ -2,7 +2,8 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 from datetime import datetime
 
-from odoo import http
+from odoo import Command, http
+from odoo.exceptions import ValidationError
 from odoo.http import request
 
 from odoo.addons.pms_website.controllers.website import Website as PmsPropertyWebsite
@@ -76,7 +77,8 @@ class PropertyTableCompute:
 
 class WebsiteSale(WebsiteSale):
     def _get_property_search_domain(self, search, category, guest, args):
-        domain = []
+        domain = [("is_published", "=", True)] + request.env.website.website_domain()
+        domain.append(("company_id", "in", [False, request.env.website.company_id.id]))
         if search:
             domain += [("city", "ilike", search)]
         if guest:
@@ -89,22 +91,15 @@ class WebsiteSale(WebsiteSale):
             end = date_range[1].strip() + " 23:59:59"
             start = datetime.strptime(start, "%m/%d/%Y %H:%M:%S")
             end = datetime.strptime(end, "%m/%d/%Y %H:%M:%S")
-            reservation_ids = (
-                request.env["pms.reservation"]
-                .sudo()
-                .search(
-                    [
-                        ("stop", "<=", end),
-                        "|",
-                        "|",
-                        ("start", ">=", start),
-                        ("start", ">=", end),
-                        ("stop", ">=", start),
-                    ]
-                )
-            )
-            property_ids = reservation_ids.mapped("property_id")
-            domain += [("id", "not in", property_ids.ids)]
+            Reservation = request.env["pms.reservation"].sudo()
+            blocked = []
+            for prop in request.env["pms.property"].search(domain):
+                checkin, checkout = prop._get_stay_period(start.date(), end.date())
+                if Reservation.search_count(
+                    Reservation._get_overlap_domain(prop.id, checkin, checkout), limit=1
+                ):
+                    blocked.append(prop.id)
+            domain += [("id", "not in", blocked)]
         domain += [("property_child_ids", "=", False)]
         return domain
 
@@ -240,6 +235,36 @@ class PmsWebsiteSale(PmsPropertyWebsite):
         values["is_public_user"] = request.env.user._is_public()
         return values
 
+    def _get_booking_property(self, property_id):
+        return (
+            request.env["pms.property"]
+            .sudo()
+            .search(
+                [
+                    ("id", "=", property_id),
+                    ("is_published", "=", True),
+                    ("website_id", "in", [False, request.env.website.id]),
+                    ("company_id", "in", [False, request.env.website.company_id.id]),
+                ],
+                limit=1,
+            )
+        )
+
+    def _get_booking_dates(self, prop, date_start, date_end):
+        if not isinstance(date_start, str) or not isinstance(date_end, str):
+            raise ValueError("Invalid dates")
+        arrival = datetime.strptime(date_start, "%Y-%m-%d")
+        departure = datetime.strptime(date_end, "%Y-%m-%d")
+        nights = (departure - arrival).days
+        if (
+            nights <= 0
+            or (prop.min_nights and nights < prop.min_nights)
+            or (prop.max_nights and nights > prop.max_nights)
+        ):
+            raise ValueError("The stay does not meet the property's night limits")
+        start, stop = prop._get_stay_period(arrival.date(), departure.date())
+        return start, stop, nights
+
     @http.route(
         ["/property/<int:property_id>/check_availability"],
         type="jsonrpc",
@@ -248,31 +273,21 @@ class PmsWebsiteSale(PmsPropertyWebsite):
         methods=["POST"],
     )
     def check_availability(self, property_id, date_start=None, date_end=None, **kwargs):
+        prop = self._get_booking_property(property_id)
+        if not prop:
+            return {"available": False, "error": "Property not found"}
         if not date_start or not date_end:
             return {"available": False, "error": "Missing dates"}
         try:
-            start = datetime.strptime(date_start, "%Y-%m-%d")
-            end = datetime.strptime(date_end, "%Y-%m-%d")
-        except ValueError:
+            start, stop, _nights = self._get_booking_dates(prop, date_start, date_end)
+        except (ValueError, TypeError):
             return {"available": False, "error": "Invalid dates"}
-        stage_new = request.env.ref("pms_sale.pms_stage_new", raise_if_not_found=False)
-        stage_cancelled = request.env.ref(
-            "pms_sale.pms_stage_cancelled", raise_if_not_found=False
-        )
-        excluded_stage_ids = [s.id for s in [stage_new, stage_cancelled] if s]
-        conflicting = (
-            request.env["pms.reservation"]
-            .sudo()
-            .search(
-                [
-                    ("property_id", "=", property_id),
-                    ("stage_id", "not in", excluded_stage_ids),
-                    ("start", "<=", end),
-                    ("stop", ">=", start),
-                ]
+        Reservation = request.env["pms.reservation"].sudo()
+        return {
+            "available": not Reservation.search_count(
+                Reservation._get_overlap_domain(prop.id, start, stop), limit=1
             )
-        )
-        return {"available": not bool(conflicting)}
+        }
 
     @http.route(
         ["/property/<int:property_id>/add_to_cart"],
@@ -290,60 +305,80 @@ class PmsWebsiteSale(PmsPropertyWebsite):
         guests=None,
         **kwargs,
     ):
-        pms_property = request.env["pms.property"].sudo().browse(property_id)
-        if (
-            not pms_property.exists()
-            or not pms_property.can_access_from_current_website()
-        ):
+        prop = self._get_booking_property(property_id)
+        if not prop:
             return {"error": "Property not found", "redirect": "/property"}
-
         if request.env.user._is_public():
             return {
                 "error": "Login required",
-                "redirect": f"/web/login?redirect={pms_property.website_url}",
+                "redirect": f"/web/login?redirect={prop.website_url}",
             }
-
         try:
-            start = datetime.strptime(date_start or "", "%Y-%m-%d")
-            end = datetime.strptime(date_end or "", "%Y-%m-%d")
-        except ValueError:
+            start, stop, nights = self._get_booking_dates(prop, date_start, date_end)
+            if isinstance(reservation_type_id, bool) or not isinstance(
+                reservation_type_id, (int, str)
+            ):
+                raise ValueError("Invalid reservation type")
+            type_id = int(reservation_type_id)
+        except (ValueError, TypeError):
             return {"error": "Invalid dates"}
-
-        reservation_type = (
+        rate = (
             request.env["pms.property.reservation"]
             .sudo()
-            .browse(int(reservation_type_id or 0))
-        )
-        if not reservation_type.exists():
-            return {"error": "Invalid reservation type"}
-
-        guests = [g for g in (guests or []) if g.get("name", "").strip()]
-        if not guests:
-            return {"error": "At least one guest is required"}
-
-        reservation = (
-            request.env["pms.reservation"]
-            .sudo()
-            .create(
-                {
-                    "property_id": pms_property.id,
-                    "start": start,
-                    "stop": end,
-                    "no_of_guests": len(guests),
-                    "guest_ids": [(0, 0, g) for g in guests],
-                    "partner_id": request.env.user.partner_id.id,
-                }
+            .search(
+                [
+                    ("id", "=", type_id),
+                    ("property_id", "in", [False, prop.id]),
+                    ("product_id.reservation_ok", "=", True),
+                ],
+                limit=1,
             )
         )
-        duration = (end - start).days
-        order = request.cart or request.env.website._create_cart()
-        request.env["sale.order.line"].sudo().create(
-            {
-                "order_id": order.id,
-                "product_id": reservation_type.product_id.id,
-                "product_uom_qty": duration,
-                "price_unit": reservation_type.price,
-                "pms_reservation_id": reservation.id,
-            }
-        )
+        if not rate:
+            return {"error": "Invalid reservation type"}
+        if not isinstance(guests, list) or not 1 <= len(guests) <= prop.no_of_guests:
+            return {"error": "The guest count exceeds this property's capacity"}
+        clean_guests = []
+        for guest in guests:
+            if not isinstance(guest, dict) or set(guest) - {"name", "phone", "email"}:
+                return {"error": "Invalid guest details"}
+            if not isinstance(guest.get("name"), str) or not guest["name"].strip():
+                return {"error": "At least one guest is required"}
+            if any(
+                not isinstance(value, str) or len(value) > 256
+                for value in guest.values()
+            ):
+                return {"error": "Invalid guest details"}
+            clean_guests.append({key: value.strip() for key, value in guest.items()})
+        Reservation = request.env["pms.reservation"].sudo()
+        if Reservation.search_count(
+            Reservation._get_overlap_domain(prop.id, start, stop), limit=1
+        ):
+            return {"error": "Property is unavailable for these dates"}
+        try:
+            with request.env.cr.savepoint():
+                reservation = Reservation.create(
+                    {
+                        "property_id": prop.id,
+                        "reservation_type_id": rate.id,
+                        "start": start,
+                        "stop": stop,
+                        "company_id": prop.company_id.id
+                        or request.env.website.company_id.id,
+                        "guest_ids": [Command.create(guest) for guest in clean_guests],
+                        "partner_id": request.env.user.partner_id.id,
+                    }
+                )
+                order = request.cart or request.env.website._create_cart()
+                request.env["sale.order.line"].sudo().create(
+                    {
+                        "order_id": order.id,
+                        "product_id": rate.product_id.id,
+                        "product_uom_qty": nights,
+                        "price_unit": rate.price,
+                        "pms_reservation_id": reservation.id,
+                    }
+                )
+        except ValidationError:
+            return {"error": "The booking could not be created"}
         return {"redirect": "/shop/cart"}
