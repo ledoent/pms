@@ -1,0 +1,110 @@
+{
+  "schema": 1,
+  "source_19_sha": "50919859db16540d13dd90bc1bd89c8a30ddf4c3",
+  "upstream_20_scaffold_sha": "e611cc04820b0c8abd6e2dc7f4dc82c531b791d2",
+  "migrations": {
+    "pms_base": {
+      "repo": "ledoent/pms",
+      "branch": "20.0-mig-pms_base",
+      "sha": "7c6889c2a0472925d4ec895773dae9e1816dbd6d"
+    },
+    "pms_account": {
+      "repo": "ledoent/pms",
+      "branch": "20.0-mig-pms_account",
+      "sha": "e0a00f48c288cb6d3bb5e2a3c14dd797399428bf"
+    },
+    "pms_sale": {
+      "repo": "ledoent/pms",
+      "branch": "20.0-mig-pms_sale",
+      "sha": "146d4f5b4f5cfaa4330ae72e5a76c81869c43657"
+    },
+    "pms_project": {
+      "repo": "ledoent/pms",
+      "branch": "20.0-mig-pms_project",
+      "sha": "2e28ce1408035cf70912e1d8a762ecf9e3eb7e01"
+    },
+    "pms_crm": {
+      "repo": "ledoent/pms",
+      "branch": "20.0-mig-pms_crm",
+      "sha": "3691d3813cb0cb90b880dc89faf5361109183b75"
+    },
+    "pms_stock": {
+      "repo": "ledoent/pms",
+      "branch": "20.0-mig-pms_stock",
+      "sha": "1570baf32f10049ca924fd7accdbcb1f7d74b0cb"
+    },
+    "pms_purchase": {
+      "repo": "ledoent/pms",
+      "branch": "20.0-mig-pms_purchase",
+      "sha": "73fb5a58252b72fb0fb7ee065e2ab923458c1c7f"
+    },
+    "pms_contract": {
+      "repo": "ledoent/pms",
+      "branch": "20.0-mig-pms_contract",
+      "sha": "aa38bccf22f78b5d125c2480d914a52465426f56"
+    },
+    "pms_account_asset": {
+      "repo": "ledoent/pms",
+      "branch": "20.0-mig-pms_account_asset",
+      "sha": "610db624e7de9a9941b4aab179eaa865d8501129"
+    },
+    "pms_website": {
+      "repo": "ledoent/pms",
+      "branch": "20.0-mig-pms_website",
+      "sha": "1cb10458ec61e0e1ec6cfd97a490c033c860686c"
+    },
+    "pms_website_sale": {
+      "repo": "ledoent/pms",
+      "branch": "20.0-mig-pms_website_sale",
+      "sha": "ed080d96b5502113016180b73b1cf5cbd0fcea0c"
+    }
+  },
+  "corrections": {
+    "pms_sale": {
+      "repo": "ledoent/pms",
+      "branch": "20.0-fix-booking-boundaries",
+      "base": "20.0-fix-stay-length",
+      "sha": "ebe74a48dd2cb5f20fc6ef0af360a6a89596579e"
+    },
+    "pms_website": {
+      "repo": "ledoent/pms",
+      "branch": "20.0-fix-website-access",
+      "base": "20.0-mig-pms_website",
+      "sha": "147be9c2ea75bfb302f007e09833c7ca895ebdfd"
+    },
+    "pms_website_sale": {
+      "repo": "ledoent/pms",
+      "branch": "20.0-fix-website-booking",
+      "base": "20.0-mig-pms_website_sale",
+      "sha": "a117c49797e4eabc075cb11e22d189b128cabde5"
+    }
+  },
+  "dependencies": {
+    "contract": {
+      "sha": "c276713f3fbfac27b4e498cd07c1a38f783935a2",
+      "repo": "Borruso/contract"
+    },
+    "account_asset_management": {
+      "sha": "0c8ec1732b1dd2d03a5b1c48ca9e7e4d030d312b",
+      "repo": "ledoent/account-financial-tools"
+    },
+    "report_xlsx": {
+      "sha": "c8dbdafc9b0f46be551e6ac135287b4ce63937ad",
+      "repo": "ledoent/reporting-engine"
+    },
+    "report_xlsx_helper": {
+      "sha": "f6a0a6fbe514f3fa8ce0e3703da1dccff91c4c45",
+      "repo": "ledoent/reporting-engine"
+    },
+    "web_timeline": {
+      "wheel": "odoo_addon_web_timeline-20.0.1.0.2.3-py3-none-any.whl",
+      "sha256": "1db7988fc96696e42dc526e8da28f4d85d9853141f416750aa16a36030e87bf8",
+      "package": "odoo-addon-web-timeline",
+      "version": "20.0.1.0.2.3"
+    }
+  },
+  "images": {
+    "odoo": "ghcr.io/oca/oca-ci/py3.12-odoo20.0@sha256:778e8dd08a7b30fb0ce2633859c73d96ac9ac3ecee31d4c0b3a4e389f012cc92",
+    "postgres": "postgres:17-alpine@sha256:b0f9560a2de083e2cc7382e75f808c7381a32852a7ec49117deedb300e552b24"
+  }
+}

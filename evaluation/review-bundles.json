@@ -1,0 +1,1744 @@
+[
+  {
+    "candidate": "booking-boundaries",
+    "public_index": "https://storage.googleapis.com/ledo-pr-assets/oca-reviews/pms-pr13/index.html",
+    "complete": {
+      "generated": "2026-11-15T01:29:41Z",
+      "complete": true,
+      "phases": {
+        "phase1": {
+          "status": "ok",
+          "facts": [
+            "skill_started",
+            "input",
+            "repo",
+            "pr_num",
+            "worktree",
+            "kind",
+            "addons_touched",
+            "new_modules",
+            "module_readme_captured",
+            "fetch_status"
+          ]
+        },
+        "phase1.5": {
+          "status": "present",
+          "facts": [
+            "runboat_flavor",
+            "runboat_api",
+            "runboat"
+          ]
+        },
+        "phase0": {
+          "status": "ok",
+          "facts": [
+            "threads_total",
+            "comments_total",
+            "issue_comments_total"
+          ]
+        },
+        "phase2": {
+          "status": "ok",
+          "facts": [
+            "phase_started",
+            "target_branch",
+            "series",
+            "acl_csv_expected",
+            "ui_files_count",
+            "ui_pct",
+            "ui_touched",
+            "pr_title",
+            "branch_name",
+            "is_mig_pr",
+            "ai_policy_exit",
+            "owl_hoot_detectors_ran",
+            "gotcha_count",
+            "callgraph_lines",
+            "params_lines",
+            "verdict"
+          ]
+        },
+        "phase3": {
+          "status": "ok",
+          "facts": [
+            "series",
+            "odoo_service",
+            "db_service",
+            "phase_started",
+            "db",
+            "erp_src",
+            "src_strategy",
+            "image_has_coverage",
+            "image_has_otel",
+            "touched_paths",
+            "clean_core_template",
+            "primary_module",
+            "browser_test_replacement",
+            "otel_skipped",
+            "coverage_captured",
+            "coverage_bytes",
+            "install_exit",
+            "tests_failed_count",
+            "install",
+            "verified_nonzero_tests",
+            "final_candidate_sha"
+          ]
+        },
+        "phase4": {
+          "status": "ok",
+          "facts": [
+            "screenshots_taken",
+            "ui_walk",
+            "ui_scope",
+            "generic_ui_helper"
+          ]
+        },
+        "phase4.5": {
+          "status": "ok",
+          "facts": [
+            "claim_verifier",
+            "threads_unresolved",
+            "changed_methods_total",
+            "changed_methods_covered",
+            "changed_methods_uncovered",
+            "scope_evidence"
+          ]
+        },
+        "phase5.7": {
+          "status": "ok",
+          "facts": [
+            "oo-emit-result.jsonl"
+          ]
+        }
+      },
+      "missing_artifacts": [],
+      "warnings": []
+    }
+  },
+  {
+    "candidate": "pms_account",
+    "public_index": "https://storage.googleapis.com/ledo-pr-assets/oca-reviews/pms-pr3/index.html",
+    "complete": {
+      "generated": "2026-11-15T01:29:51Z",
+      "complete": true,
+      "phases": {
+        "phase1": {
+          "status": "ok",
+          "facts": [
+            "skill_started",
+            "input",
+            "repo",
+            "pr_num",
+            "worktree",
+            "kind",
+            "addons_touched",
+            "new_modules",
+            "module_readme_captured",
+            "fetch_status",
+            "final_candidate_sha"
+          ]
+        },
+        "phase1.5": {
+          "status": "present",
+          "facts": [
+            "runboat_flavor",
+            "runboat_api",
+            "runboat"
+          ]
+        },
+        "phase0": {
+          "status": "ok",
+          "facts": [
+            "threads_total",
+            "comments_total",
+            "issue_comments_total"
+          ]
+        },
+        "phase2": {
+          "status": "ok",
+          "facts": [
+            "phase_started",
+            "target_branch",
+            "series",
+            "acl_csv_expected",
+            "ui_files_count",
+            "ui_pct",
+            "ui_touched",
+            "pr_title",
+            "branch_name",
+            "is_mig_pr",
+            "ai_policy_exit",
+            "owl_hoot_detectors_ran",
+            "gotcha_count",
+            "callgraph_lines",
+            "params_lines",
+            "verdict"
+          ]
+        },
+        "phase3": {
+          "status": "ok",
+          "facts": [
+            "series",
+            "odoo_service",
+            "db_service",
+            "phase_started",
+            "db",
+            "erp_src",
+            "src_strategy",
+            "image_has_coverage",
+            "image_has_otel",
+            "touched_paths",
+            "primary_module",
+            "otel_skipped",
+            "coverage_captured",
+            "coverage_bytes",
+            "install_exit",
+            "tests_failed_count",
+            "install",
+            "clean_core_template",
+            "browser_test_replacement",
+            "verified_nonzero_tests",
+            "final_candidate_sha"
+          ]
+        },
+        "phase4": {
+          "status": "ok",
+          "facts": [
+            "screenshots_taken",
+            "ui_walk",
+            "ui_scope",
+            "generic_ui_helper"
+          ]
+        },
+        "phase4.5": {
+          "status": "ok",
+          "facts": [
+            "claim_verifier",
+            "threads_unresolved",
+            "changed_methods_total",
+            "changed_methods_covered",
+            "changed_methods_uncovered",
+            "scope_evidence"
+          ]
+        },
+        "phase5.7": {
+          "status": "ok",
+          "facts": [
+            "oo-emit-result.jsonl"
+          ]
+        }
+      },
+      "missing_artifacts": [],
+      "warnings": []
+    }
+  },
+  {
+    "candidate": "pms_account_asset",
+    "public_index": "https://storage.googleapis.com/ledo-pr-assets/oca-reviews/pms-pr9/index.html",
+    "complete": {
+      "generated": "2026-11-15T01:30:02Z",
+      "complete": true,
+      "phases": {
+        "phase1": {
+          "status": "ok",
+          "facts": [
+            "skill_started",
+            "input",
+            "repo",
+            "pr_num",
+            "worktree",
+            "kind",
+            "addons_touched",
+            "new_modules",
+            "module_readme_captured",
+            "fetch_status",
+            "final_candidate_sha"
+          ]
+        },
+        "phase1.5": {
+          "status": "present",
+          "facts": [
+            "runboat_flavor",
+            "runboat_api",
+            "runboat"
+          ]
+        },
+        "phase0": {
+          "status": "ok",
+          "facts": [
+            "threads_total",
+            "comments_total",
+            "issue_comments_total"
+          ]
+        },
+        "phase2": {
+          "status": "ok",
+          "facts": [
+            "phase_started",
+            "target_branch",
+            "series",
+            "acl_csv_expected",
+            "ui_files_count",
+            "ui_pct",
+            "ui_touched",
+            "pr_title",
+            "branch_name",
+            "is_mig_pr",
+            "ai_policy_exit",
+            "owl_hoot_detectors_ran",
+            "gotcha_count",
+            "callgraph_lines",
+            "params_lines",
+            "verdict"
+          ]
+        },
+        "phase3": {
+          "status": "ok",
+          "facts": [
+            "series",
+            "odoo_service",
+            "db_service",
+            "phase_started",
+            "db",
+            "erp_src",
+            "src_strategy",
+            "image_has_coverage",
+            "image_has_otel",
+            "touched_paths",
+            "clean_core_template",
+            "primary_module",
+            "otel_skipped",
+            "browser_test_replacement",
+            "coverage_captured",
+            "coverage_bytes",
+            "install_exit",
+            "tests_failed_count",
+            "install",
+            "verified_nonzero_tests",
+            "final_candidate_sha"
+          ]
+        },
+        "phase4": {
+          "status": "ok",
+          "facts": [
+            "screenshots_taken",
+            "ui_walk",
+            "ui_scope",
+            "generic_ui_helper"
+          ]
+        },
+        "phase4.5": {
+          "status": "ok",
+          "facts": [
+            "claim_verifier",
+            "threads_unresolved",
+            "changed_methods_total",
+            "changed_methods_covered",
+            "changed_methods_uncovered",
+            "scope_evidence"
+          ]
+        },
+        "phase5.7": {
+          "status": "ok",
+          "facts": [
+            "oo-emit-result.jsonl"
+          ]
+        }
+      },
+      "missing_artifacts": [],
+      "warnings": []
+    }
+  },
+  {
+    "candidate": "pms_base",
+    "public_index": "https://storage.googleapis.com/ledo-pr-assets/oca-reviews/pms-pr1/index.html",
+    "complete": {
+      "generated": "2026-11-15T01:30:14Z",
+      "complete": true,
+      "phases": {
+        "phase1": {
+          "status": "ok",
+          "facts": [
+            "skill_started",
+            "input",
+            "repo",
+            "pr_num",
+            "worktree",
+            "kind",
+            "addons_touched",
+            "new_modules",
+            "module_readme_captured",
+            "fetch_status"
+          ]
+        },
+        "phase1.5": {
+          "status": "present",
+          "facts": [
+            "runboat_flavor",
+            "runboat_api",
+            "runboat"
+          ]
+        },
+        "phase0": {
+          "status": "ok",
+          "facts": [
+            "threads_total",
+            "comments_total",
+            "issue_comments_total"
+          ]
+        },
+        "phase2": {
+          "status": "ok",
+          "facts": [
+            "phase_started",
+            "target_branch",
+            "series",
+            "acl_csv_expected",
+            "ui_files_count",
+            "ui_pct",
+            "ui_touched",
+            "pr_title",
+            "branch_name",
+            "is_mig_pr",
+            "ai_policy_exit",
+            "owl_hoot_detectors_ran",
+            "gotcha_count",
+            "callgraph_lines",
+            "params_lines",
+            "verdict"
+          ]
+        },
+        "phase3": {
+          "status": "ok",
+          "facts": [
+            "series",
+            "odoo_service",
+            "db_service",
+            "phase_started",
+            "db",
+            "erp_src",
+            "src_strategy",
+            "image_has_coverage",
+            "image_has_otel",
+            "touched_paths",
+            "primary_module",
+            "otel_skipped",
+            "coverage_captured",
+            "coverage_bytes",
+            "install_exit",
+            "tests_failed_count",
+            "install",
+            "verified_nonzero_tests",
+            "final_candidate_sha"
+          ]
+        },
+        "phase4": {
+          "status": "ok",
+          "facts": [
+            "screenshots_taken",
+            "ui_walk",
+            "ui_scope",
+            "generic_ui_helper"
+          ]
+        },
+        "phase4.5": {
+          "status": "ok",
+          "facts": [
+            "claim_verifier",
+            "threads_unresolved",
+            "changed_methods_total",
+            "changed_methods_covered",
+            "changed_methods_uncovered",
+            "scope_evidence"
+          ]
+        },
+        "phase5.7": {
+          "status": "ok",
+          "facts": [
+            "oo-emit-result.jsonl"
+          ]
+        }
+      },
+      "missing_artifacts": [],
+      "warnings": []
+    }
+  },
+  {
+    "candidate": "pms_contract",
+    "public_index": "https://storage.googleapis.com/ledo-pr-assets/oca-reviews/pms-pr6/index.html",
+    "complete": {
+      "generated": "2026-11-15T01:30:25Z",
+      "complete": true,
+      "phases": {
+        "phase1": {
+          "status": "ok",
+          "facts": [
+            "skill_started",
+            "input",
+            "repo",
+            "pr_num",
+            "worktree",
+            "kind",
+            "addons_touched",
+            "new_modules",
+            "module_readme_captured",
+            "fetch_status",
+            "final_candidate_sha"
+          ]
+        },
+        "phase1.5": {
+          "status": "present",
+          "facts": [
+            "runboat_flavor",
+            "runboat_api",
+            "runboat"
+          ]
+        },
+        "phase0": {
+          "status": "ok",
+          "facts": [
+            "threads_total",
+            "comments_total",
+            "issue_comments_total"
+          ]
+        },
+        "phase2": {
+          "status": "ok",
+          "facts": [
+            "phase_started",
+            "target_branch",
+            "series",
+            "acl_csv_expected",
+            "ui_files_count",
+            "ui_pct",
+            "ui_touched",
+            "pr_title",
+            "branch_name",
+            "is_mig_pr",
+            "ai_policy_exit",
+            "owl_hoot_detectors_ran",
+            "gotcha_count",
+            "callgraph_lines",
+            "params_lines",
+            "verdict"
+          ]
+        },
+        "phase3": {
+          "status": "ok",
+          "facts": [
+            "series",
+            "odoo_service",
+            "db_service",
+            "phase_started",
+            "db",
+            "erp_src",
+            "src_strategy",
+            "image_has_coverage",
+            "image_has_otel",
+            "touched_paths",
+            "clean_core_template",
+            "primary_module",
+            "otel_skipped",
+            "coverage_captured",
+            "coverage_bytes",
+            "install_exit",
+            "tests_failed_count",
+            "install",
+            "verified_nonzero_tests",
+            "final_candidate_sha"
+          ]
+        },
+        "phase4": {
+          "status": "ok",
+          "facts": [
+            "screenshots_taken",
+            "ui_walk",
+            "ui_scope",
+            "generic_ui_helper"
+          ]
+        },
+        "phase4.5": {
+          "status": "ok",
+          "facts": [
+            "claim_verifier",
+            "threads_unresolved",
+            "changed_methods_total",
+            "changed_methods_covered",
+            "changed_methods_uncovered",
+            "scope_evidence"
+          ]
+        },
+        "phase5.7": {
+          "status": "ok",
+          "facts": [
+            "oo-emit-result.jsonl"
+          ]
+        }
+      },
+      "missing_artifacts": [],
+      "warnings": []
+    }
+  },
+  {
+    "candidate": "pms_crm",
+    "public_index": "https://storage.googleapis.com/ledo-pr-assets/oca-reviews/pms-pr2/index.html",
+    "complete": {
+      "generated": "2026-11-15T01:30:36Z",
+      "complete": true,
+      "phases": {
+        "phase1": {
+          "status": "ok",
+          "facts": [
+            "skill_started",
+            "input",
+            "repo",
+            "pr_num",
+            "worktree",
+            "kind",
+            "addons_touched",
+            "new_modules",
+            "module_readme_captured",
+            "fetch_status"
+          ]
+        },
+        "phase1.5": {
+          "status": "present",
+          "facts": [
+            "runboat_flavor",
+            "runboat_api",
+            "runboat"
+          ]
+        },
+        "phase0": {
+          "status": "ok",
+          "facts": [
+            "threads_total",
+            "comments_total",
+            "issue_comments_total"
+          ]
+        },
+        "phase2": {
+          "status": "ok",
+          "facts": [
+            "phase_started",
+            "target_branch",
+            "series",
+            "acl_csv_expected",
+            "ui_files_count",
+            "ui_pct",
+            "ui_touched",
+            "pr_title",
+            "branch_name",
+            "is_mig_pr",
+            "ai_policy_exit",
+            "owl_hoot_detectors_ran",
+            "gotcha_count",
+            "callgraph_lines",
+            "params_lines",
+            "verdict"
+          ]
+        },
+        "phase3": {
+          "status": "ok",
+          "facts": [
+            "series",
+            "odoo_service",
+            "db_service",
+            "phase_started",
+            "db",
+            "erp_src",
+            "src_strategy",
+            "image_has_coverage",
+            "image_has_otel",
+            "touched_paths",
+            "clean_core_template",
+            "primary_module",
+            "otel_skipped",
+            "coverage_captured",
+            "coverage_bytes",
+            "install_exit",
+            "tests_failed_count",
+            "install",
+            "verified_nonzero_tests",
+            "final_candidate_sha"
+          ]
+        },
+        "phase4": {
+          "status": "ok",
+          "facts": [
+            "screenshots_taken",
+            "ui_walk",
+            "ui_scope",
+            "generic_ui_helper"
+          ]
+        },
+        "phase4.5": {
+          "status": "ok",
+          "facts": [
+            "claim_verifier",
+            "threads_unresolved",
+            "changed_methods_total",
+            "changed_methods_covered",
+            "changed_methods_uncovered",
+            "scope_evidence"
+          ]
+        },
+        "phase5.7": {
+          "status": "ok",
+          "facts": [
+            "oo-emit-result.jsonl"
+          ]
+        }
+      },
+      "missing_artifacts": [],
+      "warnings": []
+    }
+  },
+  {
+    "candidate": "pms_project",
+    "public_index": "https://storage.googleapis.com/ledo-pr-assets/oca-reviews/pms-pr4/index.html",
+    "complete": {
+      "generated": "2026-11-15T01:30:47Z",
+      "complete": true,
+      "phases": {
+        "phase1": {
+          "status": "ok",
+          "facts": [
+            "skill_started",
+            "input",
+            "repo",
+            "pr_num",
+            "worktree",
+            "kind",
+            "addons_touched",
+            "new_modules",
+            "module_readme_captured",
+            "fetch_status"
+          ]
+        },
+        "phase1.5": {
+          "status": "present",
+          "facts": [
+            "runboat_flavor",
+            "runboat_api",
+            "runboat"
+          ]
+        },
+        "phase0": {
+          "status": "ok",
+          "facts": [
+            "threads_total",
+            "comments_total",
+            "issue_comments_total"
+          ]
+        },
+        "phase2": {
+          "status": "ok",
+          "facts": [
+            "phase_started",
+            "target_branch",
+            "series",
+            "acl_csv_expected",
+            "ui_files_count",
+            "ui_pct",
+            "ui_touched",
+            "pr_title",
+            "branch_name",
+            "is_mig_pr",
+            "ai_policy_exit",
+            "owl_hoot_detectors_ran",
+            "gotcha_count",
+            "callgraph_lines",
+            "params_lines",
+            "verdict"
+          ]
+        },
+        "phase3": {
+          "status": "ok",
+          "facts": [
+            "series",
+            "odoo_service",
+            "db_service",
+            "phase_started",
+            "db",
+            "erp_src",
+            "src_strategy",
+            "image_has_coverage",
+            "image_has_otel",
+            "touched_paths",
+            "primary_module",
+            "otel_skipped",
+            "clean_core_template",
+            "browser_test_replacement",
+            "coverage_captured",
+            "coverage_bytes",
+            "install_exit",
+            "tests_failed_count",
+            "install",
+            "verified_nonzero_tests",
+            "final_candidate_sha"
+          ]
+        },
+        "phase4": {
+          "status": "ok",
+          "facts": [
+            "screenshots_taken",
+            "ui_walk",
+            "ui_scope",
+            "generic_ui_helper"
+          ]
+        },
+        "phase4.5": {
+          "status": "ok",
+          "facts": [
+            "claim_verifier",
+            "threads_unresolved",
+            "changed_methods_total",
+            "changed_methods_covered",
+            "changed_methods_uncovered",
+            "scope_evidence"
+          ]
+        },
+        "phase5.7": {
+          "status": "ok",
+          "facts": [
+            "oo-emit-result.jsonl"
+          ]
+        }
+      },
+      "missing_artifacts": [],
+      "warnings": []
+    }
+  },
+  {
+    "candidate": "pms_purchase",
+    "public_index": "https://storage.googleapis.com/ledo-pr-assets/oca-reviews/pms-pr7/index.html",
+    "complete": {
+      "generated": "2026-11-15T01:30:57Z",
+      "complete": true,
+      "phases": {
+        "phase1": {
+          "status": "ok",
+          "facts": [
+            "skill_started",
+            "input",
+            "repo",
+            "pr_num",
+            "worktree",
+            "kind",
+            "addons_touched",
+            "new_modules",
+            "module_readme_captured",
+            "fetch_status",
+            "final_candidate_sha"
+          ]
+        },
+        "phase1.5": {
+          "status": "present",
+          "facts": [
+            "runboat_flavor",
+            "runboat_api",
+            "runboat"
+          ]
+        },
+        "phase0": {
+          "status": "ok",
+          "facts": [
+            "threads_total",
+            "comments_total",
+            "issue_comments_total"
+          ]
+        },
+        "phase2": {
+          "status": "ok",
+          "facts": [
+            "phase_started",
+            "target_branch",
+            "series",
+            "acl_csv_expected",
+            "ui_files_count",
+            "ui_pct",
+            "ui_touched",
+            "pr_title",
+            "branch_name",
+            "is_mig_pr",
+            "ai_policy_exit",
+            "owl_hoot_detectors_ran",
+            "gotcha_count",
+            "callgraph_lines",
+            "params_lines",
+            "verdict"
+          ]
+        },
+        "phase3": {
+          "status": "ok",
+          "facts": [
+            "series",
+            "odoo_service",
+            "db_service",
+            "phase_started",
+            "db",
+            "erp_src",
+            "src_strategy",
+            "image_has_coverage",
+            "image_has_otel",
+            "touched_paths",
+            "clean_core_template",
+            "primary_module",
+            "otel_skipped",
+            "coverage_captured",
+            "coverage_bytes",
+            "install_exit",
+            "tests_failed_count",
+            "install",
+            "verified_nonzero_tests",
+            "final_candidate_sha"
+          ]
+        },
+        "phase4": {
+          "status": "ok",
+          "facts": [
+            "screenshots_taken",
+            "ui_walk",
+            "ui_scope",
+            "generic_ui_helper"
+          ]
+        },
+        "phase4.5": {
+          "status": "ok",
+          "facts": [
+            "claim_verifier",
+            "threads_unresolved",
+            "changed_methods_total",
+            "changed_methods_covered",
+            "changed_methods_uncovered",
+            "scope_evidence"
+          ]
+        },
+        "phase5.7": {
+          "status": "ok",
+          "facts": [
+            "oo-emit-result.jsonl"
+          ]
+        }
+      },
+      "missing_artifacts": [],
+      "warnings": []
+    }
+  },
+  {
+    "candidate": "pms_sale",
+    "public_index": "https://storage.googleapis.com/ledo-pr-assets/oca-reviews/pms-pr5/index.html",
+    "complete": {
+      "generated": "2026-11-15T01:31:08Z",
+      "complete": true,
+      "phases": {
+        "phase1": {
+          "status": "ok",
+          "facts": [
+            "skill_started",
+            "input",
+            "repo",
+            "pr_num",
+            "worktree",
+            "kind",
+            "addons_touched",
+            "new_modules",
+            "module_readme_captured",
+            "fetch_status",
+            "final_candidate_sha"
+          ]
+        },
+        "phase1.5": {
+          "status": "present",
+          "facts": [
+            "runboat_flavor",
+            "runboat_api",
+            "runboat"
+          ]
+        },
+        "phase0": {
+          "status": "ok",
+          "facts": [
+            "threads_total",
+            "comments_total",
+            "issue_comments_total"
+          ]
+        },
+        "phase2": {
+          "status": "ok",
+          "facts": [
+            "phase_started",
+            "target_branch",
+            "series",
+            "acl_csv_expected",
+            "ui_files_count",
+            "ui_pct",
+            "ui_touched",
+            "pr_title",
+            "branch_name",
+            "is_mig_pr",
+            "ai_policy_exit",
+            "owl_hoot_detectors_ran",
+            "gotcha_count",
+            "callgraph_lines",
+            "params_lines",
+            "verdict"
+          ]
+        },
+        "phase3": {
+          "status": "ok",
+          "facts": [
+            "series",
+            "odoo_service",
+            "db_service",
+            "phase_started",
+            "db",
+            "erp_src",
+            "src_strategy",
+            "image_has_coverage",
+            "image_has_otel",
+            "touched_paths",
+            "primary_module",
+            "otel_skipped",
+            "clean_core_template",
+            "browser_test_replacement",
+            "coverage_captured",
+            "coverage_bytes",
+            "install_exit",
+            "tests_failed_count",
+            "install",
+            "verified_nonzero_tests",
+            "final_candidate_sha"
+          ]
+        },
+        "phase4": {
+          "status": "ok",
+          "facts": [
+            "screenshots_taken",
+            "ui_walk",
+            "ui_scope",
+            "generic_ui_helper"
+          ]
+        },
+        "phase4.5": {
+          "status": "ok",
+          "facts": [
+            "claim_verifier",
+            "threads_unresolved",
+            "changed_methods_total",
+            "changed_methods_covered",
+            "changed_methods_uncovered",
+            "scope_evidence"
+          ]
+        },
+        "phase5.7": {
+          "status": "ok",
+          "facts": [
+            "oo-emit-result.jsonl"
+          ]
+        }
+      },
+      "missing_artifacts": [],
+      "warnings": []
+    }
+  },
+  {
+    "candidate": "pms_stock",
+    "public_index": "https://storage.googleapis.com/ledo-pr-assets/oca-reviews/pms-pr10/index.html",
+    "complete": {
+      "generated": "2026-11-15T01:31:18Z",
+      "complete": true,
+      "phases": {
+        "phase1": {
+          "status": "ok",
+          "facts": [
+            "skill_started",
+            "input",
+            "repo",
+            "pr_num",
+            "worktree",
+            "kind",
+            "addons_touched",
+            "new_modules",
+            "module_readme_captured",
+            "fetch_status",
+            "final_candidate_sha"
+          ]
+        },
+        "phase1.5": {
+          "status": "present",
+          "facts": [
+            "runboat_flavor",
+            "runboat_api",
+            "runboat"
+          ]
+        },
+        "phase0": {
+          "status": "ok",
+          "facts": [
+            "threads_total",
+            "comments_total",
+            "issue_comments_total"
+          ]
+        },
+        "phase2": {
+          "status": "ok",
+          "facts": [
+            "phase_started",
+            "target_branch",
+            "series",
+            "acl_csv_expected",
+            "ui_files_count",
+            "ui_pct",
+            "ui_touched",
+            "pr_title",
+            "branch_name",
+            "is_mig_pr",
+            "ai_policy_exit",
+            "owl_hoot_detectors_ran",
+            "gotcha_count",
+            "callgraph_lines",
+            "params_lines",
+            "verdict"
+          ]
+        },
+        "phase3": {
+          "status": "ok",
+          "facts": [
+            "series",
+            "odoo_service",
+            "db_service",
+            "phase_started",
+            "db",
+            "erp_src",
+            "src_strategy",
+            "image_has_coverage",
+            "image_has_otel",
+            "touched_paths",
+            "clean_core_template",
+            "primary_module",
+            "otel_skipped",
+            "coverage_captured",
+            "coverage_bytes",
+            "install_exit",
+            "tests_failed_count",
+            "install",
+            "browser_test_replacement",
+            "verified_nonzero_tests",
+            "final_candidate_sha"
+          ]
+        },
+        "phase4": {
+          "status": "ok",
+          "facts": [
+            "screenshots_taken",
+            "ui_walk",
+            "ui_scope",
+            "generic_ui_helper"
+          ]
+        },
+        "phase4.5": {
+          "status": "ok",
+          "facts": [
+            "claim_verifier",
+            "threads_unresolved",
+            "changed_methods_total",
+            "changed_methods_covered",
+            "changed_methods_uncovered",
+            "scope_evidence"
+          ]
+        },
+        "phase5.7": {
+          "status": "ok",
+          "facts": [
+            "oo-emit-result.jsonl"
+          ]
+        }
+      },
+      "missing_artifacts": [],
+      "warnings": []
+    }
+  },
+  {
+    "candidate": "pms_website",
+    "public_index": "https://storage.googleapis.com/ledo-pr-assets/oca-reviews/pms-pr11/index.html",
+    "complete": {
+      "generated": "2026-11-15T01:31:29Z",
+      "complete": true,
+      "phases": {
+        "phase1": {
+          "status": "ok",
+          "facts": [
+            "skill_started",
+            "input",
+            "repo",
+            "pr_num",
+            "worktree",
+            "kind",
+            "addons_touched",
+            "new_modules",
+            "module_readme_captured",
+            "fetch_status"
+          ]
+        },
+        "phase1.5": {
+          "status": "present",
+          "facts": [
+            "runboat_flavor",
+            "runboat_api",
+            "runboat"
+          ]
+        },
+        "phase0": {
+          "status": "ok",
+          "facts": [
+            "threads_total",
+            "comments_total",
+            "issue_comments_total"
+          ]
+        },
+        "phase2": {
+          "status": "ok",
+          "facts": [
+            "phase_started",
+            "target_branch",
+            "series",
+            "acl_csv_expected",
+            "ui_files_count",
+            "ui_pct",
+            "ui_touched",
+            "pr_title",
+            "branch_name",
+            "is_mig_pr",
+            "ai_policy_exit",
+            "owl_hoot_detectors_ran",
+            "gotcha_count",
+            "callgraph_lines",
+            "params_lines",
+            "verdict"
+          ]
+        },
+        "phase3": {
+          "status": "ok",
+          "facts": [
+            "series",
+            "odoo_service",
+            "db_service",
+            "phase_started",
+            "db",
+            "erp_src",
+            "src_strategy",
+            "image_has_coverage",
+            "image_has_otel",
+            "touched_paths",
+            "clean_core_template",
+            "primary_module",
+            "otel_skipped",
+            "browser_test_replacement",
+            "coverage_captured",
+            "coverage_bytes",
+            "install_exit",
+            "tests_failed_count",
+            "install",
+            "verified_nonzero_tests",
+            "final_candidate_sha"
+          ]
+        },
+        "phase4": {
+          "status": "ok",
+          "facts": [
+            "screenshots_taken",
+            "ui_walk",
+            "ui_scope",
+            "generic_ui_helper"
+          ]
+        },
+        "phase4.5": {
+          "status": "ok",
+          "facts": [
+            "claim_verifier",
+            "threads_unresolved",
+            "changed_methods_total",
+            "changed_methods_covered",
+            "changed_methods_uncovered",
+            "scope_evidence"
+          ]
+        },
+        "phase5.7": {
+          "status": "ok",
+          "facts": [
+            "oo-emit-result.jsonl"
+          ]
+        }
+      },
+      "missing_artifacts": [],
+      "warnings": []
+    }
+  },
+  {
+    "candidate": "pms_website_sale",
+    "public_index": "https://storage.googleapis.com/ledo-pr-assets/oca-reviews/pms-pr8/index.html",
+    "complete": {
+      "generated": "2026-11-15T01:31:46Z",
+      "complete": true,
+      "phases": {
+        "phase1": {
+          "status": "ok",
+          "facts": [
+            "skill_started",
+            "input",
+            "repo",
+            "pr_num",
+            "worktree",
+            "kind",
+            "addons_touched",
+            "new_modules",
+            "module_readme_captured",
+            "fetch_status",
+            "final_candidate_sha"
+          ]
+        },
+        "phase1.5": {
+          "status": "present",
+          "facts": [
+            "runboat_flavor",
+            "runboat_api",
+            "runboat"
+          ]
+        },
+        "phase0": {
+          "status": "ok",
+          "facts": [
+            "threads_total",
+            "comments_total",
+            "issue_comments_total"
+          ]
+        },
+        "phase2": {
+          "status": "ok",
+          "facts": [
+            "phase_started",
+            "target_branch",
+            "series",
+            "acl_csv_expected",
+            "ui_files_count",
+            "ui_pct",
+            "ui_touched",
+            "pr_title",
+            "branch_name",
+            "is_mig_pr",
+            "ai_policy_exit",
+            "owl_hoot_detectors_ran",
+            "gotcha_count",
+            "callgraph_lines",
+            "params_lines",
+            "verdict"
+          ]
+        },
+        "phase3": {
+          "status": "ok",
+          "facts": [
+            "series",
+            "odoo_service",
+            "db_service",
+            "phase_started",
+            "db",
+            "erp_src",
+            "src_strategy",
+            "image_has_coverage",
+            "image_has_otel",
+            "touched_paths",
+            "clean_core_template",
+            "primary_module",
+            "browser_test_replacement",
+            "otel_skipped",
+            "coverage_captured",
+            "coverage_bytes",
+            "install_exit",
+            "tests_failed_count",
+            "install",
+            "verified_nonzero_tests",
+            "final_candidate_sha"
+          ]
+        },
+        "phase4": {
+          "status": "ok",
+          "facts": [
+            "screenshots_taken",
+            "ui_walk",
+            "ui_scope",
+            "generic_ui_helper"
+          ]
+        },
+        "phase4.5": {
+          "status": "ok",
+          "facts": [
+            "claim_verifier",
+            "threads_unresolved",
+            "changed_methods_total",
+            "changed_methods_covered",
+            "changed_methods_uncovered",
+            "scope_evidence"
+          ]
+        },
+        "phase5.7": {
+          "status": "ok",
+          "facts": [
+            "oo-emit-result.jsonl"
+          ]
+        }
+      },
+      "missing_artifacts": [],
+      "warnings": []
+    }
+  },
+  {
+    "candidate": "stay-length",
+    "public_index": "https://storage.googleapis.com/ledo-pr-assets/oca-reviews/pms-pr12/index.html",
+    "complete": {
+      "generated": "2026-11-15T01:32:03Z",
+      "complete": true,
+      "phases": {
+        "phase1": {
+          "status": "ok",
+          "facts": [
+            "skill_started",
+            "input",
+            "repo",
+            "pr_num",
+            "worktree",
+            "kind",
+            "addons_touched",
+            "new_modules",
+            "module_readme_captured",
+            "fetch_status"
+          ]
+        },
+        "phase1.5": {
+          "status": "present",
+          "facts": [
+            "runboat_flavor",
+            "runboat_api",
+            "runboat"
+          ]
+        },
+        "phase0": {
+          "status": "ok",
+          "facts": [
+            "threads_total",
+            "comments_total",
+            "issue_comments_total"
+          ]
+        },
+        "phase2": {
+          "status": "ok",
+          "facts": [
+            "phase_started",
+            "target_branch",
+            "series",
+            "acl_csv_expected",
+            "ui_files_count",
+            "ui_pct",
+            "ui_touched",
+            "pr_title",
+            "branch_name",
+            "is_mig_pr",
+            "ai_policy_exit",
+            "owl_hoot_detectors_ran",
+            "gotcha_count",
+            "callgraph_lines",
+            "params_lines",
+            "verdict"
+          ]
+        },
+        "phase3": {
+          "status": "ok",
+          "facts": [
+            "series",
+            "odoo_service",
+            "db_service",
+            "phase_started",
+            "db",
+            "erp_src",
+            "src_strategy",
+            "image_has_coverage",
+            "image_has_otel",
+            "touched_paths",
+            "clean_core_template",
+            "primary_module",
+            "browser_test_replacement",
+            "otel_skipped",
+            "coverage_captured",
+            "coverage_bytes",
+            "install_exit",
+            "tests_failed_count",
+            "install",
+            "verified_nonzero_tests",
+            "final_candidate_sha"
+          ]
+        },
+        "phase4": {
+          "status": "ok",
+          "facts": [
+            "screenshots_taken",
+            "ui_walk",
+            "ui_scope",
+            "generic_ui_helper"
+          ]
+        },
+        "phase4.5": {
+          "status": "ok",
+          "facts": [
+            "claim_verifier",
+            "threads_unresolved",
+            "changed_methods_total",
+            "changed_methods_covered",
+            "changed_methods_uncovered",
+            "scope_evidence"
+          ]
+        },
+        "phase5.7": {
+          "status": "ok",
+          "facts": [
+            "oo-emit-result.jsonl"
+          ]
+        }
+      },
+      "missing_artifacts": [],
+      "warnings": []
+    }
+  },
+  {
+    "candidate": "website-access",
+    "public_index": "https://storage.googleapis.com/ledo-pr-assets/oca-reviews/pms-pr14/index.html",
+    "complete": {
+      "generated": "2026-11-15T01:32:14Z",
+      "complete": true,
+      "phases": {
+        "phase1": {
+          "status": "ok",
+          "facts": [
+            "skill_started",
+            "input",
+            "repo",
+            "pr_num",
+            "worktree",
+            "kind",
+            "addons_touched",
+            "new_modules",
+            "module_readme_captured",
+            "fetch_status"
+          ]
+        },
+        "phase1.5": {
+          "status": "present",
+          "facts": [
+            "runboat_flavor",
+            "runboat_api",
+            "runboat"
+          ]
+        },
+        "phase0": {
+          "status": "ok",
+          "facts": [
+            "threads_total",
+            "comments_total",
+            "issue_comments_total"
+          ]
+        },
+        "phase2": {
+          "status": "ok",
+          "facts": [
+            "phase_started",
+            "target_branch",
+            "series",
+            "acl_csv_expected",
+            "ui_files_count",
+            "ui_pct",
+            "ui_touched",
+            "pr_title",
+            "branch_name",
+            "is_mig_pr",
+            "ai_policy_exit",
+            "owl_hoot_detectors_ran",
+            "gotcha_count",
+            "callgraph_lines",
+            "params_lines",
+            "verdict"
+          ]
+        },
+        "phase3": {
+          "status": "ok",
+          "facts": [
+            "series",
+            "odoo_service",
+            "db_service",
+            "phase_started",
+            "db",
+            "erp_src",
+            "src_strategy",
+            "image_has_coverage",
+            "image_has_otel",
+            "touched_paths",
+            "clean_core_template",
+            "primary_module",
+            "browser_test_replacement",
+            "otel_skipped",
+            "coverage_captured",
+            "coverage_bytes",
+            "install_exit",
+            "tests_failed_count",
+            "install",
+            "verified_nonzero_tests",
+            "final_candidate_sha"
+          ]
+        },
+        "phase4": {
+          "status": "ok",
+          "facts": [
+            "screenshots_taken",
+            "ui_walk",
+            "ui_scope",
+            "generic_ui_helper"
+          ]
+        },
+        "phase4.5": {
+          "status": "ok",
+          "facts": [
+            "claim_verifier",
+            "threads_unresolved",
+            "changed_methods_total",
+            "changed_methods_covered",
+            "changed_methods_uncovered",
+            "scope_evidence"
+          ]
+        },
+        "phase5.7": {
+          "status": "ok",
+          "facts": [
+            "oo-emit-result.jsonl"
+          ]
+        }
+      },
+      "missing_artifacts": [],
+      "warnings": []
+    }
+  },
+  {
+    "candidate": "website-booking",
+    "public_index": "https://storage.googleapis.com/ledo-pr-assets/oca-reviews/pms-pr15/index.html",
+    "complete": {
+      "generated": "2026-11-15T01:32:25Z",
+      "complete": true,
+      "phases": {
+        "phase1": {
+          "status": "ok",
+          "facts": [
+            "skill_started",
+            "input",
+            "repo",
+            "pr_num",
+            "worktree",
+            "kind",
+            "addons_touched",
+            "new_modules",
+            "module_readme_captured",
+            "fetch_status"
+          ]
+        },
+        "phase1.5": {
+          "status": "present",
+          "facts": [
+            "runboat_flavor",
+            "runboat_api",
+            "runboat"
+          ]
+        },
+        "phase0": {
+          "status": "ok",
+          "facts": [
+            "threads_total",
+            "comments_total",
+            "issue_comments_total"
+          ]
+        },
+        "phase2": {
+          "status": "ok",
+          "facts": [
+            "phase_started",
+            "target_branch",
+            "series",
+            "acl_csv_expected",
+            "ui_files_count",
+            "ui_pct",
+            "ui_touched",
+            "pr_title",
+            "branch_name",
+            "is_mig_pr",
+            "ai_policy_exit",
+            "owl_hoot_detectors_ran",
+            "gotcha_count",
+            "callgraph_lines",
+            "params_lines",
+            "verdict"
+          ]
+        },
+        "phase3": {
+          "status": "ok",
+          "facts": [
+            "series",
+            "odoo_service",
+            "db_service",
+            "phase_started",
+            "db",
+            "erp_src",
+            "src_strategy",
+            "image_has_coverage",
+            "image_has_otel",
+            "touched_paths",
+            "clean_core_template",
+            "primary_module",
+            "browser_test_replacement",
+            "otel_skipped",
+            "coverage_captured",
+            "coverage_bytes",
+            "install_exit",
+            "tests_failed_count",
+            "install",
+            "verified_nonzero_tests",
+            "final_candidate_sha"
+          ]
+        },
+        "phase4": {
+          "status": "ok",
+          "facts": [
+            "screenshots_taken",
+            "ui_walk",
+            "ui_scope",
+            "generic_ui_helper"
+          ]
+        },
+        "phase4.5": {
+          "status": "ok",
+          "facts": [
+            "claim_verifier",
+            "threads_unresolved",
+            "changed_methods_total",
+            "changed_methods_covered",
+            "changed_methods_uncovered",
+            "scope_evidence"
+          ]
+        },
+        "phase5.7": {
+          "status": "ok",
+          "facts": [
+            "oo-emit-result.jsonl"
+          ]
+        }
+      },
+      "missing_artifacts": [],
+      "warnings": []
+    }
+  }
+]

@@ -1,0 +1,62 @@
+{
+  "pms_base": {
+    "url": "https://github.com/ledoent/pms/pull/1",
+    "number": 1
+  },
+  "pms_account": {
+    "url": "https://github.com/ledoent/pms/pull/3",
+    "number": 3
+  },
+  "pms_sale": {
+    "url": "https://github.com/ledoent/pms/pull/5",
+    "number": 5
+  },
+  "pms_project": {
+    "url": "https://github.com/ledoent/pms/pull/4",
+    "number": 4
+  },
+  "pms_crm": {
+    "url": "https://github.com/ledoent/pms/pull/2",
+    "number": 2
+  },
+  "pms_stock": {
+    "url": "https://github.com/ledoent/pms/pull/10",
+    "number": 10
+  },
+  "pms_purchase": {
+    "url": "https://github.com/ledoent/pms/pull/7",
+    "number": 7
+  },
+  "pms_contract": {
+    "url": "https://github.com/ledoent/pms/pull/6",
+    "number": 6
+  },
+  "pms_account_asset": {
+    "url": "https://github.com/ledoent/pms/pull/9",
+    "number": 9
+  },
+  "pms_website": {
+    "url": "https://github.com/ledoent/pms/pull/11",
+    "number": 11
+  },
+  "pms_website_sale": {
+    "url": "https://github.com/ledoent/pms/pull/8",
+    "number": 8
+  },
+  "stay-length": {
+    "url": "https://github.com/ledoent/pms/pull/12",
+    "number": 12
+  },
+  "booking-boundaries": {
+    "url": "https://github.com/ledoent/pms/pull/13",
+    "number": 13
+  },
+  "website-access": {
+    "url": "https://github.com/ledoent/pms/pull/14",
+    "number": 14
+  },
+  "website-booking": {
+    "url": "https://github.com/ledoent/pms/pull/15",
+    "number": 15
+  }
+}

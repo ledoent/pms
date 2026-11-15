@@ -1,0 +1,40 @@
+name: pms20-review
+services:
+  db-prod-20:
+    image: postgres:17-alpine@sha256:b0f9560a2de083e2cc7382e75f808c7381a32852a7ec49117deedb300e552b24
+    environment:
+      POSTGRES_USER: odoo
+      POSTGRES_PASSWORD: pms20-synthetic-only
+      POSTGRES_DB: postgres
+    volumes:
+      - pms20-postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: [CMD-SHELL, pg_isready -U odoo -d postgres]
+      interval: 2s
+      timeout: 5s
+      retries: 30
+  odoo-prod-20:
+    image: ghcr.io/oca/oca-ci/py3.12-odoo20.0@sha256:778e8dd08a7b30fb0ce2633859c73d96ac9ac3ecee31d4c0b3a4e389f012cc92
+    platform: linux/amd64
+    entrypoint: []
+    command: [odoo, -d, pms20_ui, --db-filter=^pms20_ui$]
+    environment:
+      ODOO_RC: /etc/odoo-pms20.conf
+      PGHOST: db-prod-20
+      PGUSER: odoo
+      PGPASSWORD: pms20-synthetic-only
+    depends_on:
+      db-prod-20:
+        condition: service_healthy
+    ports:
+      - 127.0.0.1:19320:8069
+    volumes:
+      - ${PMS_ADDONS_DIR:-./addons-fixed}:/opt/odoo/custom/src/pms:ro
+      - ./odoo.conf:/etc/odoo-pms20.conf:ro
+      - ./scripts:/pms20-scripts:ro
+      - ./evidence:/pms20-evidence
+      - pms20-filestore:/var/lib/odoo-pms20
+    shm_size: 1gb
+volumes:
+  pms20-postgres:
+  pms20-filestore:

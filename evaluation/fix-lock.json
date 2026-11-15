@@ -1,0 +1,26 @@
+{
+  "stay-length": {
+    "repo": "ledoent/pms",
+    "branch": "20.0-fix-stay-length",
+    "base": "20.0-mig-pms_sale",
+    "sha": "03d51ec9519d35c5daf0ab7b19147742b77a7337"
+  },
+  "booking-boundaries": {
+    "repo": "ledoent/pms",
+    "branch": "20.0-fix-booking-boundaries",
+    "base": "20.0-fix-stay-length",
+    "sha": "ebe74a48dd2cb5f20fc6ef0af360a6a89596579e"
+  },
+  "website-access": {
+    "repo": "ledoent/pms",
+    "branch": "20.0-fix-website-access",
+    "base": "20.0-mig-pms_website",
+    "sha": "147be9c2ea75bfb302f007e09833c7ca895ebdfd"
+  },
+  "website-booking": {
+    "repo": "ledoent/pms",
+    "branch": "20.0-fix-website-booking",
+    "base": "20.0-mig-pms_website_sale",
+    "sha": "a117c49797e4eabc075cb11e22d189b128cabde5"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "contract": {
+    "sha": "c276713f3fbfac27b4e498cd07c1a38f783935a2",
+    "repo": "pms-20-evaluation/deps/contract-repo"
+  },
+  "account_asset_management": {
+    "sha": "0c8ec1732b1dd2d03a5b1c48ca9e7e4d030d312b",
+    "repo": "forks/account-financial-tools"
+  },
+  "report_xlsx": {
+    "sha": "c8dbdafc9b0f46be551e6ac135287b4ce63937ad",
+    "repo": "forks/reporting-engine"
+  },
+  "report_xlsx_helper": {
+    "sha": "f6a0a6fbe514f3fa8ce0e3703da1dccff91c4c45",
+    "repo": "forks/reporting-engine"
+  },
+  "web_timeline": {
+    "wheel": "odoo_addon_web_timeline-20.0.1.0.2.3-py3-none-any.whl",
+    "sha256": "1db7988fc96696e42dc526e8da28f4d85d9853141f416750aa16a36030e87bf8"
+  }
+}

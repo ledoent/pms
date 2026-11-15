@@ -1,0 +1,357 @@
+# Copyright (c) 2021 Gray Matter Logic
+# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+from datetime import datetime, timedelta
+from zoneinfo import ZoneInfo
+
+from odoo import api, fields, models
+from odoo.exceptions import ValidationError
+from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT
+
+from ..tools import add_nights, stay_nights
+
+AVAILABLE_PRIORITIES = [("0", "Normal"), ("1", "Low"), ("2", "High"), ("3", "Urgent")]
+
+
+class PmsReservation(models.Model):
+    _name = "pms.reservation"
+    _description = "Reservation"
+    _order = "start, id"
+    _check_company_auto = True
+    _inherit = ["mail.thread", "mail.activity.mixin"]
+
+    def _default_stage_id(self):
+        return self.env.ref("pms_sale.pms_stage_new", raise_if_not_found=False)
+
+    def _get_duration(self, start, stop):
+        return stay_nights(start, stop, self.property_id.tz or "UTC")
+
+    @api.depends("guest_ids")
+    def _compute_no_of_guests(self):
+        for record in self:
+            record.no_of_guests = len(record.guest_ids)
+
+    name = fields.Char(
+        string="Reservation #",
+        help="Reservation Number",
+        required=True,
+        readonly=True,
+        index=True,
+        copy=False,
+        default=lambda self: self.env._("New"),
+    )
+    start = fields.Datetime(
+        "Checkin",
+        required=True,
+        tracking=True,
+        default=fields.Date.today,
+        help="Start date of the reservation",
+    )
+    stop = fields.Datetime(
+        "Checkout",
+        required=True,
+        tracking=True,
+        default=fields.Date.today,
+        compute="_compute_stop",
+        readonly=False,
+        store=True,
+        help="Stop date of the reservation",
+    )
+    duration = fields.Integer(
+        "Nights", compute="_compute_duration", store=True, readonly=False
+    )
+    date = fields.Datetime(default=lambda self: fields.Datetime.now())
+    stage_id = fields.Many2one(
+        "pms.stage",
+        store=True,
+        tracking=True,
+        index=True,
+        default=lambda self: self._default_stage_id(),
+        group_expand="_read_group_stage_ids",
+    )
+    team_id = fields.Many2one("pms.team", related="property_id.team_id", store=True)
+    property_id = fields.Many2one("pms.property", check_company=True)
+    reservation_type_id = fields.Many2one("pms.property.reservation")
+    sale_order_id = fields.Many2one(
+        "sale.order", string="Sales Order", check_company=True
+    )
+    sale_order_line_id = fields.Many2one(
+        "sale.order.line", string="Sales Order Line", check_company=True
+    )
+    invoice_status = fields.Selection(
+        related="sale_order_id.invoice_status", store=True, index=True
+    )
+    partner_id = fields.Many2one("res.partner", string="Booked by")
+    user_id = fields.Many2one(
+        "res.users", string="Responsible", default=lambda self: self.env.user.id
+    )
+    company_id = fields.Many2one(
+        "res.company",
+        default=lambda self: self.env.company.id,
+    )
+    adults = fields.Integer()
+    children = fields.Integer()
+    no_of_guests = fields.Integer(
+        "Number of Guests", compute="_compute_no_of_guests", store=True
+    )
+    guest_ids = fields.One2many(
+        "pms.reservation.guest", "reservation_id", string="Guests"
+    )
+    priority = fields.Selection(
+        AVAILABLE_PRIORITIES,
+        index=True,
+        default=AVAILABLE_PRIORITIES[0][0],
+    )
+    tag_ids = fields.Many2many("pms.tag", string="Tags")
+    color = fields.Integer("Color Index", default=0)
+    invoice_count = fields.Integer(
+        compute="_compute_invoice_count",
+        readonly=True,
+        copy=False,
+    )
+
+    @api.depends("stop", "start", "property_id.tz")
+    def _compute_duration(self):
+        for reservation in self.with_context(dont_notify=True):
+            reservation.duration = reservation._get_duration(
+                reservation.start, reservation.stop
+            )
+
+    @api.depends("start", "duration")
+    def _compute_stop(self):
+        # stop and duration fields both depends on the start field.
+        # But they also depends on each other.
+        # When start is updated, we want to update the stop datetime based on
+        # the *current* duration.
+        # In other words, we want: change start => keep the duration fixed and
+        # recompute stop accordingly.
+        # However, while computing stop, duration is marked to be recomputed.
+        # Calling `reservation.duration` would trigger its recomputation.
+        # To avoid this we manually mark the field as computed.
+        duration_field = self._fields["duration"]
+        self.env.remove_to_compute(duration_field, self)
+        for reservation in self:
+            reservation.stop = add_nights(
+                reservation.start, reservation.duration, reservation.property_id.tz
+            )
+
+    def _compute_invoice_count(self):
+        for reservation in self:
+            invoices = (
+                self.env["account.move.line"]
+                .search([("pms_reservation_id", "=", reservation.id)])
+                .mapped("move_id")
+                .filtered(lambda r: r.move_type in ("out_invoice", "out_refund"))
+            )
+            reservation.invoice_count = len(invoices)
+
+    @api.model
+    def _read_group_stage_ids(self, stages, domain):
+        search_domain = [("stage_type", "=", "reservation")]
+        if self.env.context.get("default_team_id"):
+            search_domain = [
+                "&",
+                ("team_ids", "in", self.env.context["default_team_id"]),
+            ] + search_domain
+        return stages.search(search_domain)
+
+    @api.model_create_multi
+    def create(self, vals_list):
+        for vals in vals_list:
+            if vals.get("property_id"):
+                prop = self.env["pms.property"].browse(vals["property_id"])
+                vals.setdefault("company_id", prop.company_id.id or self.env.company.id)
+            if vals.get("name", self.env._("New")) == self.env._("New"):
+                vals["name"] = self.env["ir.sequence"].next_by_code(
+                    "pms.reservation"
+                ) or self.env._("New")
+        return super().create(vals_list)
+
+    @api.onchange("property_id")
+    def onchange_property_id(self):
+        user_tz = self.env.user.tz or "UTC"
+        utc = ZoneInfo("UTC")
+        timezone = ZoneInfo(self.property_id.tz or user_tz)
+        if (
+            self.property_id
+            and self.start
+            and self.stop
+            and self.property_id.checkin
+            and self.property_id.checkout
+        ):
+            start_datetime = (
+                str(self.start.date())
+                + " "
+                + str(timedelta(hours=self.property_id.checkin))
+            )
+            with_timezone = datetime.strptime(
+                start_datetime, DEFAULT_SERVER_DATETIME_FORMAT
+            ).replace(tzinfo=timezone, fold=1)
+            start_datetime = with_timezone.astimezone(utc)
+            self.start = start_datetime.strftime(DEFAULT_SERVER_DATETIME_FORMAT)
+
+            end_datetime = (
+                str(self.stop.date())
+                + " "
+                + str(timedelta(hours=self.property_id.checkout))
+            )
+            with_timezone = datetime.strptime(
+                end_datetime, DEFAULT_SERVER_DATETIME_FORMAT
+            ).replace(tzinfo=timezone, fold=1)
+            end_datetime = with_timezone.astimezone(utc)
+            self.stop = end_datetime.strftime(DEFAULT_SERVER_DATETIME_FORMAT)
+        else:
+            self.start = self.start.date()
+            self.stop = self.stop.date()
+
+    @api.constrains("property_id", "no_of_guests")
+    def _check_max_no_of_guests(self):
+        for reservation in self:
+            if reservation.no_of_guests > reservation.property_id.no_of_guests:
+                raise ValidationError(
+                    self.env._(  # pylint: disable=W8301
+                        "Too many guests (%(guests)s) on the reservation: "
+                        "the property accepts a maximum of %(max)s guests."
+                    )
+                    % {
+                        "guests": reservation.no_of_guests,
+                        "max": reservation.property_id.no_of_guests,
+                    }
+                )
+
+    @api.model
+    def _get_overlap_domain(self, property_id, start, stop, exclude_id=False):
+        excluded = [
+            self.env.ref("pms_sale.pms_stage_new").id,
+            self.env.ref("pms_sale.pms_stage_cancelled").id,
+        ]
+        domain = [
+            ("property_id", "=", property_id),
+            ("stage_id", "not in", excluded),
+            ("start", "<", stop),
+            ("stop", ">", start),
+        ]
+        if exclude_id:
+            domain.append(("id", "!=", exclude_id))
+        return domain
+
+    @api.constrains("property_id", "start", "stop", "reservation_type_id")
+    def _check_stay_dates(self):
+        for record in self:
+            if record.start and record.stop and record.stop <= record.start:
+                raise ValidationError(self.env._("Checkout must be after checkin."))
+            if (
+                record.reservation_type_id.property_id
+                and record.reservation_type_id.property_id != record.property_id
+            ):
+                raise ValidationError(
+                    self.env._("The reservation type belongs to another property.")
+                )
+
+    @api.constrains("property_id", "stage_id", "start", "stop")
+    def _check_no_of_reservations(self):
+        excluded = self.env.ref("pms_sale.pms_stage_new") | self.env.ref(
+            "pms_sale.pms_stage_cancelled"
+        )
+        for record in self:
+            if (
+                record.property_id
+                and record.stage_id not in excluded
+                and self.sudo().search_count(
+                    self._get_overlap_domain(
+                        record.property_id.id, record.start, record.stop, record.id
+                    ),
+                    limit=1,
+                )
+            ):
+                raise ValidationError(
+                    self.env._(
+                        "You cannot have 2 reservations on the same night "
+                        "at the same property."
+                    )
+                )
+
+    @api.constrains("property_id", "duration")
+    def _check_no_of_nights(self):
+        for rec in self:
+            min_nights = rec.property_id.min_nights
+            max_nights = rec.property_id.max_nights
+            too_short = min_nights > 0 and rec.duration < min_nights
+            too_long = max_nights > 0 and rec.duration > max_nights
+            if too_short or too_long:
+                raise ValidationError(
+                    self.env._(  # pylint: disable=W8301
+                        "The number of nights must be between %(min)s and %(max)s."
+                    )
+                    % {
+                        "min": min_nights,
+                        "max": max_nights,
+                    }
+                )
+
+    def action_book(self):
+        return self.write(
+            {
+                "stage_id": self.env.ref(
+                    "pms_sale.pms_stage_booked", raise_if_not_found=False
+                ).id,
+            }
+        )
+
+    def action_confirm(self):
+        return self.write(
+            {
+                "stage_id": self.env.ref(
+                    "pms_sale.pms_stage_confirmed", raise_if_not_found=False
+                ).id
+            }
+        )
+
+    def action_check_in(self):
+        return self.write(
+            {
+                "stage_id": self.env.ref(
+                    "pms_sale.pms_stage_checked_in", raise_if_not_found=False
+                ).id,
+                "start": fields.Datetime.now(),
+            }
+        )
+
+    def action_check_out(self):
+        return self.write(
+            {
+                "stage_id": self.env.ref(
+                    "pms_sale.pms_stage_checked_out", raise_if_not_found=False
+                ).id,
+                "stop": fields.Datetime.now(),
+            }
+        )
+
+    def action_cancel(self):
+        self.write(
+            {
+                "stage_id": self.env.ref(
+                    "pms_sale.pms_stage_cancelled", raise_if_not_found=False
+                ).id
+            }
+        )
+
+    def action_view_invoices(self):
+        for reservation in self:
+            action = self.env.ref("account.action_move_out_invoice_type").read()[0]
+            invoices = (
+                self.env["account.move.line"]
+                .search([("pms_reservation_id", "=", reservation.id)])
+                .mapped("move_id")
+                .filtered(lambda r: r.move_type in ("out_invoice", "out_refund"))
+            )
+            action["domain"] = [("id", "in", invoices.ids)]
+            return action
+
+    @api.model
+    def get_selections(self):
+        cities = list(
+            {rec.city for rec in self.env["pms.property"].search([]) if rec.city}
+        )
+        cities.sort()
+        values = {"city": cities}
+        return values

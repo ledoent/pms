@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t
+        t-name="pms_sale.TimelineReservationFilter"
+        t-inherit="web_timeline.TimelineRenderer"
+        t-inherit-mode="extension"
+    >
+        <xpath expr="//div[hasclass('oe_timeline_buttons')]" position="inside">
+            <form
+                t-if="this.pmsFilter"
+                class="pms-timeline-filters d-flex flex-wrap gap-2 align-items-end mt-2"
+                t-on-submit.prevent="this._onPmsFilterSearch"
+            >
+                <label>City
+                    <select
+                    class="form-select pms-city-select"
+                    t-att-value="this.pmsFilter.city"
+                    t-on-change="(ev) => this.pmsFilter.city = ev.target.value"
+                >
+                    <option value="">All cities</option>
+                    <option
+                        t-foreach="this.pmsFilter.cities"
+                        t-as="city"
+                        t-key="city"
+                        t-att-value="city"
+                        t-out="city"
+                    />
+                </select>
+                </label>
+                <label>Stay dates
+                    <input
+                    class="form-control"
+                    placeholder="MM/DD/YYYY - MM/DD/YYYY"
+                    size="27"
+                    t-att-value="this.pmsFilter.datepicker"
+                    t-on-input="(ev) => this.pmsFilter.datepicker = ev.target.value"
+                />
+                </label>
+                <label>Minimum bedrooms
+                    <input
+                    class="form-control"
+                    type="number"
+                    min="0"
+                    t-att-value="this.pmsFilter.bedrooms"
+                    t-on-input="(ev) => this.pmsFilter.bedrooms = ev.target.value"
+                />
+                </label>
+                <button class="btn btn-secondary" type="submit">Search</button>
+            </form>
+        </xpath>
+    </t>
+</templates>

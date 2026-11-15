@@ -1,0 +1,6 @@
+# DO NOT MERGE: exact external sources for the combined fork evaluation.
+odoo-addon-contract @ git+https://github.com/Borruso/contract.git@c276713f3fbfac27b4e498cd07c1a38f783935a2#subdirectory=contract
+odoo-addon-account_asset_management @ git+https://github.com/ledoent/account-financial-tools.git@0c8ec1732b1dd2d03a5b1c48ca9e7e4d030d312b#subdirectory=account_asset_management
+odoo-addon-report_xlsx @ git+https://github.com/ledoent/reporting-engine.git@c8dbdafc9b0f46be551e6ac135287b4ce63937ad#subdirectory=report_xlsx
+odoo-addon-report_xlsx_helper @ git+https://github.com/ledoent/reporting-engine.git@f6a0a6fbe514f3fa8ce0e3703da1dccff91c4c45#subdirectory=report_xlsx_helper
+odoo-addon-web-timeline==20.0.1.0.2.3
