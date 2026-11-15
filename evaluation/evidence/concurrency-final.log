@@ -1,0 +1,15 @@
+ Container pms20-review-odoo-prod-20-run-6a668806f75d Creating 
+ Container pms20-review-odoo-prod-20-run-6a668806f75d Created 
+2026-11-14 17:19:05,971 1 INFO ? odoo: Odoo version 20.0
+2026-11-14 17:19:05,973 1 INFO ? odoo: Using configuration file at /etc/odoo-pms20.conf
+2026-11-14 17:19:05,974 1 INFO ? odoo: addons paths: _NamespacePath(['/opt/odoo/odoo/addons', '/var/lib/odoo-pms20/addons/20.0', '/opt/odoo/custom/src/pms', '/opt/odoo/addons'])
+2026-11-14 17:19:05,975 1 INFO ? odoo: database: odoo@db-prod-20:5432
+2026-11-14 17:19:09,961 1 INFO ? odoo.service.server.ThreadedServer: Initiating shutdown
+2026-11-14 17:19:09,961 1 INFO ? odoo.service.server.ThreadedServer: Hit CTRL-C again or send a second signal to force the shutdown.
+2026-11-14 17:19:10,109 1 INFO pms20_ui odoo.modules.loading: loading 1 modules...
+2026-11-14 17:19:10,131 1 INFO pms20_ui odoo.modules.loading: 1 modules loaded in 0.02s, 0 queries (+0 extra)
+2026-11-14 17:19:10,453 1 INFO pms20_ui odoo.modules.loading: loading 109 modules...
+2026-11-14 17:19:23,753 1 INFO pms20_ui odoo.modules.loading: 109 modules loaded in 13.30s, 0 queries (+0 extra)
+2026-11-14 17:19:25,058 1 INFO pms20_ui odoo.modules.loading: Modules loaded.
+2026-11-14 17:19:25,193 1 INFO pms20_ui odoo.registry: Registry loaded in 15.185s
+{"test_enable": false, "independent_transactions": true, "property_id": 162, "results": [{"worker": 1, "committed": true, "id": 33}, {"worker": 2, "committed": true, "id": 32}], "confirmed_stays_same_interval": 2, "adoption_blocker": true}

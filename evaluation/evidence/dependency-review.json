@@ -1,0 +1,80 @@
+{
+  "checked_at": "2026-11-14",
+  "sources": {
+    "OCA/contract#1566": {
+      "url": "https://github.com/OCA/contract/pull/1566",
+      "head_sha": "c276713f3fbfac27b4e498cd07c1a38f783935a2",
+      "head_repo_full_name": "Borruso/contract",
+      "head": "20.0-mig-contract",
+      "base": "20.0",
+      "state": "open",
+      "merged": false
+    },
+    "ledoent/account-financial-tools#13": {
+      "url": "https://github.com/ledoent/account-financial-tools/pull/13",
+      "head_sha": "0c8ec1732b1dd2d03a5b1c48ca9e7e4d030d312b",
+      "head_repo_full_name": "ledoent/account-financial-tools",
+      "head": "20.0-mig-account_asset_management",
+      "base": "20.0",
+      "state": "open",
+      "merged": false
+    },
+    "OCA/pms#444": {
+      "url": "https://github.com/OCA/pms/pull/444",
+      "head_sha": "65de281d175d0de5023bede4322c93effb07c335",
+      "head_repo_full_name": "bretif/pms",
+      "head": "fix-pms-sale-min-nights-enforcement",
+      "base": "19.0",
+      "state": "open",
+      "merged": false
+    }
+  },
+  "contract_ci": {
+    "workflow_runs": [
+      {
+        "id": 43422793446,
+        "name": "pre-commit",
+        "status": "completed",
+        "conclusion": "success",
+        "run_number": 5226,
+        "jobs_url": "https://api.github.com/repos/OCA/contract/actions/runs/43422793446/jobs",
+        "logs_url": "https://api.github.com/repos/OCA/contract/actions/runs/43422793446/logs",
+        "workflow_id": 4196964
+      },
+      {
+        "id": 43422793494,
+        "name": "tests",
+        "status": "completed",
+        "conclusion": "success",
+        "run_number": 4590,
+        "jobs_url": "https://api.github.com/repos/OCA/contract/actions/runs/43422793494/jobs",
+        "logs_url": "https://api.github.com/repos/OCA/contract/actions/runs/43422793494/logs",
+        "workflow_id": 14278487
+      }
+    ]
+  },
+  "asset_ci": {
+    "workflow_runs": [
+      {
+        "id": 36793232342,
+        "name": "pre-commit",
+        "status": "completed",
+        "conclusion": "success",
+        "run_number": 146,
+        "jobs_url": "https://api.github.com/repos/ledoent/account-financial-tools/actions/runs/36793232342/jobs",
+        "logs_url": "https://api.github.com/repos/ledoent/account-financial-tools/actions/runs/36793232342/logs",
+        "workflow_id": 278043254
+      },
+      {
+        "id": 36793232321,
+        "name": "tests",
+        "status": "completed",
+        "conclusion": "failure",
+        "run_number": 146,
+        "jobs_url": "https://api.github.com/repos/ledoent/account-financial-tools/actions/runs/36793232321/jobs",
+        "logs_url": "https://api.github.com/repos/ledoent/account-financial-tools/actions/runs/36793232321/logs",
+        "workflow_id": 278043256
+      }
+    ]
+  }
+}

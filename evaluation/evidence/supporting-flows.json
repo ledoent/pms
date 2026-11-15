@@ -1,0 +1,22 @@
+{
+  "property": 157,
+  "contract": 27,
+  "contract_invoice_ids": [
+    82
+  ],
+  "asset": 8,
+  "depreciation_lines": 7,
+  "project": 11,
+  "task": 90,
+  "lead": 50,
+  "purchase": 21,
+  "purchase_state": "purchase",
+  "stock_location": 192,
+  "stock_moves": [
+    167
+  ],
+  "invoice_property_link": true,
+  "asset_property_link": true,
+  "task_property_link": true,
+  "purchase_property_link": true
+}

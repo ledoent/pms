@@ -1,0 +1,707 @@
+{
+  "pms_base": {
+    "headRefOid": "7c6889c2a0472925d4ec895773dae9e1816dbd6d",
+    "isDraft": true,
+    "statusCheckRollup": [
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T13:40:55Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43600946762/job/132465353655",
+        "name": "pre-commit",
+        "startedAt": "2026-11-14T13:40:33Z",
+        "status": "COMPLETED",
+        "workflowName": "pre-commit"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T13:40:39Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43600946764/job/132465354030",
+        "name": "Detect unreleased dependencies",
+        "startedAt": "2026-11-14T13:40:34Z",
+        "status": "COMPLETED",
+        "workflowName": "tests"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T13:42:18Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43600946764/job/132465354077",
+        "name": "test with Odoo",
+        "startedAt": "2026-11-14T13:40:33Z",
+        "status": "COMPLETED",
+        "workflowName": "tests"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T13:42:23Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43600946764/job/132465353841",
+        "name": "test with OCB",
+        "startedAt": "2026-11-14T13:40:33Z",
+        "status": "COMPLETED",
+        "workflowName": "tests"
+      }
+    ],
+    "url": "https://github.com/ledoent/pms/pull/1"
+  },
+  "pms_account": {
+    "headRefOid": "e0a00f48c288cb6d3bb5e2a3c14dd797399428bf",
+    "isDraft": true,
+    "statusCheckRollup": [
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T16:36:20Z",
+        "conclusion": "FAILURE",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43616504711/job/132512615045",
+        "name": "Detect unreleased dependencies",
+        "startedAt": "2026-11-14T16:36:14Z",
+        "status": "COMPLETED",
+        "workflowName": "tests"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T16:36:36Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43616504681/job/132512614866",
+        "name": "pre-commit",
+        "startedAt": "2026-11-14T16:36:14Z",
+        "status": "COMPLETED",
+        "workflowName": "pre-commit"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T16:38:24Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43616504711/job/132512615275",
+        "name": "test with Odoo",
+        "startedAt": "2026-11-14T16:36:14Z",
+        "status": "COMPLETED",
+        "workflowName": "tests"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T16:38:22Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43616504711/job/132512615358",
+        "name": "test with OCB",
+        "startedAt": "2026-11-14T16:36:14Z",
+        "status": "COMPLETED",
+        "workflowName": "tests"
+      }
+    ],
+    "url": "https://github.com/ledoent/pms/pull/3"
+  },
+  "pms_sale": {
+    "headRefOid": "146d4f5b4f5cfaa4330ae72e5a76c81869c43657",
+    "isDraft": true,
+    "statusCheckRollup": [
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T16:36:30Z",
+        "conclusion": "FAILURE",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43616521416/job/132512664723",
+        "name": "Detect unreleased dependencies",
+        "startedAt": "2026-11-14T16:36:25Z",
+        "status": "COMPLETED",
+        "workflowName": "tests"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T16:36:47Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43616521334/job/132512664392",
+        "name": "pre-commit",
+        "startedAt": "2026-11-14T16:36:25Z",
+        "status": "COMPLETED",
+        "workflowName": "pre-commit"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T16:39:19Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43616521416/job/132512664578",
+        "name": "test with Odoo",
+        "startedAt": "2026-11-14T16:36:25Z",
+        "status": "COMPLETED",
+        "workflowName": "tests"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T16:38:19Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43616521416/job/132512664747",
+        "name": "test with OCB",
+        "startedAt": "2026-11-14T16:36:25Z",
+        "status": "COMPLETED",
+        "workflowName": "tests"
+      }
+    ],
+    "url": "https://github.com/ledoent/pms/pull/5"
+  },
+  "pms_project": {
+    "headRefOid": "2e28ce1408035cf70912e1d8a762ecf9e3eb7e01",
+    "isDraft": true,
+    "statusCheckRollup": [
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T13:50:59Z",
+        "conclusion": "FAILURE",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43601804620/job/132467945041",
+        "name": "Detect unreleased dependencies",
+        "startedAt": "2026-11-14T13:50:54Z",
+        "status": "COMPLETED",
+        "workflowName": "tests"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T13:51:24Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43601804624/job/132467944807",
+        "name": "pre-commit",
+        "startedAt": "2026-11-14T13:50:54Z",
+        "status": "COMPLETED",
+        "workflowName": "pre-commit"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T13:52:56Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43601804620/job/132467944778",
+        "name": "test with Odoo",
+        "startedAt": "2026-11-14T13:50:53Z",
+        "status": "COMPLETED",
+        "workflowName": "tests"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T13:52:54Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43601804620/job/132467944625",
+        "name": "test with OCB",
+        "startedAt": "2026-11-14T13:50:53Z",
+        "status": "COMPLETED",
+        "workflowName": "tests"
+      }
+    ],
+    "url": "https://github.com/ledoent/pms/pull/4"
+  },
+  "pms_crm": {
+    "headRefOid": "3691d3813cb0cb90b880dc89faf5361109183b75",
+    "isDraft": true,
+    "statusCheckRollup": [
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T13:49:36Z",
+        "conclusion": "FAILURE",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43601690321/job/132467599964",
+        "name": "Detect unreleased dependencies",
+        "startedAt": "2026-11-14T13:49:32Z",
+        "status": "COMPLETED",
+        "workflowName": "tests"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T13:49:47Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43601690329/job/132467599721",
+        "name": "pre-commit",
+        "startedAt": "2026-11-14T13:49:32Z",
+        "status": "COMPLETED",
+        "workflowName": "pre-commit"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T13:50:59Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43601690321/job/132467599807",
+        "name": "test with Odoo",
+        "startedAt": "2026-11-14T13:49:32Z",
+        "status": "COMPLETED",
+        "workflowName": "tests"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T13:51:28Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43601690321/job/132467599937",
+        "name": "test with OCB",
+        "startedAt": "2026-11-14T13:49:32Z",
+        "status": "COMPLETED",
+        "workflowName": "tests"
+      }
+    ],
+    "url": "https://github.com/ledoent/pms/pull/2"
+  },
+  "pms_stock": {
+    "headRefOid": "1570baf32f10049ca924fd7accdbcb1f7d74b0cb",
+    "isDraft": true,
+    "statusCheckRollup": [
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T16:36:51Z",
+        "conclusion": "FAILURE",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43616554258/job/132512766282",
+        "name": "Detect unreleased dependencies",
+        "startedAt": "2026-11-14T16:36:47Z",
+        "status": "COMPLETED",
+        "workflowName": "tests"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T16:37:02Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43616554255/job/132512765957",
+        "name": "pre-commit",
+        "startedAt": "2026-11-14T16:36:46Z",
+        "status": "COMPLETED",
+        "workflowName": "pre-commit"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T16:38:43Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43616554258/job/132512766360",
+        "name": "test with Odoo",
+        "startedAt": "2026-11-14T16:36:47Z",
+        "status": "COMPLETED",
+        "workflowName": "tests"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T16:38:41Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43616554258/job/132512766100",
+        "name": "test with OCB",
+        "startedAt": "2026-11-14T16:36:47Z",
+        "status": "COMPLETED",
+        "workflowName": "tests"
+      }
+    ],
+    "url": "https://github.com/ledoent/pms/pull/10"
+  },
+  "pms_purchase": {
+    "headRefOid": "73fb5a58252b72fb0fb7ee065e2ab923458c1c7f",
+    "isDraft": true,
+    "statusCheckRollup": [
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T16:36:57Z",
+        "conclusion": "FAILURE",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43616563573/job/132512794047",
+        "name": "Detect unreleased dependencies",
+        "startedAt": "2026-11-14T16:36:53Z",
+        "status": "COMPLETED",
+        "workflowName": "tests"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T16:37:15Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43616563577/job/132512794259",
+        "name": "pre-commit",
+        "startedAt": "2026-11-14T16:36:53Z",
+        "status": "COMPLETED",
+        "workflowName": "pre-commit"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T16:38:55Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43616563573/job/132512794241",
+        "name": "test with Odoo",
+        "startedAt": "2026-11-14T16:36:53Z",
+        "status": "COMPLETED",
+        "workflowName": "tests"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T16:39:07Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43616563573/job/132512794199",
+        "name": "test with OCB",
+        "startedAt": "2026-11-14T16:36:53Z",
+        "status": "COMPLETED",
+        "workflowName": "tests"
+      }
+    ],
+    "url": "https://github.com/ledoent/pms/pull/7"
+  },
+  "pms_contract": {
+    "headRefOid": "aa38bccf22f78b5d125c2480d914a52465426f56",
+    "isDraft": true,
+    "statusCheckRollup": [
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T16:37:06Z",
+        "conclusion": "FAILURE",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43616577295/job/132512836283",
+        "name": "Detect unreleased dependencies",
+        "startedAt": "2026-11-14T16:37:02Z",
+        "status": "COMPLETED",
+        "workflowName": "tests"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T16:37:19Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43616577217/job/132512835859",
+        "name": "pre-commit",
+        "startedAt": "2026-11-14T16:37:02Z",
+        "status": "COMPLETED",
+        "workflowName": "pre-commit"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T16:38:35Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43616577295/job/132512836454",
+        "name": "test with Odoo",
+        "startedAt": "2026-11-14T16:37:02Z",
+        "status": "COMPLETED",
+        "workflowName": "tests"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T16:39:25Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43616577295/job/132512836478",
+        "name": "test with OCB",
+        "startedAt": "2026-11-14T16:37:03Z",
+        "status": "COMPLETED",
+        "workflowName": "tests"
+      }
+    ],
+    "url": "https://github.com/ledoent/pms/pull/6"
+  },
+  "pms_account_asset": {
+    "headRefOid": "610db624e7de9a9941b4aab179eaa865d8501129",
+    "isDraft": true,
+    "statusCheckRollup": [
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T16:37:15Z",
+        "conclusion": "FAILURE",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43616588775/job/132512868582",
+        "name": "Detect unreleased dependencies",
+        "startedAt": "2026-11-14T16:37:09Z",
+        "status": "COMPLETED",
+        "workflowName": "tests"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T16:37:36Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43616588668/job/132512868283",
+        "name": "pre-commit",
+        "startedAt": "2026-11-14T16:37:09Z",
+        "status": "COMPLETED",
+        "workflowName": "pre-commit"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T16:39:26Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43616588775/job/132512868707",
+        "name": "test with Odoo",
+        "startedAt": "2026-11-14T16:37:10Z",
+        "status": "COMPLETED",
+        "workflowName": "tests"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T16:38:43Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43616588775/job/132512868867",
+        "name": "test with OCB",
+        "startedAt": "2026-11-14T16:37:09Z",
+        "status": "COMPLETED",
+        "workflowName": "tests"
+      }
+    ],
+    "url": "https://github.com/ledoent/pms/pull/9"
+  },
+  "pms_website": {
+    "headRefOid": "1cb10458ec61e0e1ec6cfd97a490c033c860686c",
+    "isDraft": true,
+    "statusCheckRollup": [
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T14:16:00Z",
+        "conclusion": "FAILURE",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43603947326/job/132474425704",
+        "name": "Detect unreleased dependencies",
+        "startedAt": "2026-11-14T14:15:56Z",
+        "status": "COMPLETED",
+        "workflowName": "tests"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T14:16:13Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43603947359/job/132474425706",
+        "name": "pre-commit",
+        "startedAt": "2026-11-14T14:15:56Z",
+        "status": "COMPLETED",
+        "workflowName": "pre-commit"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T14:18:23Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43603947326/job/132474425865",
+        "name": "test with Odoo",
+        "startedAt": "2026-11-14T14:15:56Z",
+        "status": "COMPLETED",
+        "workflowName": "tests"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T14:18:25Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43603947326/job/132474425812",
+        "name": "test with OCB",
+        "startedAt": "2026-11-14T14:15:56Z",
+        "status": "COMPLETED",
+        "workflowName": "tests"
+      }
+    ],
+    "url": "https://github.com/ledoent/pms/pull/11"
+  },
+  "pms_website_sale": {
+    "headRefOid": "ed080d96b5502113016180b73b1cf5cbd0fcea0c",
+    "isDraft": true,
+    "statusCheckRollup": [
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T16:37:31Z",
+        "conclusion": "FAILURE",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43616615643/job/132512955319",
+        "name": "Detect unreleased dependencies",
+        "startedAt": "2026-11-14T16:37:28Z",
+        "status": "COMPLETED",
+        "workflowName": "tests"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T16:37:53Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43616615646/job/132512955182",
+        "name": "pre-commit",
+        "startedAt": "2026-11-14T16:37:28Z",
+        "status": "COMPLETED",
+        "workflowName": "pre-commit"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T16:40:47Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43616615643/job/132512955118",
+        "name": "test with Odoo",
+        "startedAt": "2026-11-14T16:37:28Z",
+        "status": "COMPLETED",
+        "workflowName": "tests"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T16:40:53Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43616615643/job/132512955389",
+        "name": "test with OCB",
+        "startedAt": "2026-11-14T16:37:28Z",
+        "status": "COMPLETED",
+        "workflowName": "tests"
+      }
+    ],
+    "url": "https://github.com/ledoent/pms/pull/8"
+  },
+  "stay-length": {
+    "headRefOid": "03d51ec9519d35c5daf0ab7b19147742b77a7337",
+    "isDraft": true,
+    "statusCheckRollup": [
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T16:38:53Z",
+        "conclusion": "FAILURE",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43616732467/job/132513319345",
+        "name": "Detect unreleased dependencies",
+        "startedAt": "2026-11-14T16:38:49Z",
+        "status": "COMPLETED",
+        "workflowName": "tests"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T16:39:09Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43616732428/job/132513318773",
+        "name": "pre-commit",
+        "startedAt": "2026-11-14T16:38:48Z",
+        "status": "COMPLETED",
+        "workflowName": "pre-commit"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T16:41:21Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43616732467/job/132513319310",
+        "name": "test with Odoo",
+        "startedAt": "2026-11-14T16:38:48Z",
+        "status": "COMPLETED",
+        "workflowName": "tests"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T16:41:38Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43616732467/job/132513319042",
+        "name": "test with OCB",
+        "startedAt": "2026-11-14T16:38:48Z",
+        "status": "COMPLETED",
+        "workflowName": "tests"
+      }
+    ],
+    "url": "https://github.com/ledoent/pms/pull/12"
+  },
+  "booking-boundaries": {
+    "headRefOid": "ebe74a48dd2cb5f20fc6ef0af360a6a89596579e",
+    "isDraft": true,
+    "statusCheckRollup": [
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T17:05:41Z",
+        "conclusion": "FAILURE",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43619182736/job/132520776547",
+        "name": "Detect unreleased dependencies",
+        "startedAt": "2026-11-14T17:05:37Z",
+        "status": "COMPLETED",
+        "workflowName": "tests"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T17:06:01Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43619182758/job/132520754423",
+        "name": "pre-commit",
+        "startedAt": "2026-11-14T17:05:32Z",
+        "status": "COMPLETED",
+        "workflowName": "pre-commit"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T17:08:25Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43619182736/job/132520776743",
+        "name": "test with Odoo",
+        "startedAt": "2026-11-14T17:05:37Z",
+        "status": "COMPLETED",
+        "workflowName": "tests"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T17:07:27Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43619182736/job/132520776846",
+        "name": "test with OCB",
+        "startedAt": "2026-11-14T17:05:37Z",
+        "status": "COMPLETED",
+        "workflowName": "tests"
+      }
+    ],
+    "url": "https://github.com/ledoent/pms/pull/13"
+  },
+  "website-access": {
+    "headRefOid": "147be9c2ea75bfb302f007e09833c7ca895ebdfd",
+    "isDraft": true,
+    "statusCheckRollup": [
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T17:05:39Z",
+        "conclusion": "FAILURE",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43619184409/job/132520759659",
+        "name": "Detect unreleased dependencies",
+        "startedAt": "2026-11-14T17:05:34Z",
+        "status": "COMPLETED",
+        "workflowName": "tests"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T17:05:55Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43619184320/job/132520759278",
+        "name": "pre-commit",
+        "startedAt": "2026-11-14T17:05:33Z",
+        "status": "COMPLETED",
+        "workflowName": "pre-commit"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T17:07:19Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43619184409/job/132520760000",
+        "name": "test with Odoo",
+        "startedAt": "2026-11-14T17:05:34Z",
+        "status": "COMPLETED",
+        "workflowName": "tests"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T17:08:01Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43619184409/job/132520759930",
+        "name": "test with OCB",
+        "startedAt": "2026-11-14T17:05:34Z",
+        "status": "COMPLETED",
+        "workflowName": "tests"
+      }
+    ],
+    "url": "https://github.com/ledoent/pms/pull/14"
+  },
+  "website-booking": {
+    "headRefOid": "a117c49797e4eabc075cb11e22d189b128cabde5",
+    "isDraft": true,
+    "statusCheckRollup": [
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T17:05:40Z",
+        "conclusion": "FAILURE",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43619187268/job/132520768382",
+        "name": "Detect unreleased dependencies",
+        "startedAt": "2026-11-14T17:05:35Z",
+        "status": "COMPLETED",
+        "workflowName": "tests"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T17:06:00Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43619187246/job/132520768330",
+        "name": "pre-commit",
+        "startedAt": "2026-11-14T17:05:35Z",
+        "status": "COMPLETED",
+        "workflowName": "pre-commit"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T17:09:00Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43619187268/job/132520768793",
+        "name": "test with Odoo",
+        "startedAt": "2026-11-14T17:05:38Z",
+        "status": "COMPLETED",
+        "workflowName": "tests"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-14T17:07:53Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/ledoent/pms/actions/runs/43619187268/job/132520768842",
+        "name": "test with OCB",
+        "startedAt": "2026-11-14T17:05:35Z",
+        "status": "COMPLETED",
+        "workflowName": "tests"
+      }
+    ],
+    "url": "https://github.com/ledoent/pms/pull/15"
+  }
+}

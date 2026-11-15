@@ -1,0 +1,849 @@
+ Container pms20-review-odoo-prod-20-run-19fb9e03c58c Creating 
+ Container pms20-review-odoo-prod-20-run-19fb9e03c58c Created 
+Running as user 'root' is a security risk.
+2026-11-14 17:07:28,439 1 INFO ? odoo: Odoo version 20.0
+2026-11-14 17:07:28,440 1 INFO ? odoo: Using configuration file at /etc/odoo-pms20.conf
+2026-11-14 17:07:28,441 1 INFO ? odoo: addons paths: _NamespacePath(['/opt/odoo/odoo/addons', '/var/lib/odoo-pms20/addons/20.0', '/opt/odoo/custom/src/pms', '/opt/odoo/addons'])
+2026-11-14 17:07:28,441 1 INFO ? odoo: database: odoo@db-prod-20:5432
+2026-11-14 17:07:32,697 1 INFO ? odoo.service.server: HTTP service running on 0.0.0.0:8069
+2026-11-14 17:07:32,918 1 INFO pms20_combined_final2 odoo.tests.common: Importing test framework
+2026-11-14 17:07:33,059 1 INFO pms20_combined_final2 odoo.modules.loading: loading 1 modules...
+2026-11-14 17:07:33,084 1 INFO pms20_combined_final2 odoo.modules.loading: 1 modules loaded in 0.02s, 0 queries (+0 extra)
+2026-11-14 17:07:33,233 1 INFO pms20_combined_final2 odoo.modules.loading: updating modules list
+2026-11-14 17:07:33,242 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a
+2026-11-14 17:07:39,270 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_module: ALLOW access to module.button_install on ['Property Management System', 'PMS - Accounting', 'PMS - Asset Management', 'PMS - Contracts', 'PMS - CRM', 'PMS - Project', 'PMS - Purchase', 'PMS - Sale', 'PMS - Stock', 'PMS - Website', 'PMS - Website Sale'] to user __system__ #1 via n/a
+2026-11-14 17:07:39,565 1 INFO pms20_combined_final2 odoo.modules.loading: loading 109 modules...
+2026-11-14 17:07:53,961 1 INFO pms20_combined_final2 odoo.modules.loading: Loading module pms_base (99/109)
+2026-11-14 17:07:55,408 1 INFO pms20_combined_final2 odoo.registry: module pms_base: creating or updating database tables
+2026-11-14 17:07:56,466 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_base/security/res_groups.xml
+2026-11-14 17:07:57,816 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_base/data/pms_stage.xml
+2026-11-14 17:07:57,862 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_base/data/pms_team.xml
+2026-11-14 17:07:57,951 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_base/data/pms_amenity_type.xml
+2026-11-14 17:07:57,987 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_base/data/pms_room_type.xml
+2026-11-14 17:07:58,090 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_base/views/pms_tag.xml
+2026-11-14 17:07:58,312 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_base/views/pms_stage.xml
+2026-11-14 17:07:58,392 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_base/views/pms_amenity_type.xml
+2026-11-14 17:07:58,441 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_base/views/pms_amenity.xml
+2026-11-14 17:07:58,509 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_base/views/pms_room_type.xml
+2026-11-14 17:07:58,560 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_base/views/pms_room.xml
+2026-11-14 17:07:58,638 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_base/views/pms_service.xml
+2026-11-14 17:07:58,716 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_base/views/pms_property.xml
+2026-11-14 17:07:58,858 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_base/views/res_config_settings.xml
+2026-11-14 17:07:59,049 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_base/views/pms_team.xml
+2026-11-14 17:07:59,194 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_base/views/menu.xml
+2026-11-14 17:07:59,479 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_base/views/res_partner_view.xml
+2026-11-14 17:07:59,685 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_base/security/ir.access.csv
+2026-11-14 17:07:59,961 1 INFO pms20_combined_final2 odoo.modules.loading: Module pms_base: loading demo
+2026-11-14 17:07:59,967 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_base/demo/pms_tag.xml
+2026-11-14 17:07:59,997 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_base/demo/pms_amenity.xml
+2026-11-14 17:08:00,040 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_base/demo/res_partner.xml
+2026-11-14 17:08:00,232 1 INFO pms20_combined_final2 odoo.addons.phone_validation.tools.phone_validation: The `phonenumbers` Python module is not installed, contact numbers will not be verified. Please install the `phonenumbers` Python module.
+2026-11-14 17:08:00,236 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_base/demo/pms_property.xml
+2026-11-14 17:08:00,434 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_base/demo/pms_room.xml
+2026-11-14 17:08:00,541 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_base/demo/product_product.xml
+2026-11-14 17:08:00,985 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_base/demo/pms_service.xml
+2026-11-14 17:08:05,040 1 INFO pms20_combined_final2 odoo.registry: Registry changed, signaling through the database
+2026-11-14 17:08:05,158 1 INFO pms20_combined_final2 odoo.modules.loading: Module pms_base loaded in 11.20s, 2135 queries (+2135 other)
+2026-11-14 17:08:05,158 1 INFO pms20_combined_final2 odoo.modules.loading: Loading module pms_account (100/109)
+2026-11-14 17:08:05,415 1 INFO pms20_combined_final2 odoo.registry: module pms_account: creating or updating database tables
+2026-11-14 17:08:05,896 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_account/data/analytic_plan.xml
+2026-11-14 17:08:05,932 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_account/views/account_analytic_account.xml
+2026-11-14 17:08:06,187 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_account/views/account_move.xml
+2026-11-14 17:08:06,592 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_account/views/pms_property.xml
+2026-11-14 17:08:06,675 1 INFO pms20_combined_final2 odoo.modules.loading: Module pms_account: loading demo
+2026-11-14 17:08:06,676 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_account/demo/account_analytic_account.xml
+2026-11-14 17:08:07,158 1 INFO pms20_combined_final2 odoo.registry: Registry changed, signaling through the database
+2026-11-14 17:08:11,730 1 INFO pms20_combined_final2 odoo.modules.loading: Module pms_account loaded in 6.57s, 331 queries (+331 other)
+2026-11-14 17:08:11,730 1 INFO pms20_combined_final2 odoo.modules.loading: Loading module pms_crm (101/109)
+2026-11-14 17:08:11,875 1 INFO pms20_combined_final2 odoo.registry: module pms_crm: creating or updating database tables
+2026-11-14 17:08:12,260 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_crm/views/crm_lead.xml
+2026-11-14 17:08:12,510 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_crm/views/pms_property.xml
+2026-11-14 17:08:12,592 1 INFO pms20_combined_final2 odoo.modules.loading: Module pms_crm: loading demo
+2026-11-14 17:08:12,594 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_crm/demo/crm_lead.xml
+2026-11-14 17:08:13,299 1 INFO pms20_combined_final2 odoo.registry: Registry changed, signaling through the database
+2026-11-14 17:08:13,327 1 INFO pms20_combined_final2 odoo.modules.loading: Module pms_crm loaded in 1.60s, 223 queries (+223 other)
+2026-11-14 17:08:13,328 1 INFO pms20_combined_final2 odoo.modules.loading: Loading module pms_project (102/109)
+2026-11-14 17:08:13,504 1 INFO pms20_combined_final2 odoo.registry: module pms_project: creating or updating database tables
+2026-11-14 17:08:13,904 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_project/views/pms_property_views.xml
+2026-11-14 17:08:14,204 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_project/views/project_task_views.xml
+2026-11-14 17:08:14,298 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_project/views/project.xml
+2026-11-14 17:08:14,402 1 INFO pms20_combined_final2 odoo.modules.loading: Module pms_project: loading demo
+2026-11-14 17:08:14,403 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_project/demo/project.xml
+2026-11-14 17:08:15,104 1 INFO pms20_combined_final2 odoo.registry: Registry changed, signaling through the database
+2026-11-14 17:08:15,127 1 INFO pms20_combined_final2 odoo.modules.loading: Module pms_project loaded in 1.80s, 321 queries (+321 other)
+2026-11-14 17:08:15,128 1 INFO pms20_combined_final2 odoo.modules.loading: Loading module pms_stock (103/109)
+2026-11-14 17:08:15,249 1 INFO pms20_combined_final2 odoo.registry: module pms_stock: creating or updating database tables
+2026-11-14 17:08:15,590 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_stock/views/pms_property.xml
+2026-11-14 17:08:15,885 1 INFO pms20_combined_final2 odoo.modules.loading: Module pms_stock: loading demo
+2026-11-14 17:08:15,887 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_stock/demo/stock_location.xml
+2026-11-14 17:08:15,961 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_stock/demo/pms_property.xml
+2026-11-14 17:08:16,469 1 INFO pms20_combined_final2 odoo.registry: Registry changed, signaling through the database
+2026-11-14 17:08:16,502 1 INFO pms20_combined_final2 odoo.modules.loading: Module pms_stock loaded in 1.37s, 159 queries (+159 other)
+2026-11-14 17:08:16,503 1 INFO pms20_combined_final2 odoo.modules.loading: Loading module pms_website (104/109)
+2026-11-14 17:08:16,663 1 INFO pms20_combined_final2 odoo.registry: module pms_website: creating or updating database tables
+2026-11-14 17:08:17,375 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_website/data/rule.xml
+2026-11-14 17:08:17,526 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_website/views/website_menu.xml
+2026-11-14 17:08:17,665 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_website/views/pms_property_template.xml
+2026-11-14 17:08:17,774 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_website/views/pms_property.xml
+2026-11-14 17:08:18,089 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_website/views/pms_amenity_views.xml
+2026-11-14 17:08:18,173 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_website/views/pms_website_category_views.xml
+2026-11-14 17:08:18,249 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_website/security/ir.access.csv
+2026-11-14 17:08:18,524 1 INFO pms20_combined_final2 odoo.modules.loading: Module pms_website: loading demo
+2026-11-14 17:08:18,526 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_website/demo/pms_website_category.xml
+2026-11-14 17:08:18,568 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_website/demo/pms_amenity.xml
+2026-11-14 17:08:18,617 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_website/demo/pms_property.xml
+2026-11-14 17:08:20,701 1 INFO pms20_combined_final2 odoo.registry: Registry changed, signaling through the database
+2026-11-14 17:08:20,770 1 INFO pms20_combined_final2 odoo.modules.loading: Module pms_website loaded in 4.27s, 503 queries (+503 other)
+2026-11-14 17:08:20,770 1 INFO pms20_combined_final2 odoo.modules.loading: Loading module pms_account_asset (105/109)
+2026-11-14 17:08:20,916 1 INFO pms20_combined_final2 odoo.registry: module pms_account_asset: creating or updating database tables
+2026-11-14 17:08:21,320 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_account_asset/views/account_asset.xml
+2026-11-14 17:08:21,627 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_account_asset/views/pms_property.xml
+2026-11-14 17:08:21,749 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_account_asset/views/menu.xml
+2026-11-14 17:08:21,771 1 INFO pms20_combined_final2 odoo.modules.loading: Module pms_account_asset: loading demo
+2026-11-14 17:08:21,773 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_account_asset/demo/account_asset.xml
+2026-11-14 17:08:22,554 1 INFO pms20_combined_final2 odoo.registry: Registry changed, signaling through the database
+2026-11-14 17:08:22,582 1 INFO pms20_combined_final2 odoo.modules.loading: Module pms_account_asset loaded in 1.81s, 255 queries (+255 other)
+2026-11-14 17:08:22,583 1 INFO pms20_combined_final2 odoo.modules.loading: Loading module pms_contract (106/109)
+2026-11-14 17:08:22,777 1 INFO pms20_combined_final2 odoo.registry: module pms_contract: creating or updating database tables
+2026-11-14 17:08:23,179 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_contract/views/pms_service.xml
+2026-11-14 17:08:23,500 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_contract/views/contract_contract.xml
+2026-11-14 17:08:23,577 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_contract/views/pms_property.xml
+2026-11-14 17:08:23,689 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_contract/views/menu.xml
+2026-11-14 17:08:23,717 1 INFO pms20_combined_final2 odoo.modules.loading: Module pms_contract: loading demo
+2026-11-14 17:08:23,719 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_contract/demo/contract_contract.xml
+2026-11-14 17:08:24,193 1 INFO pms20_combined_final2 odoo.registry: Registry changed, signaling through the database
+2026-11-14 17:08:24,222 1 INFO pms20_combined_final2 odoo.modules.loading: Module pms_contract loaded in 1.64s, 236 queries (+236 other)
+2026-11-14 17:08:24,223 1 INFO pms20_combined_final2 odoo.modules.loading: Loading module pms_purchase (107/109)
+2026-11-14 17:08:24,407 1 INFO pms20_combined_final2 odoo.registry: module pms_purchase: creating or updating database tables
+2026-11-14 17:08:24,879 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_purchase/views/purchase_order.xml
+2026-11-14 17:08:25,212 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_purchase/views/pms_property.xml
+2026-11-14 17:08:25,331 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_purchase/views/stock_putaway_views.xml
+2026-11-14 17:08:25,397 1 INFO pms20_combined_final2 odoo.modules.loading: Module pms_purchase: loading demo
+2026-11-14 17:08:25,399 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_purchase/demo/purchase_order.xml
+2026-11-14 17:08:26,494 1 INFO pms20_combined_final2 odoo.registry: Registry changed, signaling through the database
+2026-11-14 17:08:26,559 1 INFO pms20_combined_final2 odoo.modules.loading: Module pms_purchase loaded in 2.34s, 276 queries (+276 other)
+2026-11-14 17:08:26,560 1 INFO pms20_combined_final2 odoo.modules.loading: Loading module pms_sale (108/109)
+2026-11-14 17:08:27,249 1 INFO pms20_combined_final2 odoo.registry: module pms_sale: creating or updating database tables
+2026-11-14 17:08:28,969 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_sale/data/ir_sequence.xml
+2026-11-14 17:08:29,054 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_sale/data/product_data.xml
+2026-11-14 17:08:29,622 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_sale/data/pms_stage.xml
+2026-11-14 17:08:29,722 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_sale/views/product_views.xml
+2026-11-14 17:08:30,212 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_sale/views/pms_property_reservation.xml
+2026-11-14 17:08:30,302 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_sale/views/pms_mail_views.xml
+2026-11-14 17:08:30,428 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_sale/views/pms_property.xml
+2026-11-14 17:08:30,598 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_sale/views/pms_reservation_guest_views.xml
+2026-11-14 17:08:30,702 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_sale/views/pms_reservation_views.xml
+2026-11-14 17:08:31,025 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_sale/wizards/pms_configurator_views.xml
+2026-11-14 17:08:31,095 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_sale/views/sale_order_views.xml
+2026-11-14 17:08:31,232 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_sale/views/pms_team_views.xml
+2026-11-14 17:08:31,288 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_sale/views/menu.xml
+2026-11-14 17:08:31,338 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_sale/views/account_move.xml
+2026-11-14 17:08:31,480 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_sale/security/ir.access.csv
+2026-11-14 17:08:31,656 1 INFO pms20_combined_final2 odoo.modules.loading: Module pms_sale: loading demo
+2026-11-14 17:08:31,657 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_sale/demo/res_partner.xml
+2026-11-14 17:08:31,927 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_sale/demo/pms_property.xml
+2026-11-14 17:08:32,071 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_sale/demo/pms_property_reservation.xml
+2026-11-14 17:08:32,101 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_sale/demo/pms_reservation.xml
+2026-11-14 17:08:32,574 1 INFO pms20_combined_final2 odoo.registry: Registry changed, signaling through the database
+2026-11-14 17:08:32,927 1 INFO pms20_combined_final2 odoo.modules.loading: Module pms_sale loaded in 6.37s, 1069 queries (+1069 other)
+2026-11-14 17:08:32,927 1 INFO pms20_combined_final2 odoo.modules.loading: Loading module pms_website_sale (109/109)
+2026-11-14 17:08:33,098 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_website_sale/data/website_menu.xml
+2026-11-14 17:08:33,428 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_website_sale/security/pms_website_sale.xml
+2026-11-14 17:08:33,668 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_website_sale/views/templates.xml
+2026-11-14 17:08:33,937 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_website_sale/security/ir.access.csv
+2026-11-14 17:08:34,089 1 INFO pms20_combined_final2 odoo.modules.loading: Module pms_website_sale: loading demo
+2026-11-14 17:08:34,090 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_website_sale/demo/pms_property_reservation.xml
+2026-11-14 17:08:34,108 1 INFO pms20_combined_final2 odoo.modules.loading: loading pms_website_sale/demo/pms_reservation.xml
+2026-11-14 17:08:34,416 1 INFO pms20_combined_final2 odoo.registry: Caches invalidated, signaling through the database: ['default', 'groups', 'stable', 'templates']
+2026-11-14 17:08:34,480 1 INFO pms20_combined_final2 odoo.modules.loading: Module pms_website_sale loaded in 1.55s, 236 queries (+236 other)
+2026-11-14 17:08:34,481 1 INFO pms20_combined_final2 odoo.modules.loading: 109 modules loaded in 54.92s, 5744 queries (+5744 extra)
+2026-11-14 17:08:36,088 1 INFO pms20_combined_final2 odoo.registry: verifying fields for every extended model
+2026-11-14 17:08:36,942 1 INFO pms20_combined_final2 odoo.modules.loading: Modules loaded.
+2026-11-14 17:08:36,967 1 INFO pms20_combined_final2 odoo.registry: Registry changed, signaling through the database
+2026-11-14 17:08:36,972 1 INFO pms20_combined_final2 odoo.registry: Registry loaded in 64.224s
+2026-11-14 17:08:36,973 1 INFO pms20_combined_final2 odoo.service.server: Starting post tests
+2026-11-14 17:08:37,005 1 INFO pms20_combined_final2 odoo.registry: Reloading the model registry after database signaling.
+2026-11-14 17:08:37,073 1 INFO pms20_combined_final2 odoo.modules.loading: loading 1 modules...
+2026-11-14 17:08:37,097 1 INFO pms20_combined_final2 odoo.modules.loading: 1 modules loaded in 0.02s, 0 queries (+0 extra)
+2026-11-14 17:08:37,107 1 INFO pms20_combined_final2 odoo.modules.loading: loading 109 modules...
+2026-11-14 17:08:37,433 1 INFO pms20_combined_final2 odoo.modules.loading: 109 modules loaded in 0.33s, 0 queries (+0 extra)
+2026-11-14 17:08:38,544 1 INFO pms20_combined_final2 odoo.modules.loading: Modules loaded.
+2026-11-14 17:08:38,575 1 INFO pms20_combined_final2 odoo.registry: Registry loaded in 1.569s
+2026-11-14 17:08:38,576 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_qweb: Pregenerating assets bundles
+2026-11-14 17:08:49,439 1 INFO pms20_combined_final2 odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/fa0cc8a/spreadsheet.public_spreadsheet.min.js (id:1502)
+2026-11-14 17:08:49,442 1 INFO pms20_combined_final2 odoo.addons.base.models.assetsbundle: Deleting attachments [1284] (matching /web/assets/_______/spreadsheet.public_spreadsheet.min.js) because it was replaced with /web/assets/fa0cc8a/spreadsheet.public_spreadsheet.min.js
+2026-11-14 17:08:51,059 1 INFO pms20_combined_final2 odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/c81cb40/web.__assets_tests_call__.min.js (id:1503)
+2026-11-14 17:08:51,062 1 INFO pms20_combined_final2 odoo.addons.base.models.assetsbundle: Deleting attachments [1285] (matching /web/assets/_______/web.__assets_tests_call__.min.js) because it was replaced with /web/assets/c81cb40/web.__assets_tests_call__.min.js
+2026-11-14 17:08:51,531 1 INFO pms20_combined_final2 odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/a18a1e3/web.assets_frontend_lazy.min.js (id:1504)
+2026-11-14 17:08:51,534 1 INFO pms20_combined_final2 odoo.addons.base.models.assetsbundle: Deleting attachments [1286] (matching /web/assets/_______/web.assets_frontend_lazy.min.js) because it was replaced with /web/assets/a18a1e3/web.assets_frontend_lazy.min.js
+2026-11-14 17:08:51,604 1 INFO pms20_combined_final2 odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/098c050/web.assets_tests.min.js (id:1505)
+2026-11-14 17:08:51,607 1 INFO pms20_combined_final2 odoo.addons.base.models.assetsbundle: Deleting attachments [1288] (matching /web/assets/_______/web.assets_tests.min.js) because it was replaced with /web/assets/098c050/web.assets_tests.min.js
+2026-11-14 17:09:14,177 1 INFO pms20_combined_final2 odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/56fc0ff/web.assets_unit_tests.min.js (id:1506)
+2026-11-14 17:09:14,180 1 INFO pms20_combined_final2 odoo.addons.base.models.assetsbundle: Deleting attachments [1460] (matching /web/assets/_______/web.assets_unit_tests.min.js) because it was replaced with /web/assets/56fc0ff/web.assets_unit_tests.min.js
+2026-11-14 17:09:23,998 1 INFO pms20_combined_final2 odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/397a2ce/web.assets_unit_tests_setup.min.js (id:1507)
+2026-11-14 17:09:24,001 1 INFO pms20_combined_final2 odoo.addons.base.models.assetsbundle: Deleting attachments [1461] (matching /web/assets/_______/web.assets_unit_tests_setup.min.js) because it was replaced with /web/assets/397a2ce/web.assets_unit_tests_setup.min.js
+2026-11-14 17:09:25,946 1 INFO pms20_combined_final2 odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/d077798/web.assets_web.min.js (id:1508)
+2026-11-14 17:09:25,950 1 INFO pms20_combined_final2 odoo.addons.base.models.assetsbundle: Deleting attachments [1480] (matching /web/assets/_______/web.assets_web.min.js) because it was replaced with /web/assets/d077798/web.assets_web.min.js
+2026-11-14 17:09:26,186 1 INFO pms20_combined_final2 odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/a247dfc/web_timeline.vis-timeline_lib.min.js (id:1509)
+2026-11-14 17:09:26,189 1 INFO pms20_combined_final2 odoo.addons.base.models.assetsbundle: Deleting attachments [1295] (matching /web/assets/_______/web_timeline.vis-timeline_lib.min.js) because it was replaced with /web/assets/a247dfc/web_timeline.vis-timeline_lib.min.js
+2026-11-14 17:09:26,372 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_qweb: JS Assets bundles generated in 45.786869287490845 seconds
+2026-11-14 17:09:26,375 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_qweb: Binary Assets bundles generated in 0.0025680065155029297 seconds
+2026-11-14 17:09:39,755 1 INFO pms20_combined_final2 odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/4535c58/web.assets_unit_tests_setup.min.css (id:1510)
+2026-11-14 17:09:39,759 1 INFO pms20_combined_final2 odoo.addons.base.models.assetsbundle: Deleting attachments [1310] (matching /web/assets/_______/web.assets_unit_tests_setup.min.css) because it was replaced with /web/assets/4535c58/web.assets_unit_tests_setup.min.css
+2026-11-14 17:09:52,412 1 INFO pms20_combined_final2 odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/a12a267/web.assets_web.min.css (id:1511)
+2026-11-14 17:09:52,430 1 INFO pms20_combined_final2 odoo.addons.base.models.assetsbundle: Deleting attachments [1476] (matching /web/assets/_______/web.assets_web.min.css) because it was replaced with /web/assets/a12a267/web.assets_web.min.css
+2026-11-14 17:10:08,504 1 INFO pms20_combined_final2 odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/9f9b5c0/web.assets_web_dark.min.css (id:1512)
+2026-11-14 17:10:08,508 1 INFO pms20_combined_final2 odoo.addons.base.models.assetsbundle: Deleting attachments [1312] (matching /web/assets/_______/web.assets_web_dark.min.css) because it was replaced with /web/assets/9f9b5c0/web.assets_web_dark.min.css
+2026-11-14 17:10:23,170 1 INFO pms20_combined_final2 odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/5864d76/web.assets_web_print.min.css (id:1513)
+2026-11-14 17:10:23,174 1 INFO pms20_combined_final2 odoo.addons.base.models.assetsbundle: Deleting attachments [1488] (matching /web/assets/_______/web.assets_web_print.min.css) because it was replaced with /web/assets/5864d76/web.assets_web_print.min.css
+2026-11-14 17:10:23,221 1 INFO pms20_combined_final2 odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/2d8675f/web_timeline.vis-timeline_lib.min.css (id:1514)
+2026-11-14 17:10:23,224 1 INFO pms20_combined_final2 odoo.addons.base.models.assetsbundle: Deleting attachments [1318] (matching /web/assets/_______/web_timeline.vis-timeline_lib.min.css) because it was replaced with /web/assets/2d8675f/web_timeline.vis-timeline_lib.min.css
+2026-11-14 17:10:23,305 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_qweb: CSS Assets bundles generated in 56.929394006729126 seconds
+2026-11-14 17:10:23,796 1 INFO pms20_combined_final2 odoo.addons.pms_account.tests.test_pms_account: Starting TestPmsAccountAnalytic.test_action_view_bills_empty ...
+2026-11-14 17:10:23,861 1 INFO pms20_combined_final2 odoo.addons.pms_account.tests.test_pms_account: Starting TestPmsAccountAnalytic.test_action_view_invoices_empty ...
+2026-11-14 17:10:23,908 1 INFO pms20_combined_final2 odoo.addons.pms_account.tests.test_pms_account: Starting TestPmsAccountAnalytic.test_analytic_account_linked_to_property ...
+2026-11-14 17:10:23,917 1 INFO pms20_combined_final2 odoo.addons.pms_account.tests.test_pms_account: Starting TestPmsAccountAnalytic.test_create_analytic_account_without_plan ...
+2026-11-14 17:10:24,035 1 INFO pms20_combined_final2 odoo.addons.pms_account.tests.test_pms_account: Starting TestPmsAccountAnalytic.test_create_batch_mixed_analytic ...
+2026-11-14 17:10:24,245 1 INFO pms20_combined_final2 odoo.addons.pms_account.tests.test_pms_account: Starting TestPmsAccountAnalytic.test_create_property_with_existing_analytic_id ...
+2026-11-14 17:10:24,401 1 INFO pms20_combined_final2 odoo.addons.pms_account.tests.test_pms_account: Starting TestPmsAccountAnalytic.test_invoice_count_initial ...
+2026-11-14 17:10:24,410 1 INFO pms20_combined_final2 odoo.addons.pms_account.tests.test_pms_account: Starting TestPmsAccountAnalytic.test_module_models_import ...
+2026-11-14 17:10:24,411 1 INFO pms20_combined_final2 odoo.addons.pms_account.tests.test_pms_account: Starting TestPmsAccountAnalytic.test_property_creates_analytic_account ...
+2026-11-14 17:10:24,428 1 INFO pms20_combined_final2 odoo.addons.pms_account.tests.test_pms_account: Starting TestPmsAccountAnalytic.test_write_creates_analytic_when_missing ...
+2026-11-14 17:10:24,641 1 INFO pms20_combined_final2 odoo.addons.pms_account.tests.test_pms_account: Starting TestPmsAccountAnalytic.test_write_property_name_and_ref ...
+2026-11-14 17:10:24,805 1 INFO pms20_combined_final2 odoo.addons.pms_account.tests.test_pms_account: Starting TestPmsAccountAnalytic.test_write_property_updates_analytic_code ...
+2026-11-14 17:10:24,936 1 INFO pms20_combined_final2 odoo.addons.pms_account.tests.test_pms_account: Starting TestPmsAccountAnalytic.test_write_property_updates_analytic_name ...
+2026-11-14 17:10:25,094 1 INFO pms20_combined_final2 odoo.addons.pms_account.tests.test_pms_account: Starting TestPmsAccountAnalytic.test_write_unrelated_field_does_not_sync_analytic ...
+2026-11-14 17:10:25,219 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_attachment: filestore gc 27 checked, 0 removed
+2026-11-14 17:10:26,375 1 INFO pms20_combined_final2 odoo.addons.base.models.res_users: Group change: user 22 with IP n/a changed groups of user 22 who belonged to [39, 76, 22, 43, 59, 5, 1, 38] with changes [(<Command.LINK: 4>, 6, 0)]
+2026-11-14 17:10:27,039 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_attachment: _file_read reading /var/lib/odoo-pms20/filestore/pms20_combined_final2/83/835ed246572b47ba1e9f55198e57b566888b46a6
+Traceback (most recent call last):
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 148, in _file_read
+    return LocalBinaryFile(self)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 1204, in __init__
+    self.__stat = os.stat(path)  # checks that the file exists
+                  ^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo-pms20/filestore/pms20_combined_final2/83/835ed246572b47ba1e9f55198e57b566888b46a6'
+2026-11-14 17:10:27,044 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_attachment: _file_read reading /var/lib/odoo-pms20/filestore/pms20_combined_final2/b2/b2a7945f0edf2c87b0d5bcd21fdeb5833feab7a4
+Traceback (most recent call last):
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 148, in _file_read
+    return LocalBinaryFile(self)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 1204, in __init__
+    self.__stat = os.stat(path)  # checks that the file exists
+                  ^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo-pms20/filestore/pms20_combined_final2/b2/b2a7945f0edf2c87b0d5bcd21fdeb5833feab7a4'
+2026-11-14 17:10:27,045 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_attachment: _file_read reading /var/lib/odoo-pms20/filestore/pms20_combined_final2/7e/7e3a4f88badf2f8729e4aa4f0a1d70a615d43768
+Traceback (most recent call last):
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 148, in _file_read
+    return LocalBinaryFile(self)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 1204, in __init__
+    self.__stat = os.stat(path)  # checks that the file exists
+                  ^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo-pms20/filestore/pms20_combined_final2/7e/7e3a4f88badf2f8729e4aa4f0a1d70a615d43768'
+2026-11-14 17:10:27,085 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_attachment: _file_read reading /var/lib/odoo-pms20/filestore/pms20_combined_final2/51/5188bb23feb1a00e56aeeeacb478500c28cde961
+Traceback (most recent call last):
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 148, in _file_read
+    return LocalBinaryFile(self)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 1204, in __init__
+    self.__stat = os.stat(path)  # checks that the file exists
+                  ^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo-pms20/filestore/pms20_combined_final2/51/5188bb23feb1a00e56aeeeacb478500c28cde961'
+2026-11-14 17:10:27,087 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_attachment: _file_read reading /var/lib/odoo-pms20/filestore/pms20_combined_final2/a0/a0693ec4f22d6090a343f1e38a9c6490476f4f5c
+Traceback (most recent call last):
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 148, in _file_read
+    return LocalBinaryFile(self)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 1204, in __init__
+    self.__stat = os.stat(path)  # checks that the file exists
+                  ^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo-pms20/filestore/pms20_combined_final2/a0/a0693ec4f22d6090a343f1e38a9c6490476f4f5c'
+2026-11-14 17:10:27,088 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_attachment: _file_read reading /var/lib/odoo-pms20/filestore/pms20_combined_final2/47/47782f33549207499a3ac33d126c4fc3c8a94ea6
+Traceback (most recent call last):
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 148, in _file_read
+    return LocalBinaryFile(self)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 1204, in __init__
+    self.__stat = os.stat(path)  # checks that the file exists
+                  ^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo-pms20/filestore/pms20_combined_final2/47/47782f33549207499a3ac33d126c4fc3c8a94ea6'
+2026-11-14 17:10:30,298 1 INFO pms20_combined_final2 odoo.addons.base.models.res_users: Group change: user 22 with IP n/a changed groups of user 22 who belonged to [39, 76, 22, 43, 59, 6, 5, 1, 38] with changes [(<Command.UNLINK: 3>, 6, 0)]
+2026-11-14 17:10:33,794 1 INFO pms20_combined_final2 odoo.addons.base.models.res_users: Group change: user 22 with IP n/a changed groups of user 22 who belonged to [39, 76, 22, 43, 59, 5, 1, 38] with changes [(<Command.LINK: 4>, 85, 0)]
+2026-11-14 17:10:34,389 1 INFO pms20_combined_final2 odoo.addons.pms_account.tests.test_pms_account: Starting TestPmsAccountInvoice.test_action_view_bills_multiple ...
+2026-11-14 17:10:39,513 1 INFO pms20_combined_final2 odoo.addons.pms_account.tests.test_pms_account: Starting TestPmsAccountInvoice.test_action_view_bills_single ...
+2026-11-14 17:10:40,213 1 INFO pms20_combined_final2 odoo.addons.pms_account.tests.test_pms_account: Starting TestPmsAccountInvoice.test_action_view_invoices_multiple ...
+2026-11-14 17:10:41,766 1 INFO pms20_combined_final2 odoo.addons.pms_account.tests.test_pms_account: Starting TestPmsAccountInvoice.test_action_view_invoices_single ...
+2026-11-14 17:10:42,728 1 INFO pms20_combined_final2 odoo.addons.pms_account.tests.test_pms_account: Starting TestPmsAccountInvoice.test_bill_count_with_in_invoice ...
+2026-11-14 17:10:43,312 1 INFO pms20_combined_final2 odoo.addons.pms_account.tests.test_pms_account: Starting TestPmsAccountInvoice.test_invoice_count_includes_refunds ...
+2026-11-14 17:10:45,334 1 INFO pms20_combined_final2 odoo.addons.pms_account.tests.test_pms_account: Starting TestPmsAccountInvoice.test_invoice_count_with_out_invoice ...
+2026-11-14 17:10:46,066 1 INFO pms20_combined_final2 odoo.addons.pms_account.tests.test_pms_account: Starting TestPmsAccountInvoice.test_invoice_line_property_ids ...
+2026-11-14 17:10:46,849 1 INFO pms20_combined_final2 odoo.addons.pms_account.tests.test_pms_account: Starting TestPmsAccountInvoice.test_move_action_view_pms_property_empty ...
+2026-11-14 17:10:47,611 1 INFO pms20_combined_final2 odoo.addons.pms_account.tests.test_pms_account: Starting TestPmsAccountInvoice.test_move_action_view_pms_property_multiple ...
+2026-11-14 17:10:48,400 1 INFO pms20_combined_final2 odoo.addons.pms_account.tests.test_pms_account: Starting TestPmsAccountInvoice.test_move_action_view_pms_property_single ...
+2026-11-14 17:10:49,202 1 INFO pms20_combined_final2 odoo.addons.pms_account.tests.test_pms_account: Starting TestPmsAccountInvoice.test_move_property_ids_compute ...
+2026-11-14 17:10:49,965 1 INFO pms20_combined_final2 odoo.addons.pms_account.tests.test_pms_account: Starting TestPmsAccountInvoice.test_service_vendor_required ...
+2026-11-14 17:10:50,014 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_attachment: filestore gc 6 checked, 2 removed
+2026-11-14 17:10:51,132 1 INFO pms20_combined_final2 odoo.addons.base.models.res_users: Group change: user 24 with IP n/a changed groups of user 24 who belonged to [39, 76, 22, 43, 59, 5, 1, 38] with changes [(<Command.LINK: 4>, 6, 0)]
+2026-11-14 17:10:51,781 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_attachment: _file_read reading /var/lib/odoo-pms20/filestore/pms20_combined_final2/83/835ed246572b47ba1e9f55198e57b566888b46a6
+Traceback (most recent call last):
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 148, in _file_read
+    return LocalBinaryFile(self)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 1204, in __init__
+    self.__stat = os.stat(path)  # checks that the file exists
+                  ^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo-pms20/filestore/pms20_combined_final2/83/835ed246572b47ba1e9f55198e57b566888b46a6'
+2026-11-14 17:10:51,784 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_attachment: _file_read reading /var/lib/odoo-pms20/filestore/pms20_combined_final2/b2/b2a7945f0edf2c87b0d5bcd21fdeb5833feab7a4
+Traceback (most recent call last):
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 148, in _file_read
+    return LocalBinaryFile(self)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 1204, in __init__
+    self.__stat = os.stat(path)  # checks that the file exists
+                  ^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo-pms20/filestore/pms20_combined_final2/b2/b2a7945f0edf2c87b0d5bcd21fdeb5833feab7a4'
+2026-11-14 17:10:51,785 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_attachment: _file_read reading /var/lib/odoo-pms20/filestore/pms20_combined_final2/7e/7e3a4f88badf2f8729e4aa4f0a1d70a615d43768
+Traceback (most recent call last):
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 148, in _file_read
+    return LocalBinaryFile(self)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 1204, in __init__
+    self.__stat = os.stat(path)  # checks that the file exists
+                  ^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo-pms20/filestore/pms20_combined_final2/7e/7e3a4f88badf2f8729e4aa4f0a1d70a615d43768'
+2026-11-14 17:10:51,823 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_attachment: _file_read reading /var/lib/odoo-pms20/filestore/pms20_combined_final2/51/5188bb23feb1a00e56aeeeacb478500c28cde961
+Traceback (most recent call last):
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 148, in _file_read
+    return LocalBinaryFile(self)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 1204, in __init__
+    self.__stat = os.stat(path)  # checks that the file exists
+                  ^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo-pms20/filestore/pms20_combined_final2/51/5188bb23feb1a00e56aeeeacb478500c28cde961'
+2026-11-14 17:10:51,826 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_attachment: _file_read reading /var/lib/odoo-pms20/filestore/pms20_combined_final2/a0/a0693ec4f22d6090a343f1e38a9c6490476f4f5c
+Traceback (most recent call last):
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 148, in _file_read
+    return LocalBinaryFile(self)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 1204, in __init__
+    self.__stat = os.stat(path)  # checks that the file exists
+                  ^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo-pms20/filestore/pms20_combined_final2/a0/a0693ec4f22d6090a343f1e38a9c6490476f4f5c'
+2026-11-14 17:10:51,828 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_attachment: _file_read reading /var/lib/odoo-pms20/filestore/pms20_combined_final2/47/47782f33549207499a3ac33d126c4fc3c8a94ea6
+Traceback (most recent call last):
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 148, in _file_read
+    return LocalBinaryFile(self)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 1204, in __init__
+    self.__stat = os.stat(path)  # checks that the file exists
+                  ^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo-pms20/filestore/pms20_combined_final2/47/47782f33549207499a3ac33d126c4fc3c8a94ea6'
+2026-11-14 17:10:55,020 1 INFO pms20_combined_final2 odoo.addons.base.models.res_users: Group change: user 24 with IP n/a changed groups of user 24 who belonged to [39, 76, 22, 43, 59, 6, 5, 1, 38] with changes [(<Command.UNLINK: 3>, 6, 0)]
+2026-11-14 17:10:58,463 1 INFO pms20_combined_final2 odoo.addons.base.models.res_users: Group change: user 24 with IP n/a changed groups of user 24 who belonged to [39, 76, 22, 43, 59, 5, 1, 38] with changes [(<Command.LINK: 4>, 85, 0)]
+2026-11-14 17:10:58,922 1 INFO pms20_combined_final2 odoo.addons.pms_account_asset.tests.test_pms_account_asset: Starting TestPmsAccountAsset.test_account_asset_property_link ...
+2026-11-14 17:10:59,523 1 INFO pms20_combined_final2 odoo.addons.pms_account_asset.tests.test_pms_account_asset: Starting TestPmsAccountAsset.test_action_view_assets_empty ...
+2026-11-14 17:10:59,594 1 INFO pms20_combined_final2 odoo.addons.pms_account_asset.tests.test_pms_account_asset: Starting TestPmsAccountAsset.test_action_view_assets_multiple ...
+2026-11-14 17:10:59,724 1 INFO pms20_combined_final2 odoo.addons.pms_account_asset.tests.test_pms_account_asset: Starting TestPmsAccountAsset.test_action_view_assets_single ...
+2026-11-14 17:10:59,848 1 INFO pms20_combined_final2 odoo.addons.pms_account_asset.tests.test_pms_account_asset: Starting TestPmsAccountAsset.test_asset_count_initial ...
+2026-11-14 17:10:59,876 1 INFO pms20_combined_final2 odoo.addons.pms_account_asset.tests.test_pms_account_asset: Starting TestPmsAccountAsset.test_asset_count_with_assets ...
+2026-11-14 17:10:59,955 1 INFO pms20_combined_final2 odoo.addons.pms_account_asset.tests.test_pms_account_asset: Starting TestPmsAccountAsset.test_compute_asset_count_multiple_properties ...
+2026-11-14 17:11:00,066 1 INFO pms20_combined_final2 odoo.addons.pms_account_asset.tests.test_pms_account_asset: Starting TestPmsAccountAsset.test_module_models_import ...
+2026-11-14 17:11:00,082 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_attachment: filestore gc 6 checked, 2 removed
+2026-11-14 17:11:00,371 1 INFO pms20_combined_final2 odoo.addons.pms_base.tests.test_pms_property: Starting TestPmsProperty.test_action_view_childs_property_list ...
+2026-11-14 17:11:00,529 1 INFO pms20_combined_final2 odoo.addons.pms_base.tests.test_pms_property: Starting TestPmsProperty.test_child_property_count ...
+2026-11-14 17:11:00,750 1 INFO pms20_combined_final2 odoo.models.unlink: User #1 deleted mail.message records with IDs: [2895]
+2026-11-14 17:11:00,784 1 INFO pms20_combined_final2 odoo.models.unlink: User #1 deleted pms.property records with IDs: [13]
+2026-11-14 17:11:00,796 1 INFO pms20_combined_final2 odoo.addons.pms_base.tests.test_pms_property: Starting TestPmsProperty.test_compute_balcony_false ...
+2026-11-14 17:11:00,950 1 INFO pms20_combined_final2 odoo.addons.pms_base.tests.test_pms_property: Starting TestPmsProperty.test_compute_balcony_true ...
+2026-11-14 17:11:00,992 1 INFO pms20_combined_final2 odoo.addons.pms_base.tests.test_pms_property: Starting TestPmsProperty.test_compute_laundry_room_via_amenity ...
+2026-11-14 17:11:01,160 1 INFO pms20_combined_final2 odoo.addons.pms_base.tests.test_pms_property: Starting TestPmsProperty.test_compute_laundry_room_via_room ...
+2026-11-14 17:11:01,198 1 INFO pms20_combined_final2 odoo.addons.pms_base.tests.test_pms_property: Starting TestPmsProperty.test_compute_parking_lot_via_room ...
+2026-11-14 17:11:01,235 1 INFO pms20_combined_final2 odoo.addons.pms_base.tests.test_pms_property: Starting TestPmsProperty.test_compute_pets_via_amenity ...
+2026-11-14 17:11:01,398 1 INFO pms20_combined_final2 odoo.addons.pms_base.tests.test_pms_property: Starting TestPmsProperty.test_compute_terrace_true ...
+2026-11-14 17:11:01,433 1 INFO pms20_combined_final2 odoo.addons.pms_base.tests.test_pms_property: Starting TestPmsProperty.test_create_sets_is_property ...
+2026-11-14 17:11:01,580 1 INFO pms20_combined_final2 odoo.addons.pms_base.tests.test_pms_property: Starting TestPmsProperty.test_default_team_id ...
+2026-11-14 17:11:01,730 1 INFO pms20_combined_final2 odoo.addons.pms_base.tests.test_pms_property: Starting TestPmsProperty.test_display_name_with_ref ...
+2026-11-14 17:11:01,879 1 INFO pms20_combined_final2 odoo.addons.pms_base.tests.test_pms_property: Starting TestPmsProperty.test_display_name_without_ref ...
+2026-11-14 17:11:02,021 1 INFO pms20_combined_final2 odoo.addons.pms_base.tests.test_pms_property: Starting TestPmsProperty.test_multi_create ...
+2026-11-14 17:11:02,259 1 INFO pms20_combined_final2 odoo.addons.pms_base.tests.test_pms_property: Starting TestPmsProperty.test_qty_bedroom ...
+2026-11-14 17:11:02,300 1 INFO pms20_combined_final2 odoo.addons.pms_base.tests.test_pms_property: Starting TestPmsProperty.test_qty_dining_room ...
+2026-11-14 17:11:02,338 1 INFO pms20_combined_final2 odoo.addons.pms_base.tests.test_pms_property: Starting TestPmsProperty.test_qty_half_bathroom ...
+2026-11-14 17:11:02,375 1 INFO pms20_combined_final2 odoo.addons.pms_base.tests.test_pms_property: Starting TestPmsProperty.test_qty_kitchen ...
+2026-11-14 17:11:02,412 1 INFO pms20_combined_final2 odoo.addons.pms_base.tests.test_pms_property: Starting TestPmsProperty.test_qty_living_room ...
+2026-11-14 17:11:02,450 1 INFO pms20_combined_final2 odoo.addons.pms_base.tests.test_pms_property: Starting TestPmsProperty.test_room_count ...
+2026-11-14 17:11:02,484 1 INFO pms20_combined_final2 odoo.addons.pms_base.tests.test_pms_property: Starting TestPmsProperty.test_search_display_name_by_name ...
+2026-11-14 17:11:02,629 1 INFO pms20_combined_final2 odoo.addons.pms_base.tests.test_pms_property: Starting TestPmsProperty.test_search_display_name_by_ref ...
+2026-11-14 17:11:02,775 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_attachment: filestore gc 0 checked, 0 removed
+2026-11-14 17:11:03,050 1 INFO pms20_combined_final2 odoo.addons.pms_base.tests.test_pms_room: Starting TestPmsRoom.test_archive_room ...
+2026-11-14 17:11:03,090 1 INFO pms20_combined_final2 odoo.addons.pms_base.tests.test_pms_room: Starting TestPmsRoom.test_create_room ...
+2026-11-14 17:11:03,099 1 INFO pms20_combined_final2 odoo.addons.pms_base.tests.test_pms_room: Starting TestPmsRoom.test_room_order ...
+2026-11-14 17:11:03,114 1 INFO pms20_combined_final2 odoo.addons.pms_base.tests.test_pms_room: Starting TestPmsRoom.test_same_name_different_property ...
+2026-11-14 17:11:03,280 1 INFO pms20_combined_final2 odoo.addons.pms_base.tests.test_pms_room: Starting TestPmsRoom.test_unique_name_per_property ...
+2026-11-14 17:11:03,317 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_attachment: filestore gc 0 checked, 0 removed
+2026-11-14 17:11:03,769 1 INFO pms20_combined_final2 odoo.addons.pms_base.tests.test_pms_service: Starting TestPmsService.test_archive_service ...
+2026-11-14 17:11:03,892 1 INFO pms20_combined_final2 odoo.addons.pms_base.tests.test_pms_service: Starting TestPmsService.test_create_service ...
+2026-11-14 17:11:03,902 1 INFO pms20_combined_final2 odoo.addons.pms_base.tests.test_pms_service: Starting TestPmsService.test_multiple_services_per_property ...
+2026-11-14 17:11:04,047 1 INFO pms20_combined_final2 odoo.addons.pms_base.tests.test_pms_service: Starting TestPmsService.test_product_required ...
+2026-11-14 17:11:04,058 1 INFO pms20_combined_final2 odoo.addons.pms_base.tests.test_pms_service: Starting TestPmsService.test_restore_service ...
+2026-11-14 17:11:04,068 1 INFO pms20_combined_final2 odoo.addons.pms_base.tests.test_pms_service: Starting TestPmsService.test_service_linked_to_property ...
+2026-11-14 17:11:04,079 1 INFO pms20_combined_final2 odoo.addons.pms_base.tests.test_pms_service: Starting TestPmsService.test_vendor_required ...
+2026-11-14 17:11:04,095 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_attachment: filestore gc 0 checked, 0 removed
+2026-11-14 17:11:04,362 1 INFO pms20_combined_final2 odoo.addons.pms_base.tests.test_pms_stage: Starting TestPmsStage.test_closed_stage_flag ...
+2026-11-14 17:11:04,403 1 INFO pms20_combined_final2 odoo.addons.pms_base.tests.test_pms_stage: Starting TestPmsStage.test_create_stage ...
+2026-11-14 17:11:04,413 1 INFO pms20_combined_final2 odoo.addons.pms_base.tests.test_pms_stage: Starting TestPmsStage.test_default_stage_flag ...
+2026-11-14 17:11:04,425 1 INFO pms20_combined_final2 odoo.addons.pms_base.tests.test_pms_stage: Starting TestPmsStage.test_default_stages_used_by_team ...
+2026-11-14 17:11:04,499 1 INFO pms20_combined_final2 odoo.addons.pms_base.tests.test_pms_stage: Starting TestPmsStage.test_fold_flag ...
+2026-11-14 17:11:04,509 1 INFO pms20_combined_final2 odoo.addons.pms_base.tests.test_pms_stage: Starting TestPmsStage.test_invalid_hex_color_no_hash ...
+2026-11-14 17:11:04,521 1 INFO pms20_combined_final2 odoo.addons.pms_base.tests.test_pms_stage: Starting TestPmsStage.test_invalid_hex_color_wrong_length ...
+2026-11-14 17:11:04,531 1 INFO pms20_combined_final2 odoo.addons.pms_base.tests.test_pms_stage: Starting TestPmsStage.test_stage_sequence_ordering ...
+2026-11-14 17:11:04,544 1 INFO pms20_combined_final2 odoo.addons.pms_base.tests.test_pms_stage: Starting TestPmsStage.test_valid_hex_color ...
+2026-11-14 17:11:04,557 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_attachment: filestore gc 0 checked, 0 removed
+2026-11-14 17:11:04,820 1 INFO pms20_combined_final2 odoo.addons.pms_base.tests.test_pms_tag: Starting TestPmsTag.test_color_default ...
+2026-11-14 17:11:04,864 1 INFO pms20_combined_final2 odoo.addons.pms_base.tests.test_pms_tag: Starting TestPmsTag.test_create_tag ...
+2026-11-14 17:11:04,873 1 INFO pms20_combined_final2 odoo.addons.pms_base.tests.test_pms_tag: Starting TestPmsTag.test_full_name_updates_on_parent_change ...
+2026-11-14 17:11:04,886 1 INFO pms20_combined_final2 odoo.addons.pms_base.tests.test_pms_tag: Starting TestPmsTag.test_full_name_with_parent ...
+2026-11-14 17:11:04,896 1 INFO pms20_combined_final2 odoo.addons.pms_base.tests.test_pms_tag: Starting TestPmsTag.test_full_name_without_parent ...
+2026-11-14 17:11:04,905 1 INFO pms20_combined_final2 odoo.addons.pms_base.tests.test_pms_tag: Starting TestPmsTag.test_tag_assigned_to_property ...
+2026-11-14 17:11:05,020 1 INFO pms20_combined_final2 odoo.addons.pms_base.tests.test_pms_tag: Starting TestPmsTag.test_unique_name_constraint ...
+2026-11-14 17:11:05,039 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_attachment: filestore gc 0 checked, 0 removed
+2026-11-14 17:11:05,320 1 INFO pms20_combined_final2 odoo.addons.pms_base.tests.test_pms_team: Starting TestPmsTeam.test_company_defaults_to_current ...
+2026-11-14 17:11:05,384 1 INFO pms20_combined_final2 odoo.addons.pms_base.tests.test_pms_team: Starting TestPmsTeam.test_create_team ...
+2026-11-14 17:11:05,440 1 INFO pms20_combined_final2 odoo.addons.pms_base.tests.test_pms_team: Starting TestPmsTeam.test_default_stages_on_creation ...
+2026-11-14 17:11:05,499 1 INFO pms20_combined_final2 odoo.addons.pms_base.tests.test_pms_team: Starting TestPmsTeam.test_property_count_increments ...
+2026-11-14 17:11:05,678 1 INFO pms20_combined_final2 odoo.addons.pms_base.tests.test_pms_team: Starting TestPmsTeam.test_property_count_multiple ...
+2026-11-14 17:11:06,017 1 INFO pms20_combined_final2 odoo.addons.pms_base.tests.test_pms_team: Starting TestPmsTeam.test_property_count_zero_initially ...
+2026-11-14 17:11:06,071 1 INFO pms20_combined_final2 odoo.addons.pms_base.tests.test_pms_team: Starting TestPmsTeam.test_sequence_ordering ...
+2026-11-14 17:11:06,147 1 INFO pms20_combined_final2 odoo.addons.pms_base.tests.test_pms_team: Starting TestPmsTeam.test_unique_name_constraint ...
+2026-11-14 17:11:06,216 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_attachment: filestore gc 0 checked, 0 removed
+2026-11-14 17:11:06,765 1 INFO pms20_combined_final2 odoo.addons.pms_contract.tests.test_pms_contract: Starting TestPmsContract.test_action_view_contracts_empty ...
+2026-11-14 17:11:06,926 1 INFO pms20_combined_final2 odoo.addons.pms_contract.tests.test_pms_contract: Starting TestPmsContract.test_action_view_contracts_multiple ...
+2026-11-14 17:11:07,131 1 INFO pms20_combined_final2 odoo.addons.pms_contract.tests.test_pms_contract: Starting TestPmsContract.test_action_view_contracts_single ...
+2026-11-14 17:11:07,269 1 INFO pms20_combined_final2 odoo.addons.pms_contract.tests.test_pms_contract: Starting TestPmsContract.test_action_view_properties_empty ...
+2026-11-14 17:11:07,380 1 INFO pms20_combined_final2 odoo.addons.pms_contract.tests.test_pms_contract: Starting TestPmsContract.test_action_view_properties_multiple ...
+2026-11-14 17:11:07,538 1 INFO pms20_combined_final2 odoo.addons.pms_contract.tests.test_pms_contract: Starting TestPmsContract.test_action_view_properties_single ...
+2026-11-14 17:11:07,695 1 INFO pms20_combined_final2 odoo.addons.pms_contract.tests.test_pms_contract: Starting TestPmsContract.test_contract_count_initial ...
+2026-11-14 17:11:07,700 1 INFO pms20_combined_final2 odoo.addons.pms_contract.tests.test_pms_contract: Starting TestPmsContract.test_contract_count_with_service ...
+2026-11-14 17:11:07,805 1 INFO pms20_combined_final2 odoo.addons.pms_contract.tests.test_pms_contract: Starting TestPmsContract.test_contract_property_count ...
+2026-11-14 17:11:07,916 1 INFO pms20_combined_final2 odoo.addons.pms_contract.tests.test_pms_contract: Starting TestPmsContract.test_contract_property_count_multiple ...
+2026-11-14 17:11:08,013 1 INFO pms20_combined_final2 odoo.addons.pms_contract.tests.test_pms_contract: Starting TestPmsContract.test_module_models_import ...
+2026-11-14 17:11:08,014 1 INFO pms20_combined_final2 odoo.addons.pms_contract.tests.test_pms_contract: Starting TestPmsContract.test_prepare_invoice_line_with_property ...
+2026-11-14 17:11:08,177 1 INFO pms20_combined_final2 odoo.addons.pms_contract.tests.test_pms_contract: Starting TestPmsContract.test_prepare_invoice_line_without_property ...
+2026-11-14 17:11:08,306 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_attachment: filestore gc 0 checked, 0 removed
+2026-11-14 17:11:08,912 1 INFO pms20_combined_final2 odoo.addons.pms_crm.tests.test_pms_crm: Starting TestPmsCrm.test_action_view_leads_multiple ...
+2026-11-14 17:11:09,034 1 INFO pms20_combined_final2 odoo.addons.pms_crm.tests.test_pms_crm: Starting TestPmsCrm.test_action_view_leads_single ...
+2026-11-14 17:11:09,133 1 INFO pms20_combined_final2 odoo.addons.pms_crm.tests.test_pms_crm: Starting TestPmsCrm.test_action_view_properties_multiple ...
+2026-11-14 17:11:09,205 1 INFO pms20_combined_final2 odoo.addons.pms_crm.tests.test_pms_crm: Starting TestPmsCrm.test_action_view_properties_single ...
+2026-11-14 17:11:09,280 1 INFO pms20_combined_final2 odoo.addons.pms_crm.tests.test_pms_crm: Starting TestPmsCrm.test_lead_property_count ...
+2026-11-14 17:11:09,327 1 INFO pms20_combined_final2 odoo.addons.pms_crm.tests.test_pms_crm: Starting TestPmsCrm.test_lead_property_link ...
+2026-11-14 17:11:09,374 1 INFO pms20_combined_final2 odoo.addons.pms_crm.tests.test_pms_crm: Starting TestPmsCrm.test_property_lead_count ...
+2026-11-14 17:11:09,443 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_attachment: filestore gc 0 checked, 0 removed
+2026-11-14 17:11:09,447 1 INFO pms20_combined_final2 odoo.addons.pms_project.tests.test_project_task: Starting TestProjectTask.test_project_task_m2m ...
+2026-11-14 17:11:10,747 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_attachment: filestore gc 1 checked, 1 removed
+2026-11-14 17:11:10,752 1 INFO pms20_combined_final2 odoo.addons.pms_purchase.tests.test_pms_property: Starting TestPmsProperty.test_pms_property_generate ...
+2026-11-14 17:11:12,006 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_attachment: filestore gc 0 checked, 0 removed
+2026-11-14 17:11:12,011 1 INFO pms20_combined_final2 odoo.addons.pms_purchase.tests.test_purchase: Starting TestPurchase.test_purchase_order_generate ...
+2026-11-14 17:11:12,244 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_attachment: filestore gc 0 checked, 0 removed
+2026-11-14 17:11:12,249 1 INFO pms20_combined_final2 odoo.addons.pms_purchase.tests.test_putaway_method: Starting TestPutawayMethod.test_move_to_property_field ...
+2026-11-14 17:11:12,257 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_attachment: filestore gc 0 checked, 0 removed
+2026-11-14 17:11:13,360 1 INFO pms20_combined_final2 odoo.addons.base.models.res_users: Group change: user 27 with IP n/a changed groups of user 27 who belonged to [39, 76, 22, 43, 59, 5, 1, 38] with changes [(<Command.LINK: 4>, 6, 0)]
+2026-11-14 17:11:13,924 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_attachment: _file_read reading /var/lib/odoo-pms20/filestore/pms20_combined_final2/83/835ed246572b47ba1e9f55198e57b566888b46a6
+Traceback (most recent call last):
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 148, in _file_read
+    return LocalBinaryFile(self)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 1204, in __init__
+    self.__stat = os.stat(path)  # checks that the file exists
+                  ^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo-pms20/filestore/pms20_combined_final2/83/835ed246572b47ba1e9f55198e57b566888b46a6'
+2026-11-14 17:11:13,926 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_attachment: _file_read reading /var/lib/odoo-pms20/filestore/pms20_combined_final2/b2/b2a7945f0edf2c87b0d5bcd21fdeb5833feab7a4
+Traceback (most recent call last):
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 148, in _file_read
+    return LocalBinaryFile(self)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 1204, in __init__
+    self.__stat = os.stat(path)  # checks that the file exists
+                  ^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo-pms20/filestore/pms20_combined_final2/b2/b2a7945f0edf2c87b0d5bcd21fdeb5833feab7a4'
+2026-11-14 17:11:13,928 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_attachment: _file_read reading /var/lib/odoo-pms20/filestore/pms20_combined_final2/7e/7e3a4f88badf2f8729e4aa4f0a1d70a615d43768
+Traceback (most recent call last):
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 148, in _file_read
+    return LocalBinaryFile(self)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 1204, in __init__
+    self.__stat = os.stat(path)  # checks that the file exists
+                  ^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo-pms20/filestore/pms20_combined_final2/7e/7e3a4f88badf2f8729e4aa4f0a1d70a615d43768'
+2026-11-14 17:11:13,961 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_attachment: _file_read reading /var/lib/odoo-pms20/filestore/pms20_combined_final2/51/5188bb23feb1a00e56aeeeacb478500c28cde961
+Traceback (most recent call last):
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 148, in _file_read
+    return LocalBinaryFile(self)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 1204, in __init__
+    self.__stat = os.stat(path)  # checks that the file exists
+                  ^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo-pms20/filestore/pms20_combined_final2/51/5188bb23feb1a00e56aeeeacb478500c28cde961'
+2026-11-14 17:11:13,963 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_attachment: _file_read reading /var/lib/odoo-pms20/filestore/pms20_combined_final2/a0/a0693ec4f22d6090a343f1e38a9c6490476f4f5c
+Traceback (most recent call last):
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 148, in _file_read
+    return LocalBinaryFile(self)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 1204, in __init__
+    self.__stat = os.stat(path)  # checks that the file exists
+                  ^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo-pms20/filestore/pms20_combined_final2/a0/a0693ec4f22d6090a343f1e38a9c6490476f4f5c'
+2026-11-14 17:11:13,965 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_attachment: _file_read reading /var/lib/odoo-pms20/filestore/pms20_combined_final2/47/47782f33549207499a3ac33d126c4fc3c8a94ea6
+Traceback (most recent call last):
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 148, in _file_read
+    return LocalBinaryFile(self)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 1204, in __init__
+    self.__stat = os.stat(path)  # checks that the file exists
+                  ^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo-pms20/filestore/pms20_combined_final2/47/47782f33549207499a3ac33d126c4fc3c8a94ea6'
+2026-11-14 17:11:17,079 1 INFO pms20_combined_final2 odoo.addons.base.models.res_users: Group change: user 27 with IP n/a changed groups of user 27 who belonged to [39, 76, 22, 43, 59, 6, 5, 1, 38] with changes [(<Command.UNLINK: 3>, 6, 0)]
+2026-11-14 17:11:21,274 1 INFO pms20_combined_final2 odoo.addons.pms_sale.tests.test_account_move: Starting TestAccountMove.test_compute_reservation_count ...
+2026-11-14 17:11:22,405 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_attachment: filestore gc 6 checked, 2 removed
+2026-11-14 17:11:22,667 1 INFO pms20_combined_final2 odoo.addons.pms_sale.tests.test_booking_boundaries: Starting TestBookingBoundaries.test_actual_overlap_is_rejected ...
+2026-11-14 17:11:22,774 1 INFO pms20_combined_final2 odoo.addons.pms_sale.tests.test_booking_boundaries: Starting TestBookingBoundaries.test_back_to_back_stays_are_allowed ...
+2026-11-14 17:11:22,878 1 INFO pms20_combined_final2 odoo.addons.pms_sale.tests.test_booking_boundaries: Starting TestBookingBoundaries.test_cancelled_and_draft_stays_do_not_block ...
+2026-11-14 17:11:23,000 1 INFO pms20_combined_final2 odoo.addons.pms_sale.tests.test_booking_boundaries: Starting TestBookingBoundaries.test_capacity_is_enforced ...
+2026-11-14 17:11:23,046 1 INFO pms20_combined_final2 odoo.addons.pms_sale.tests.test_booking_boundaries: Starting TestBookingBoundaries.test_dst_spring_and_autumn_stays_each_have_one_night ...
+2026-11-14 17:11:23,148 1 INFO pms20_combined_final2 odoo.addons.pms_sale.tests.test_booking_boundaries: Starting TestBookingBoundaries.test_guest_count_is_computed_per_reservation ...
+2026-11-14 17:11:23,236 1 INFO pms20_combined_final2 odoo.addons.pms_sale.tests.test_booking_boundaries: Starting TestBookingBoundaries.test_property_and_reservation_companies_must_match ...
+2026-11-14 17:11:23,825 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_attachment: _file_read reading /var/lib/odoo-pms20/filestore/pms20_combined_final2/83/835ed246572b47ba1e9f55198e57b566888b46a6
+Traceback (most recent call last):
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 148, in _file_read
+    return LocalBinaryFile(self)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 1204, in __init__
+    self.__stat = os.stat(path)  # checks that the file exists
+                  ^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo-pms20/filestore/pms20_combined_final2/83/835ed246572b47ba1e9f55198e57b566888b46a6'
+2026-11-14 17:11:23,827 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_attachment: _file_read reading /var/lib/odoo-pms20/filestore/pms20_combined_final2/b2/b2a7945f0edf2c87b0d5bcd21fdeb5833feab7a4
+Traceback (most recent call last):
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 148, in _file_read
+    return LocalBinaryFile(self)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 1204, in __init__
+    self.__stat = os.stat(path)  # checks that the file exists
+                  ^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo-pms20/filestore/pms20_combined_final2/b2/b2a7945f0edf2c87b0d5bcd21fdeb5833feab7a4'
+2026-11-14 17:11:23,828 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_attachment: _file_read reading /var/lib/odoo-pms20/filestore/pms20_combined_final2/7e/7e3a4f88badf2f8729e4aa4f0a1d70a615d43768
+Traceback (most recent call last):
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 148, in _file_read
+    return LocalBinaryFile(self)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 1204, in __init__
+    self.__stat = os.stat(path)  # checks that the file exists
+                  ^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo-pms20/filestore/pms20_combined_final2/7e/7e3a4f88badf2f8729e4aa4f0a1d70a615d43768'
+2026-11-14 17:11:23,858 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_attachment: _file_read reading /var/lib/odoo-pms20/filestore/pms20_combined_final2/51/5188bb23feb1a00e56aeeeacb478500c28cde961
+Traceback (most recent call last):
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 148, in _file_read
+    return LocalBinaryFile(self)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 1204, in __init__
+    self.__stat = os.stat(path)  # checks that the file exists
+                  ^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo-pms20/filestore/pms20_combined_final2/51/5188bb23feb1a00e56aeeeacb478500c28cde961'
+2026-11-14 17:11:23,860 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_attachment: _file_read reading /var/lib/odoo-pms20/filestore/pms20_combined_final2/a0/a0693ec4f22d6090a343f1e38a9c6490476f4f5c
+Traceback (most recent call last):
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 148, in _file_read
+    return LocalBinaryFile(self)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 1204, in __init__
+    self.__stat = os.stat(path)  # checks that the file exists
+                  ^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo-pms20/filestore/pms20_combined_final2/a0/a0693ec4f22d6090a343f1e38a9c6490476f4f5c'
+2026-11-14 17:11:23,861 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_attachment: _file_read reading /var/lib/odoo-pms20/filestore/pms20_combined_final2/47/47782f33549207499a3ac33d126c4fc3c8a94ea6
+Traceback (most recent call last):
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 148, in _file_read
+    return LocalBinaryFile(self)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 1204, in __init__
+    self.__stat = os.stat(path)  # checks that the file exists
+                  ^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo-pms20/filestore/pms20_combined_final2/47/47782f33549207499a3ac33d126c4fc3c8a94ea6'
+2026-11-14 17:11:25,245 1 INFO pms20_combined_final2 odoo.addons.pms_sale.tests.test_booking_boundaries: Starting TestBookingBoundaries.test_property_filter_ignores_cancelled_stays ...
+2026-11-14 17:11:25,433 1 INFO pms20_combined_final2 odoo.addons.pms_sale.tests.test_booking_boundaries: Starting TestBookingBoundaries.test_property_filter_uses_checkout_boundaries ...
+2026-11-14 17:11:25,641 1 INFO pms20_combined_final2 odoo.addons.pms_sale.tests.test_booking_boundaries: Starting TestBookingBoundaries.test_reservations_are_isolated_by_company ...
+2026-11-14 17:11:26,214 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_attachment: _file_read reading /var/lib/odoo-pms20/filestore/pms20_combined_final2/83/835ed246572b47ba1e9f55198e57b566888b46a6
+Traceback (most recent call last):
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 148, in _file_read
+    return LocalBinaryFile(self)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 1204, in __init__
+    self.__stat = os.stat(path)  # checks that the file exists
+                  ^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo-pms20/filestore/pms20_combined_final2/83/835ed246572b47ba1e9f55198e57b566888b46a6'
+2026-11-14 17:11:26,216 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_attachment: _file_read reading /var/lib/odoo-pms20/filestore/pms20_combined_final2/b2/b2a7945f0edf2c87b0d5bcd21fdeb5833feab7a4
+Traceback (most recent call last):
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 148, in _file_read
+    return LocalBinaryFile(self)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 1204, in __init__
+    self.__stat = os.stat(path)  # checks that the file exists
+                  ^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo-pms20/filestore/pms20_combined_final2/b2/b2a7945f0edf2c87b0d5bcd21fdeb5833feab7a4'
+2026-11-14 17:11:26,218 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_attachment: _file_read reading /var/lib/odoo-pms20/filestore/pms20_combined_final2/7e/7e3a4f88badf2f8729e4aa4f0a1d70a615d43768
+Traceback (most recent call last):
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 148, in _file_read
+    return LocalBinaryFile(self)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 1204, in __init__
+    self.__stat = os.stat(path)  # checks that the file exists
+                  ^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo-pms20/filestore/pms20_combined_final2/7e/7e3a4f88badf2f8729e4aa4f0a1d70a615d43768'
+2026-11-14 17:11:26,249 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_attachment: _file_read reading /var/lib/odoo-pms20/filestore/pms20_combined_final2/51/5188bb23feb1a00e56aeeeacb478500c28cde961
+Traceback (most recent call last):
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 148, in _file_read
+    return LocalBinaryFile(self)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 1204, in __init__
+    self.__stat = os.stat(path)  # checks that the file exists
+                  ^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo-pms20/filestore/pms20_combined_final2/51/5188bb23feb1a00e56aeeeacb478500c28cde961'
+2026-11-14 17:11:26,252 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_attachment: _file_read reading /var/lib/odoo-pms20/filestore/pms20_combined_final2/a0/a0693ec4f22d6090a343f1e38a9c6490476f4f5c
+Traceback (most recent call last):
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 148, in _file_read
+    return LocalBinaryFile(self)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 1204, in __init__
+    self.__stat = os.stat(path)  # checks that the file exists
+                  ^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo-pms20/filestore/pms20_combined_final2/a0/a0693ec4f22d6090a343f1e38a9c6490476f4f5c'
+2026-11-14 17:11:26,253 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_attachment: _file_read reading /var/lib/odoo-pms20/filestore/pms20_combined_final2/47/47782f33549207499a3ac33d126c4fc3c8a94ea6
+Traceback (most recent call last):
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 148, in _file_read
+    return LocalBinaryFile(self)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/odoo/odoo/addons/base/models/ir_attachment.py", line 1204, in __init__
+    self.__stat = os.stat(path)  # checks that the file exists
+                  ^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo-pms20/filestore/pms20_combined_final2/47/47782f33549207499a3ac33d126c4fc3c8a94ea6'
+2026-11-14 17:11:28,222 1 INFO pms20_combined_final2 odoo.addons.auth_signup.models.res_users: Signup email sent for user <boundary-company-user> to <b.b@example.com>
+2026-11-14 17:11:28,443 1 INFO pms20_combined_final2 odoo.addons.pms_sale.tests.test_booking_boundaries: Starting TestBookingBoundaries.test_reversed_dates_are_rejected ...
+2026-11-14 17:11:28,485 1 INFO pms20_combined_final2 odoo.addons.pms_sale.tests.test_booking_boundaries: Starting TestBookingBoundaries.test_short_overnight_is_one_calendar_night ...
+2026-11-14 17:11:28,563 1 INFO pms20_combined_final2 odoo.addons.pms_sale.tests.test_booking_boundaries: Starting TestBookingBoundaries.test_stay_bounds_are_inclusive_and_maximum_is_enforced ...
+2026-11-14 17:11:28,850 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_attachment: filestore gc 5 checked, 1 removed
+2026-11-14 17:11:29,232 1 INFO pms20_combined_final2 odoo.addons.pms_sale.tests.test_pms_configurator: Starting TestPMSConfigurator.test_existing_reservation_defaults_partner_from_reservation ...
+2026-11-14 17:11:29,291 1 INFO pms20_combined_final2 odoo.addons.pms_sale.tests.test_pms_configurator: Starting TestPMSConfigurator.test_new_reservation_defaults_partner_from_web_partner_id ...
+2026-11-14 17:11:29,308 1 INFO pms20_combined_final2 odoo.addons.pms_sale.tests.test_pms_configurator: Starting TestPMSConfigurator.test_no_partner_context_leaves_it_unset ...
+2026-11-14 17:11:29,322 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_attachment: filestore gc 0 checked, 0 removed
+2026-11-14 17:11:29,852 1 INFO pms20_combined_final2 odoo.addons.pms_sale.tests.test_pms_property: Starting TestPMSProperty.test_get_property_information ...
+2026-11-14 17:11:29,954 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_attachment: filestore gc 0 checked, 0 removed
+2026-11-14 17:11:30,407 1 INFO pms20_combined_final2 odoo.addons.pms_sale.tests.test_pms_reservation: Starting TestPMSReservation.test_action_book ...
+2026-11-14 17:11:30,545 1 INFO pms20_combined_final2 odoo.addons.pms_sale.tests.test_pms_reservation: Starting TestPMSReservation.test_action_cancel ...
+2026-11-14 17:11:30,566 1 INFO pms20_combined_final2 odoo.addons.pms_sale.tests.test_pms_reservation: Starting TestPMSReservation.test_action_check_in ...
+2026-11-14 17:11:30,606 1 INFO pms20_combined_final2 odoo.addons.pms_sale.tests.test_pms_reservation: Starting TestPMSReservation.test_action_check_out ...
+2026-11-14 17:11:30,631 1 INFO pms20_combined_final2 odoo.addons.pms_sale.tests.test_pms_reservation: Starting TestPMSReservation.test_action_confirm ...
+2026-11-14 17:11:30,655 1 INFO pms20_combined_final2 odoo.addons.pms_sale.tests.test_pms_reservation: Starting TestPMSReservation.test_action_view_invoices ...
+2026-11-14 17:11:30,695 1 INFO pms20_combined_final2 odoo.addons.pms_sale.tests.test_pms_reservation: Starting TestPMSReservation.test_check_max_no_of_guests ...
+2026-11-14 17:11:30,705 1 INFO pms20_combined_final2 odoo.addons.pms_sale.tests.test_pms_reservation: Starting TestPMSReservation.test_check_no_of_nights ...
+2026-11-14 17:11:30,715 1 INFO pms20_combined_final2 odoo.addons.pms_sale.tests.test_pms_reservation: Starting TestPMSReservation.test_check_no_of_nights_accepts_unconfigured_property ...
+2026-11-14 17:11:30,778 1 INFO pms20_combined_final2 odoo.addons.pms_sale.tests.test_pms_reservation: Starting TestPMSReservation.test_check_no_of_nights_rejects_fixed_length_stay_below_required ...
+2026-11-14 17:11:30,850 1 INFO pms20_combined_final2 odoo.addons.pms_sale.tests.test_pms_reservation: Starting TestPMSReservation.test_check_no_of_nights_rejects_stay_below_minimum ...
+2026-11-14 17:11:30,924 1 INFO pms20_combined_final2 odoo.addons.pms_sale.tests.test_pms_reservation: Starting TestPMSReservation.test_check_no_of_reservations ...
+2026-11-14 17:11:30,931 1 INFO pms20_combined_final2 odoo.addons.pms_sale.tests.test_pms_reservation: Starting TestPMSReservation.test_onchange_property_id ...
+2026-11-14 17:11:30,962 1 INFO pms20_combined_final2 odoo.addons.pms_sale.tests.test_pms_reservation: Starting TestPMSReservation.test_read_group_stage_ids ...
+2026-11-14 17:11:30,973 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_attachment: filestore gc 0 checked, 0 removed
+2026-11-14 17:11:31,273 1 INFO pms20_combined_final2 odoo.addons.pms_sale.tests.test_sale_reservation: Starting TestSaleReservation.test_cancel_line_cancels_reservation ...
+2026-11-14 17:11:31,717 1 INFO pms20_combined_final2 odoo.models.unlink: User #1 deleted sale.order.line records with IDs: [95]
+2026-11-14 17:11:31,727 1 INFO pms20_combined_final2 odoo.addons.pms_sale.tests.test_sale_reservation: Starting TestSaleReservation.test_confirm_sale_order ...
+2026-11-14 17:11:32,111 1 INFO pms20_combined_final2 odoo.addons.pms_sale.tests.test_sale_reservation: Starting TestSaleReservation.test_sale_order_line_links_reservation ...
+2026-11-14 17:11:32,448 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_attachment: filestore gc 0 checked, 0 removed
+2026-11-14 17:11:32,718 1 INFO pms20_combined_final2 odoo.addons.pms_stock.tests.test_pms_stock: Starting TestPmsStock.test_create_stock_location_without_parent_direct ...
+2026-11-14 17:11:32,825 1 INFO pms20_combined_final2 odoo.addons.pms_stock.tests.test_pms_stock: Starting TestPmsStock.test_create_stock_location_without_parent_on_create ...
+2026-11-14 17:11:32,961 1 INFO pms20_combined_final2 odoo.addons.pms_stock.tests.test_pms_stock: Starting TestPmsStock.test_create_stock_location_without_parent_on_write ...
+2026-11-14 17:11:33,098 1 INFO pms20_combined_final2 odoo.addons.pms_stock.tests.test_pms_stock: Starting TestPmsStock.test_property_auto_stock_location ...
+2026-11-14 17:11:33,237 1 INFO pms20_combined_final2 odoo.addons.pms_stock.tests.test_pms_stock: Starting TestPmsStock.test_property_auto_stock_location_parent ...
+2026-11-14 17:11:33,378 1 INFO pms20_combined_final2 odoo.addons.pms_stock.tests.test_pms_stock: Starting TestPmsStock.test_property_batch_create_auto_stock_locations ...
+2026-11-14 17:11:33,574 1 INFO pms20_combined_final2 odoo.addons.pms_stock.tests.test_pms_stock: Starting TestPmsStock.test_property_create_with_explicit_location ...
+2026-11-14 17:11:33,712 1 INFO pms20_combined_final2 odoo.addons.pms_stock.tests.test_pms_stock: Starting TestPmsStock.test_property_rename_creates_stock_location ...
+2026-11-14 17:11:33,875 1 INFO pms20_combined_final2 odoo.addons.pms_stock.tests.test_pms_stock: Starting TestPmsStock.test_property_rename_updates_stock_location ...
+2026-11-14 17:11:34,032 1 INFO pms20_combined_final2 odoo.addons.pms_stock.tests.test_pms_stock: Starting TestPmsStock.test_property_stock_location ...
+2026-11-14 17:11:34,046 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_attachment: filestore gc 0 checked, 0 removed
+2026-11-14 17:11:34,867 1 INFO pms20_combined_final2 odoo.addons.pms_website.tests.test_pms_website: Starting TestPmsWebsite.test_amenity_is_main_amenity ...
+2026-11-14 17:11:34,974 1 INFO pms20_combined_final2 odoo.addons.pms_website.tests.test_pms_website: Starting TestPmsWebsite.test_property_category_link ...
+2026-11-14 17:11:35,039 1 INFO pms20_combined_final2 odoo.addons.pms_website.tests.test_pms_website: Starting TestPmsWebsite.test_property_google_map_link ...
+2026-11-14 17:11:35,054 1 INFO pms20_combined_final2 odoo.addons.pms_website.tests.test_pms_website: Starting TestPmsWebsite.test_property_website_description_fields ...
+2026-11-14 17:11:35,104 1 INFO pms20_combined_final2 odoo.addons.pms_website.tests.test_pms_website: Starting TestPmsWebsite.test_property_website_fields ...
+2026-11-14 17:11:35,111 1 INFO pms20_combined_final2 odoo.addons.pms_website.tests.test_pms_website: Starting TestPmsWebsite.test_property_website_url ...
+2026-11-14 17:11:35,161 1 INFO pms20_combined_final2 odoo.addons.pms_website.tests.test_pms_website: Starting TestPmsWebsite.test_property_website_url_without_id ...
+2026-11-14 17:11:35,163 1 INFO pms20_combined_final2 odoo.addons.pms_website.tests.test_pms_website: Starting TestPmsWebsite.test_website_category_check_parent_id_cycle ...
+2026-11-14 17:11:35,178 1 INFO pms20_combined_final2 odoo.addons.pms_website.tests.test_pms_website: Starting TestPmsWebsite.test_website_category_check_parent_id_valid ...
+2026-11-14 17:11:35,188 1 INFO pms20_combined_final2 odoo.addons.pms_website.tests.test_pms_website: Starting TestPmsWebsite.test_website_category_display_name ...
+2026-11-14 17:11:35,201 1 INFO pms20_combined_final2 odoo.addons.pms_website.tests.test_pms_website: Starting TestPmsWebsite.test_website_category_hierarchy ...
+2026-11-14 17:11:35,215 1 INFO pms20_combined_final2 odoo.addons.pms_website.tests.test_pms_website: Starting TestPmsWebsite.test_website_category_parent_path ...
+2026-11-14 17:11:35,228 1 INFO pms20_combined_final2 odoo.addons.pms_website.tests.test_pms_website: Starting TestPmsWebsite.test_website_category_recursion ...
+2026-11-14 17:11:35,252 1 INFO pms20_combined_final2 odoo.addons.pms_website.tests.test_pms_website: Starting TestPmsWebsite.test_website_category_without_parent_path ...
+2026-11-14 17:11:35,269 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_attachment: filestore gc 2 checked, 0 removed
+2026-11-14 17:11:36,106 1 INFO pms20_combined_final2 odoo.addons.pms_website.tests.test_pms_website: Starting TestPmsWebsiteController.test_get_pms_display_flags ...
+2026-11-14 17:11:36,608 1 INFO pms20_combined_final2 odoo.addons.pms_website.tests.test_pms_website: Starting TestPmsWebsiteController.test_get_pms_display_flags_amenities_and_services ...
+2026-11-14 17:11:36,830 1 INFO pms20_combined_final2 odoo.addons.pms_website.tests.test_pms_website: Starting TestPmsWebsiteController.test_get_properties_filter_domain ...
+2026-11-14 17:11:36,846 1 INFO pms20_combined_final2 odoo.addons.pms_website.tests.test_pms_website: Starting TestPmsWebsiteController.test_get_properties_filter_options ...
+2026-11-14 17:11:37,099 1 INFO pms20_combined_final2 odoo.addons.pms_website.tests.test_pms_website: Starting TestPmsWebsiteController.test_get_properties_filter_options_hide_rooms ...
+2026-11-14 17:11:37,152 1 INFO pms20_combined_final2 odoo.addons.pms_website.tests.test_pms_website: Starting TestPmsWebsiteController.test_get_published_properties_domain ...
+2026-11-14 17:11:37,160 1 INFO pms20_combined_final2 odoo.addons.pms_website.tests.test_pms_website: Starting TestPmsWebsiteController.test_prepare_property_values ...
+2026-11-14 17:11:37,173 1 INFO pms20_combined_final2 odoo.addons.pms_website.tests.test_pms_website: Starting TestPmsWebsiteController.test_product_page_not_found ...
+2026-11-14 17:11:37,179 1 INFO pms20_combined_final2 odoo.addons.pms_website.tests.test_pms_website: Starting TestPmsWebsiteController.test_product_page_render ...
+2026-11-14 17:11:37,200 1 INFO pms20_combined_final2 odoo.addons.pms_website.tests.test_pms_website: Starting TestPmsWebsiteController.test_properties_bedrooms_filter_ignored_when_rooms_hidden ...
+2026-11-14 17:11:37,527 1 INFO pms20_combined_final2 odoo.addons.pms_website.tests.test_pms_website: Starting TestPmsWebsiteController.test_properties_excludes_unpublished ...
+2026-11-14 17:11:37,734 1 INFO pms20_combined_final2 odoo.addons.pms_website.tests.test_pms_website: Starting TestPmsWebsiteController.test_properties_filter_by_bedrooms ...
+2026-11-14 17:11:38,167 1 INFO pms20_combined_final2 odoo.addons.pms_website.tests.test_pms_website: Starting TestPmsWebsiteController.test_properties_filter_by_category ...
+2026-11-14 17:11:38,670 1 INFO pms20_combined_final2 odoo.addons.pms_website.tests.test_pms_website: Starting TestPmsWebsiteController.test_properties_filter_by_city ...
+2026-11-14 17:11:38,855 1 INFO pms20_combined_final2 odoo.addons.pms_website.tests.test_pms_website: Starting TestPmsWebsiteController.test_properties_filter_by_tag ...
+2026-11-14 17:11:39,184 1 INFO pms20_combined_final2 odoo.addons.pms_website.tests.test_pms_website: Starting TestPmsWebsiteController.test_properties_list_render ...
+2026-11-14 17:11:39,311 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_attachment: filestore gc 81 checked, 44 removed
+2026-11-14 17:11:40,130 1 INFO pms20_combined_final2 odoo.addons.pms_website.tests.test_pms_website: Starting TestPmsWebsiteHttp.test_properties_page_filter_by_category ...
+2026-11-14 17:11:40,673 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_http: Generating routing map for key 1
+2026-11-14 17:11:44,463 1 INFO pms20_combined_final2 odoo.http.server: 127.0.0.1 S/HW5zFoxW - [14/Nov/2026 17:11:44] "GET /properties?category=19 HTTP/1.1" 200 30482 138 0.113 3.754 rw
+2026-11-14 17:11:44,473 1 INFO pms20_combined_final2 odoo.addons.pms_website.tests.test_pms_website: Starting TestPmsWebsiteHttp.test_properties_page_filter_by_city ...
+2026-11-14 17:11:45,154 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_http: Generating routing map for key 1
+2026-11-14 17:11:47,823 1 INFO pms20_combined_final2 odoo.http.server: 127.0.0.1 S/tcWiD2AN - [14/Nov/2026 17:11:47] "GET /properties?city=New+York HTTP/1.1" 200 32225 138 0.121 2.672 rw
+2026-11-14 17:11:47,832 1 INFO pms20_combined_final2 odoo.addons.pms_website.tests.test_pms_website: Starting TestPmsWebsiteHttp.test_properties_page_filter_by_tag ...
+2026-11-14 17:11:48,465 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_http: Generating routing map for key 1
+2026-11-14 17:11:51,278 1 INFO pms20_combined_final2 odoo.http.server: 127.0.0.1 S/ow31s1gO - [14/Nov/2026 17:11:51] "GET /properties?tag=19 HTTP/1.1" 200 30498 138 0.125 2.772 rw
+2026-11-14 17:11:51,286 1 INFO pms20_combined_final2 odoo.addons.pms_website.tests.test_pms_website: Starting TestPmsWebsiteHttp.test_properties_page_public ...
+2026-11-14 17:11:51,907 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_http: Generating routing map for key 1
+2026-11-14 17:11:54,143 1 INFO pms20_combined_final2 odoo.http.server: 127.0.0.1 S/H4C7nowk - [14/Nov/2026 17:11:54] "GET /properties HTTP/1.1" 200 36572 138 0.108 2.205 rw
+2026-11-14 17:11:54,149 1 INFO pms20_combined_final2 odoo.addons.pms_website.tests.test_pms_website: Starting TestPmsWebsiteHttp.test_property_page_amenities ...
+2026-11-14 17:11:54,588 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_http: Generating routing map for key 1
+2026-11-14 17:11:57,436 1 INFO pms20_combined_final2 odoo.http.server: 127.0.0.1 S/XBqBmMis - [14/Nov/2026 17:11:57] "GET /property/amenity-property-76 HTTP/1.1" 200 33565 137 0.121 2.809 rw
+2026-11-14 17:11:57,442 1 INFO pms20_combined_final2 odoo.addons.pms_website.tests.test_pms_website: Starting TestPmsWebsiteHttp.test_property_page_contact_and_breadcrumb ...
+2026-11-14 17:11:57,553 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_http: Generating routing map for key 1
+2026-11-14 17:12:00,019 1 INFO pms20_combined_final2 odoo.http.server: 127.0.0.1 S/bzVsAiFi - [14/Nov/2026 17:12:00] "GET /property/published-property-67 HTTP/1.1" 200 32443 139 0.116 2.43 rw
+2026-11-14 17:12:00,029 1 INFO pms20_combined_final2 odoo.addons.pms_website.tests.test_pms_website: Starting TestPmsWebsiteHttp.test_property_page_hides_sections_when_features_disabled ...
+2026-11-14 17:12:00,707 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_http: Generating routing map for key 1
+2026-11-14 17:12:03,314 1 INFO pms20_combined_final2 odoo.http.server: 127.0.0.1 S/SeWhYqMg - [14/Nov/2026 17:12:03] "GET /property/filtered-property-77 HTTP/1.1" 200 33576 136 0.139 2.554 rw
+2026-11-14 17:12:03,318 1 INFO pms20_combined_final2 odoo.addons.pms_website.tests.test_pms_website: Starting TestPmsWebsiteHttp.test_property_page_public ...
+2026-11-14 17:12:03,424 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_http: Generating routing map for key 1
+2026-11-14 17:12:05,759 1 INFO pms20_combined_final2 odoo.http.server: 127.0.0.1 S/pMLXSKbK - [14/Nov/2026 17:12:05] "GET /property/published-property-67 HTTP/1.1" 200 32443 139 0.109 2.305 rw
+2026-11-14 17:12:05,765 1 INFO pms20_combined_final2 odoo.addons.pms_website.tests.test_pms_website: Starting TestPmsWebsiteHttp.test_property_page_services ...
+2026-11-14 17:12:06,252 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_http: Generating routing map for key 1
+2026-11-14 17:12:08,608 1 INFO pms20_combined_final2 odoo.http.server: 127.0.0.1 S/gCwTEOay - [14/Nov/2026 17:12:08] "GET /property/service-property-78 HTTP/1.1" 200 33157 139 0.116 2.331 rw
+2026-11-14 17:12:08,636 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_attachment: filestore gc 0 checked, 0 removed
+2026-11-14 17:12:08,645 1 INFO pms20_combined_final2 odoo.addons.pms_website.tests.test_public_access: Starting TestPublishedPropertyAccess.test_internal_child_records_follow_property_companies ...
+2026-11-14 17:12:11,700 1 INFO pms20_combined_final2 odoo.addons.auth_signup.models.res_users: Signup email sent for user <child-company-reader> to <c.c@example.com>
+2026-11-14 17:12:12,151 1 INFO pms20_combined_final2 odoo.addons.pms_website.tests.test_public_access: Starting TestPublishedPropertyAccess.test_public_access_is_read_only_and_published_only ...
+2026-11-14 17:12:12,861 1 INFO pms20_combined_final2 odoo.addons.pms_website.tests.test_public_access: Starting TestPublishedPropertyAccess.test_public_child_records_follow_property_access ...
+2026-11-14 17:12:13,698 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_attachment: filestore gc 14 checked, 1 removed
+2026-11-14 17:12:14,146 1 INFO pms20_combined_final2 odoo.addons.pms_website_sale.tests.test_booking: Starting TestPropertyBooking.test_add_to_cart_creates_order_and_reservation ...
+2026-11-14 17:12:14,217 1 INFO pms20_combined_final2 odoo.addons.base.models.res_users: Login successful for login:admin from n/a
+2026-11-14 17:12:14,251 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_http: Generating routing map for key 1
+2026-11-14 17:12:15,207 1 INFO pms20_combined_final2 odoo.http.server: 127.0.0.1 S/n9W6ABm4 - [14/Nov/2026 17:12:15] "POST /property/85/add_to_cart HTTP/1.1" 200 68 124 0.102 0.859 rw
+2026-11-14 17:12:15,222 1 INFO pms20_combined_final2 odoo.addons.pms_website_sale.tests.test_booking: Starting TestPropertyBooking.test_add_to_cart_requires_login ...
+2026-11-14 17:12:15,246 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_http: Generating routing map for key 1
+2026-11-14 17:12:15,693 1 INFO pms20_combined_final2 odoo.http.server: 127.0.0.1 S/Pp7eU2nz - [14/Nov/2026 17:12:15] "POST /property/85/add_to_cart HTTP/1.1" 200 139 13 0.013 0.439 rw
+2026-11-14 17:12:15,699 1 INFO pms20_combined_final2 odoo.addons.pms_website_sale.tests.test_booking: Starting TestPropertyBooking.test_back_to_back_availability ...
+2026-11-14 17:12:15,813 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_http: Generating routing map for key 1
+2026-11-14 17:12:16,344 1 INFO pms20_combined_final2 odoo.http.server: 127.0.0.1 S/IGufPSYt - [14/Nov/2026 17:12:16] "POST /property/85/check_availability HTTP/1.1" 200 61 14 0.011 0.525 rw
+2026-11-14 17:12:16,350 1 INFO pms20_combined_final2 odoo.addons.pms_website_sale.tests.test_booking: Starting TestPropertyBooking.test_booking_uses_property_timezone_and_rate ...
+2026-11-14 17:12:16,492 1 INFO pms20_combined_final2 odoo.addons.base.models.res_users: Login successful for login:admin from n/a
+2026-11-14 17:12:16,525 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_http: Generating routing map for key 1
+2026-11-14 17:12:17,431 1 INFO pms20_combined_final2 odoo.http.server: 127.0.0.1 S/j7P_e2-5 - [14/Nov/2026 17:12:17] "POST /property/85/add_to_cart HTTP/1.1" 200 68 121 0.09 0.821 rw
+2026-11-14 17:12:17,443 1 INFO pms20_combined_final2 odoo.addons.pms_website_sale.tests.test_booking: Starting TestPropertyBooking.test_check_availability_available ...
+2026-11-14 17:12:17,467 1 INFO pms20_combined_final2 odoo.addons.base.models.res_users: Login successful for login:admin from n/a
+2026-11-14 17:12:17,509 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_http: Generating routing map for key 1
+2026-11-14 17:12:17,960 1 INFO pms20_combined_final2 odoo.http.server: 127.0.0.1 S/H3vvK52q - [14/Nov/2026 17:12:17] "POST /property/85/check_availability HTTP/1.1" 200 61 16 0.011 0.451 rw
+2026-11-14 17:12:17,966 1 INFO pms20_combined_final2 odoo.addons.pms_website_sale.tests.test_booking: Starting TestPropertyBooking.test_check_availability_conflict ...
+2026-11-14 17:12:18,058 1 INFO pms20_combined_final2 odoo.addons.base.models.res_users: Login successful for login:admin from n/a
+2026-11-14 17:12:18,092 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_http: Generating routing map for key 1
+2026-11-14 17:12:18,557 1 INFO pms20_combined_final2 odoo.http.server: 127.0.0.1 S/7utoFoWh - [14/Nov/2026 17:12:18] "POST /property/85/check_availability HTTP/1.1" 200 62 14 0.016 0.454 rw
+2026-11-14 17:12:18,562 1 INFO pms20_combined_final2 odoo.addons.pms_website_sale.tests.test_booking: Starting TestPropertyBooking.test_confirmed_overlap_cannot_be_added_to_cart ...
+2026-11-14 17:12:18,670 1 INFO pms20_combined_final2 odoo.addons.base.models.res_users: Login successful for login:admin from n/a
+2026-11-14 17:12:18,705 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_http: Generating routing map for key 1
+2026-11-14 17:12:19,144 1 INFO pms20_combined_final2 odoo.http.server: 127.0.0.1 S/O99OuXMU - [14/Nov/2026 17:12:19] "POST /property/85/add_to_cart HTTP/1.1" 200 94 15 0.018 0.427 rw
+2026-11-14 17:12:19,151 1 INFO pms20_combined_final2 odoo.addons.pms_website_sale.tests.test_booking: Starting TestPropertyBooking.test_excess_capacity_is_rejected ...
+2026-11-14 17:12:19,176 1 INFO pms20_combined_final2 odoo.addons.base.models.res_users: Login successful for login:admin from n/a
+2026-11-14 17:12:19,215 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_http: Generating routing map for key 1
+2026-11-14 17:12:19,669 1 INFO pms20_combined_final2 odoo.http.server: 127.0.0.1 S/9AmX2h7b - [14/Nov/2026 17:12:19] "POST /property/85/add_to_cart HTTP/1.1" 200 103 12 0.012 0.448 rw
+2026-11-14 17:12:19,674 1 INFO pms20_combined_final2 odoo.addons.pms_website_sale.tests.test_booking: Starting TestPropertyBooking.test_forged_guest_fields_are_rejected_without_side_effects ...
+2026-11-14 17:12:19,702 1 INFO pms20_combined_final2 odoo.addons.base.models.res_users: Login successful for login:admin from n/a
+2026-11-14 17:12:19,745 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_http: Generating routing map for key 1
+2026-11-14 17:12:20,160 1 INFO pms20_combined_final2 odoo.http.server: 127.0.0.1 S/ZC6Kpo1F - [14/Nov/2026 17:12:20] "POST /property/85/add_to_cart HTTP/1.1" 200 76 12 0.011 0.411 rw
+2026-11-14 17:12:20,166 1 INFO pms20_combined_final2 odoo.addons.pms_website_sale.tests.test_booking: Starting TestPropertyBooking.test_malformed_guest_input_returns_validation_error ...
+2026-11-14 17:12:20,191 1 INFO pms20_combined_final2 odoo.addons.base.models.res_users: Login successful for login:admin from n/a
+2026-11-14 17:12:20,229 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_http: Generating routing map for key 1
+2026-11-14 17:12:20,792 1 INFO pms20_combined_final2 odoo.http.server: 127.0.0.1 S/0Zbur8k3 - [14/Nov/2026 17:12:20] "POST /property/85/add_to_cart HTTP/1.1" 200 76 12 0.01 0.559 rw
+2026-11-14 17:12:20,798 1 INFO pms20_combined_final2 odoo.addons.pms_website_sale.tests.test_booking: Starting TestPropertyBooking.test_reversed_dates_are_rejected ...
+2026-11-14 17:12:20,825 1 INFO pms20_combined_final2 odoo.addons.base.models.res_users: Login successful for login:admin from n/a
+2026-11-14 17:12:20,859 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_http: Generating routing map for key 1
+2026-11-14 17:12:21,254 1 INFO pms20_combined_final2 odoo.http.server: 127.0.0.1 S/bCYIzoD9 - [14/Nov/2026 17:12:21] "POST /property/85/add_to_cart HTTP/1.1" 200 68 10 0.009 0.392 rw
+2026-11-14 17:12:21,260 1 INFO pms20_combined_final2 odoo.addons.pms_website_sale.tests.test_booking: Starting TestPropertyBooking.test_unpublished_property_is_not_available ...
+2026-11-14 17:12:21,394 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_http: Generating routing map for key 1
+2026-11-14 17:12:21,802 1 INFO pms20_combined_final2 odoo.http.server: 127.0.0.1 S/3luotOux - [14/Nov/2026 17:12:21] "POST /property/85/check_availability HTTP/1.1" 200 93 10 0.009 0.404 rw
+2026-11-14 17:12:21,807 1 INFO pms20_combined_final2 odoo.addons.pms_website_sale.tests.test_booking: Starting TestPropertyBooking.test_unrelated_reservation_type_is_rejected ...
+2026-11-14 17:12:22,023 1 INFO pms20_combined_final2 odoo.addons.base.models.res_users: Login successful for login:admin from n/a
+2026-11-14 17:12:22,054 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_http: Generating routing map for key 1
+2026-11-14 17:12:22,558 1 INFO pms20_combined_final2 odoo.http.server: 127.0.0.1 S/jwf5W1Bb - [14/Nov/2026 17:12:22] "POST /property/85/add_to_cart HTTP/1.1" 200 79 11 0.013 0.496 rw
+2026-11-14 17:12:22,581 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_attachment: filestore gc 0 checked, 0 removed
+2026-11-14 17:12:22,680 1 INFO pms20_combined_final2 odoo.addons.base.models.res_users: Group change: user 1 with IP n/a changed groups of user 1 who belonged to [33, 53, 39, 76, 22, 72, 44, 10, 9, 59, 85, 6, 19, 5, 16] with changes [(<Command.SET: 6>, 0, [33, 53, 39, 76, 22, 72, 44, 10, 9, 59, 85, 6, 19, 5, 16, 1])]
+2026-11-14 17:12:23,251 1 INFO pms20_combined_final2 odoo.addons.pms_website_sale.tests.test_property_table_compute: Starting TestPropertyTableCompute.test_process_empty ...
+2026-11-14 17:12:23,420 1 INFO pms20_combined_final2 odoo.addons.pms_website_sale.tests.test_property_table_compute: Starting TestPropertyTableCompute.test_process_multiple_items ...
+2026-11-14 17:12:23,423 1 INFO pms20_combined_final2 odoo.addons.pms_website_sale.tests.test_property_table_compute: Starting TestPropertyTableCompute.test_process_single_item ...
+2026-11-14 17:12:23,444 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_attachment: filestore gc 1 checked, 1 removed
+2026-11-14 17:12:23,870 1 INFO pms20_combined_final2 odoo.addons.pms_website_sale.tests.test_website_sale: Starting TestWebsiteSaleControllers.test_add_to_cart_invalid_dates ...
+2026-11-14 17:12:23,934 1 INFO pms20_combined_final2 odoo.addons.base.models.res_users: Login successful for login:admin from n/a
+2026-11-14 17:12:23,964 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_http: Generating routing map for key 1
+2026-11-14 17:12:24,402 1 INFO pms20_combined_final2 odoo.http.server: 127.0.0.1 S/436saTL- - [14/Nov/2026 17:12:24] "POST /property/87/add_to_cart HTTP/1.1" 200 68 10 0.009 0.434 rw
+2026-11-14 17:12:24,408 1 INFO pms20_combined_final2 odoo.addons.pms_website_sale.tests.test_website_sale: Starting TestWebsiteSaleControllers.test_add_to_cart_invalid_reservation_type ...
+2026-11-14 17:12:24,433 1 INFO pms20_combined_final2 odoo.addons.base.models.res_users: Login successful for login:admin from n/a
+2026-11-14 17:12:24,473 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_http: Generating routing map for key 1
+2026-11-14 17:12:24,913 1 INFO pms20_combined_final2 odoo.http.server: 127.0.0.1 S/jFQAOXYa - [14/Nov/2026 17:12:24] "POST /property/87/add_to_cart HTTP/1.1" 200 79 12 0.012 0.435 rw
+2026-11-14 17:12:24,919 1 INFO pms20_combined_final2 odoo.addons.pms_website_sale.tests.test_website_sale: Starting TestWebsiteSaleControllers.test_add_to_cart_no_guests ...
+2026-11-14 17:12:24,943 1 INFO pms20_combined_final2 odoo.addons.base.models.res_users: Login successful for login:admin from n/a
+2026-11-14 17:12:24,979 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_http: Generating routing map for key 1
+2026-11-14 17:12:25,429 1 INFO pms20_combined_final2 odoo.http.server: 127.0.0.1 S/jMgR7dsy - [14/Nov/2026 17:12:25] "POST /property/87/add_to_cart HTTP/1.1" 200 85 12 0.015 0.443 rw
+2026-11-14 17:12:25,436 1 INFO pms20_combined_final2 odoo.addons.pms_website_sale.tests.test_website_sale: Starting TestWebsiteSaleControllers.test_add_to_cart_property_not_found ...
+2026-11-14 17:12:25,459 1 INFO pms20_combined_final2 odoo.addons.base.models.res_users: Login successful for login:admin from n/a
+2026-11-14 17:12:25,493 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_http: Generating routing map for key 1
+2026-11-14 17:12:25,941 1 INFO pms20_combined_final2 odoo.http.server: 127.0.0.1 S/EqiXJiYs - [14/Nov/2026 17:12:25] "POST /property/999999/add_to_cart HTTP/1.1" 200 98 10 0.01 0.443 rw
+2026-11-14 17:12:25,946 1 INFO pms20_combined_final2 odoo.addons.pms_website_sale.tests.test_website_sale: Starting TestWebsiteSaleControllers.test_check_availability_invalid_dates ...
+2026-11-14 17:12:25,970 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_http: Generating routing map for key 1
+2026-11-14 17:12:26,536 1 INFO pms20_combined_final2 odoo.http.server: 127.0.0.1 S/slTUR6S- - [14/Nov/2026 17:12:26] "POST /property/87/check_availability HTTP/1.1" 200 88 10 0.008 0.562 rw
+2026-11-14 17:12:26,541 1 INFO pms20_combined_final2 odoo.addons.pms_website_sale.tests.test_website_sale: Starting TestWebsiteSaleControllers.test_check_availability_missing_dates ...
+2026-11-14 17:12:26,566 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_http: Generating routing map for key 1
+2026-11-14 17:12:27,005 1 INFO pms20_combined_final2 odoo.http.server: 127.0.0.1 S/l_K8DThy - [14/Nov/2026 17:12:27] "POST /property/87/check_availability HTTP/1.1" 200 88 10 0.009 0.435 rw
+2026-11-14 17:12:27,008 1 INFO pms20_combined_final2 odoo.addons.pms_website_sale.tests.test_website_sale: Starting TestWebsiteSaleControllers.test_property_detail_includes_reservation_types ...
+2026-11-14 17:12:27,034 1 INFO pms20_combined_final2 odoo.addons.base.models.res_users: Login successful for login:admin from n/a
+2026-11-14 17:12:27,080 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_http: Generating routing map for key 1
+2026-11-14 17:12:31,772 1 INFO pms20_combined_final2 odoo.http.server: 127.0.0.1 S/rijUhClS - [14/Nov/2026 17:12:31] "GET /property/website-sale-property-87 HTTP/1.1" 200 52886 204 0.165 4.532 rw
+2026-11-14 17:12:31,778 1 INFO pms20_combined_final2 odoo.addons.pms_website_sale.tests.test_website_sale: Starting TestWebsiteSaleControllers.test_property_listing_page ...
+2026-11-14 17:12:31,802 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_http: Generating routing map for key 1
+2026-11-14 17:12:34,531 1 INFO pms20_combined_final2 odoo.http.server: 127.0.0.1 S/NpF17IJU - [14/Nov/2026 17:12:34] "GET /property HTTP/1.1" 200 35593 131 0.11 2.624 rw
+2026-11-14 17:12:34,535 1 INFO pms20_combined_final2 odoo.addons.pms_website_sale.tests.test_website_sale: Starting TestWebsiteSaleControllers.test_property_search_by_category ...
+2026-11-14 17:12:34,565 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_http: Generating routing map for key 1
+2026-11-14 17:12:36,996 1 INFO pms20_combined_final2 odoo.http.server: 127.0.0.1 S/V-hdq7rb - [14/Nov/2026 17:12:36] "GET /property/category/city-stays-20 HTTP/1.1" 200 31963 134 0.109 2.328 rw
+2026-11-14 17:12:37,002 1 INFO pms20_combined_final2 odoo.addons.pms_website_sale.tests.test_website_sale: Starting TestWebsiteSaleControllers.test_property_search_by_city ...
+2026-11-14 17:12:37,023 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_http: Generating routing map for key 1
+2026-11-14 17:12:39,215 1 INFO pms20_combined_final2 odoo.http.server: 127.0.0.1 S/XGSdP2-q - [14/Nov/2026 17:12:39] "GET /property?search=Boston HTTP/1.1" 200 31311 130 0.095 2.101 rw
+2026-11-14 17:12:39,218 1 INFO pms20_combined_final2 odoo.addons.pms_website_sale.tests.test_website_sale: Starting TestWebsiteSaleControllers.test_property_search_by_guest_count ...
+2026-11-14 17:12:39,240 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_http: Generating routing map for key 1
+2026-11-14 17:12:41,604 1 INFO pms20_combined_final2 odoo.http.server: 127.0.0.1 S/AYAdpMSY - [14/Nov/2026 17:12:41] "GET /property?guest_select=6 HTTP/1.1" 200 33734 131 0.098 2.27 rw
+2026-11-14 17:12:41,610 1 INFO pms20_combined_final2 odoo.addons.pms_website_sale.tests.test_website_sale: Starting TestWebsiteSaleControllers.test_property_search_excludes_booked_dates ...
+2026-11-14 17:12:41,704 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_http: Generating routing map for key 1
+2026-11-14 17:12:43,925 1 INFO pms20_combined_final2 odoo.http.server: 127.0.0.1 S/w0TmrpW9 - [14/Nov/2026 17:12:43] "GET /property?date_range=01/23/2027%20-%2001/28/2027 HTTP/1.1" 200 33810 142 0.102 2.123 rw
+2026-11-14 17:12:43,932 1 INFO pms20_combined_final2 odoo.addons.pms_website_sale.tests.test_website_sale: Starting TestWebsiteSaleControllers.test_property_search_hides_parent_with_children ...
+2026-11-14 17:12:44,192 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_http: Generating routing map for key 1
+2026-11-14 17:12:46,371 1 INFO pms20_combined_final2 odoo.http.server: 127.0.0.1 S/_gf_fm2m - [14/Nov/2026 17:12:46] "GET /property?search=Boston HTTP/1.1" 200 31042 127 0.088 2.097 rw
+2026-11-14 17:12:46,393 1 INFO pms20_combined_final2 odoo.addons.base.models.ir_attachment: filestore gc 0 checked, 0 removed
+2026-11-14 17:12:46,397 1 INFO pms20_combined_final2 odoo.service.server: 233 post-tests in 249.42s, 21927 queries
+2026-11-14 17:12:46,400 1 INFO pms20_combined_final2 odoo.tests.stats: pms_account: 31 tests 26.60s 3999 queries
+2026-11-14 17:12:46,401 1 INFO pms20_combined_final2 odoo.tests.stats: pms_account_asset: 10 tests 10.06s 2297 queries
+2026-11-14 17:12:46,401 1 INFO pms20_combined_final2 odoo.tests.stats: pms_base: 70 tests 6.09s 1728 queries
+2026-11-14 17:12:46,401 1 INFO pms20_combined_final2 odoo.tests.stats: pms_contract: 15 tests 2.08s 553 queries
+2026-11-14 17:12:46,401 1 INFO pms20_combined_final2 odoo.tests.stats: pms_crm: 9 tests 1.13s 280 queries
+2026-11-14 17:12:46,401 1 INFO pms20_combined_final2 odoo.tests.stats: pms_project: 3 tests 1.30s 208 queries
+2026-11-14 17:12:46,402 1 INFO pms20_combined_final2 odoo.tests.stats: pms_purchase: 9 tests 1.51s 310 queries
+2026-11-14 17:12:46,402 1 INFO pms20_combined_final2 odoo.tests.stats: pms_sale: 47 tests 20.16s 4839 queries
+2026-11-14 17:12:46,402 1 INFO pms20_combined_final2 odoo.tests.stats: pms_stock: 12 tests 1.59s 343 queries
+2026-11-14 17:12:46,402 1 INFO pms20_combined_final2 odoo.tests.stats: pms_website: 50 tests 39.62s 4627 queries
+2026-11-14 17:12:46,403 1 INFO pms20_combined_final2 odoo.tests.stats: pms_website_sale: 35 tests 32.67s 2263 queries
+2026-11-14 17:12:46,403 1 INFO pms20_combined_final2 odoo.tests.result: 0 failed, 0 error(s) of 233 tests when loading database 'pms20_combined_final2'
+2026-11-14 17:12:46,403 1 INFO pms20_combined_final2 odoo.service.server.ThreadedServer: Initiating shutdown
+2026-11-14 17:12:46,403 1 INFO pms20_combined_final2 odoo.service.server.ThreadedServer: Hit CTRL-C again or send a second signal to force the shutdown.
+2026-11-14 17:12:46,404 1 INFO pms20_combined_final2 odoo.addons.bus.websocket: Disconnecting 0 websockets
+2026-11-14 17:12:46,507 1 INFO pms20_combined_final2 odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 2 connections 

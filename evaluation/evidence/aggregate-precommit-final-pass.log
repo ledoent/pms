@@ -1,0 +1,67 @@
+forbidden files......................................(no files to check)Skipped
+en.po files cannot exist.............................(no files to check)Skipped
+obsolete dotfiles....................................(no files to check)Skipped
+init pyproject.toml with whool...........................................Passed
+Update pre-commit excluded addons........................................Passed
+Fix the manifest website key.............................................Passed
+Generate addons README files from fragments..............................Passed
+Generate requirements.txt for an addons directory........................Passed
+Checks for py, csv and xml files of Odoo modules.........................Passed
+Checks for .po[t] files..................................................Passed
+prettier (with plugin-xml)...............................................Passed
+eslint...................................................................Passed
+- hook id: eslint
+- duration: 0.5s
+
+[0m
+[4m/Users/dkendall/projects/ledoent/oca/worktrees/pms--20.0-evaluation/pms_sale/static/src/js/pms_configurator_controller.esm.js[24m
+   [2m1:1[22m  [33mwarning[39m  Invalid JSDoc tag name "odoo-module"                                        [2mjsdoc/check-tag-names[22m
+   [2m5:1[22m  [33mwarning[39m  Imports should be sorted alphabetically                                     [2msort-imports[22m
+   [2m6:1[22m  [33mwarning[39m  Imports should be sorted alphabetically                                     [2msort-imports[22m
+   [2m8:1[22m  [33mwarning[39m  Imports should be sorted alphabetically                                     [2msort-imports[22m
+   [2m9:1[22m  [33mwarning[39m  Imports should be sorted alphabetically                                     [2msort-imports[22m
+  [2m18:5[22m  [33mwarning[39m  Async method 'onRecordSaved' has a complexity of 20. Maximum allowed is 15  [2mcomplexity[22m
+
+[4m/Users/dkendall/projects/ledoent/oca/worktrees/pms--20.0-evaluation/pms_sale/static/src/js/pms_sale_product_field.esm.js[24m
+   [2m1:1[22m  [33mwarning[39m  Invalid JSDoc tag name "odoo-module"               [2mjsdoc/check-tag-names[22m
+   [2m5:1[22m  [33mwarning[39m  Imports should be sorted alphabetically            [2msort-imports[22m
+   [2m6:1[22m  [33mwarning[39m  Expected 'multiple' syntax before 'single' syntax  [2msort-imports[22m
+  [2m11:1[22m  [33mwarning[39m  Imports should be sorted alphabetically            [2msort-imports[22m
+
+[4m/Users/dkendall/projects/ledoent/oca/worktrees/pms--20.0-evaluation/pms_sale/static/src/js/timeline.esm.js[24m
+   [2m1:1[22m   [33mwarning[39m  Invalid JSDoc tag name "odoo-module"        [2mjsdoc/check-tag-names[22m
+   [2m6:1[22m   [33mwarning[39m  Imports should be sorted alphabetically     [2msort-imports[22m
+  [2m54:17[22m  [33mwarning[39m  Assignment to function parameter 'records'  [2mno-param-reassign[22m
+
+[4m/Users/dkendall/projects/ledoent/oca/worktrees/pms--20.0-evaluation/pms_website_sale/static/src/js/pms_property_booking.js[24m
+  [2m132:21[22m  [33mwarning[39m  Unexpected alert  [2mno-alert[22m
+  [2m185:21[22m  [33mwarning[39m  Unexpected alert  [2mno-alert[22m
+  [2m200:29[22m  [33mwarning[39m  Unexpected alert  [2mno-alert[22m
+  [2m207:25[22m  [33mwarning[39m  Unexpected alert  [2mno-alert[22m
+
+[33m[1m✖ 17 problems (0 errors, 17 warnings)[22m[39m
+[0m
+[0m
+[4m/Users/dkendall/projects/ledoent/oca/worktrees/pms--20.0-evaluation/pms_sale/static/tests/timeline.test.js[24m
+  [2m4:1[22m  [33mwarning[39m  Imports should be sorted alphabetically            [2msort-imports[22m
+  [2m5:1[22m  [33mwarning[39m  Expected 'multiple' syntax before 'single' syntax  [2msort-imports[22m
+
+[33m[1m✖ 2 problems (0 errors, 2 warnings)[22m[39m
+[0m
+
+trim trailing whitespace.................................................Passed
+fix end of files.........................................................Passed
+debug statements (python)................................................Passed
+check for case conflicts.................................................Passed
+check docstring is first.................................................Passed
+check that executables have shebangs.................(no files to check)Skipped
+check for merge conflicts................................................Passed
+check for broken symlinks............................(no files to check)Skipped
+check xml................................................................Passed
+mixed line ending........................................................Passed
+ruff check...............................................................Passed
+ruff format..............................................................Passed
+pylint with optional checks..............................................Passed
+- hook id: pylint_odoo
+- duration: 3.68s
+Check for Odoo modules using pylint......................................Passed

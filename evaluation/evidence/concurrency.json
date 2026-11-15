@@ -1,0 +1,19 @@
+{
+  "test_enable": false,
+  "independent_transactions": true,
+  "property_id": 162,
+  "results": [
+    {
+      "worker": 1,
+      "committed": true,
+      "id": 33
+    },
+    {
+      "worker": 2,
+      "committed": true,
+      "id": 32
+    }
+  ],
+  "confirmed_stays_same_interval": 2,
+  "adoption_blocker": true
+}

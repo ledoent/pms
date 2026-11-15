@@ -1,0 +1,6 @@
+{
+  "known_icon": "bed",
+  "fallback_icon": "check",
+  "passed": true,
+  "persistence": "rolled back synthetic probe"
+}
